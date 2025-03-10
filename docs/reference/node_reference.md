@@ -8,14 +8,6 @@
 | Node | Description |
 | --- | --- |
 | [Pt Save Model](pt_save_model.md) | A wrapper class for saving a PyTorch model. |
-## Miscellaneous
-| Node | Description |
-| --- | --- |
-| [N Resnet Blocks](ptn_resnet_model_def.md) |  |
-| [Resnet Model](ptn_resnet_model_def.md) |  |
-| [Single Conv Block](ptn_resnet_model_def.md) |  |
-| [Single Conv Block No Activation](ptn_resnet_model_def.md) |  |
-| [Single Resnet Block](ptn_resnet_model_def.md) |  |
 ## PyTorch wrapper - Arithmetic operations
 | Node | Description |
 | --- | --- |

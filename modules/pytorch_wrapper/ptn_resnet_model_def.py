@@ -8,6 +8,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class SingleConvBlock(nn.Module):
+    """
+    pragma: skip_doc
+    """
+
     def __init__(self, in_channels, out_channels, kernel_size, strides):
         super().__init__()
         padding = kernel_size // 2
@@ -33,6 +37,10 @@ class SingleConvBlock(nn.Module):
 
 
 class SingleConvBlockNoActivation(nn.Module):
+    """
+    pragma: skip_doc
+    """
+
     def __init__(self, in_channels, out_channels, kernel_size, strides):
         super().__init__()
         padding = kernel_size // 2
@@ -54,6 +62,9 @@ class SingleConvBlockNoActivation(nn.Module):
 
 
 class SingleResnetBlock(nn.Module):
+    """
+    pragma: skip_doc
+    """
 
     def __init__(self, in_channels, out_channels, kernel_size=3, downsample=False):
         super().__init__()
@@ -120,7 +131,10 @@ class SingleResnetBlock(nn.Module):
 
 
 class NResnetBlocks(nn.Module):
-    
+    """
+    pragma: skip_doc
+    """
+
     def __init__(
             self,
             num_blocks,
@@ -168,6 +182,10 @@ class NResnetBlocks(nn.Module):
         return tens
 
 class ResnetModel(nn.Module):
+    """
+    pragma: skip_doc
+    """
+
     def __init__(self,
                  num_blocks,
                  in_channels,

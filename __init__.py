@@ -101,11 +101,6 @@ from .modules.pytorch_wrapper.pt_zeros import PtZeros
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
-from .modules.pytorch_wrapper.ptn_resnet_model_def import NResnetBlocks
-from .modules.pytorch_wrapper.ptn_resnet_model_def import ResnetModel
-from .modules.pytorch_wrapper.ptn_resnet_model_def import SingleConvBlock
-from .modules.pytorch_wrapper.ptn_resnet_model_def import SingleConvBlockNoActivation
-from .modules.pytorch_wrapper.ptn_resnet_model_def import SingleResnetBlock
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
@@ -122,7 +117,6 @@ NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
 """
 
 NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
-    "NResnetBlocks": NResnetBlocks,
     "PtAbs": PtAbs,
     "PtAcos": PtAcos,
     "PtAdd": PtAdd,
@@ -231,10 +225,6 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtvImageFolderDataset": PtvImageFolderDataset,
     "PtvTransformsResize": PtvTransformsResize,
     "PtvTransformsToTensor": PtvTransformsToTensor,
-    "ResnetModel": ResnetModel,
-    "SingleConvBlock": SingleConvBlock,
-    "SingleConvBlockNoActivation": SingleConvBlockNoActivation,
-    "SingleResnetBlock": SingleResnetBlock,
 }
 
 
@@ -244,7 +234,6 @@ NODE_DISPLAY_NAME_MAPPINGS (Dict[str, str]):
 """
 
 NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
-    "NResnetBlocks": "N Resnet Blocks",
     "PtAbs": "Pt Abs",
     "PtAcos": "Pt Acos",
     "PtAdd": "Pt Add",
@@ -353,10 +342,6 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtvImageFolderDataset": "Ptv Image Folder Dataset",
     "PtvTransformsResize": "Ptv Transforms Resize",
     "PtvTransformsToTensor": "Ptv Transforms To Tensor",
-    "ResnetModel": "Resnet Model",
-    "SingleConvBlock": "Single Conv Block",
-    "SingleConvBlockNoActivation": "Single Conv Block No Activation",
-    "SingleResnetBlock": "Single Resnet Block",
 }
 
 
