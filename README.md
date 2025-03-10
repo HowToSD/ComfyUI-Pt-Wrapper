@@ -1,14 +1,21 @@
 # ComfyUI-Pt-Wrapper  
 
-ComfyUI-Pt-Wrapper is a spin-off of [ComfyUI-Data-Analysis](https://github.com/HowToSD/ComfyUI-Data-Analysis), created to provide a dedicated extension for PyTorch wrapper nodes originally included in the analysis extension.  
+ComfyUI-Pt-Wrapper is a spin-off of [ComfyUI-Data-Analysis](https://github.com/HowToSD/ComfyUI-Data-Analysis), designed as a dedicated extension for PyTorch wrapper nodes originally included in the analysis extension.
 
-This extension offers an extensive collection of nodes for direct operations on PyTorch tensors, along with specialized nodes for machine learning tasks such as ResNet.  
+This extension provides a comprehensive set of nodes for direct operations on PyTorch tensors, along with specialized nodes for machine learning tasks like ResNet.
 
-For instance, you can train an image classification model using your own image data **without writing any code**.  
+If you need access to PyTorch's low-level methods (e.g., `add`, `div`, `max`, `where`, `scatter`, `gather`) to manipulate tensors or extract information—or if you're comfortable with ComfyUI and want to explore foundational PyTorch methods —this extension is for you.
 
-Check out [this tutorial on classifying dogs and cats](docs/dog_cat_classification_model_training.md).  
+You can train an image classification model using your own image data **without writing any code**.
 
-If you need visualization or analysis features, install ComfyUI-Data-Analysis as well.
+Check out [this tutorial on classifying dogs and cats](docs/dog_cat_classification_model_training.md).
+
+For visualization or analysis features, install ComfyUI-Data-Analysis as well.
+
+# Getting Started
+If you're interested in direct operations on PyTorch tensors, check out the [Node Reference](docs/reference/node_reference.md) to explore the available nodes and see what operations are supported.
+
+If you want to learn PyTorch model training, start with the [Model Training Documentation](docs/model_training.md).
 
 ## Contribution
 🚫 **This project does not accept pull requests.**  
