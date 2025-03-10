@@ -1,0 +1,14 @@
+[project]
+name = "pt-wrapper"
+description = "PyTorch extension for ComfyUI featuring extensive PyTorch wrapper nodes for seamless tensor operations and PyTorch model training."
+version = "3.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/HowToSD/ComfyUI-Data-Analysis"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "how-to-sd"
+DisplayName = "ComfyUI-Pt-Wrapper"
+Icon = ""
