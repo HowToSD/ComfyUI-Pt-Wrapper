@@ -67,7 +67,7 @@ class TestPtTrainConvModel2(unittest.TestCase):
                        use_gpu=True,
                        early_stopping=False,
                        early_stopping_rounds=1,
-                       output_best_val_model=False
+                       output_best_val_model=False,
                        val_loader=self.val_loader)[0]
         self.save_model.f(trained_model, f"dog_cat_{epochs}_epochs_conv.pt")
 
