@@ -31,6 +31,8 @@ Convolutional model
 
 These training workflows train a FashionMNIST model from scratch effortlessly.
 
+**Note: Before you try these workflows, please install ComfyUI-Data-Analysis extension.**
+
 ### Training workflow
 **Linear model**
 ![Train](images/fashion_mnist_train.png)

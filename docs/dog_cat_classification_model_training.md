@@ -9,16 +9,18 @@ Once you complete the tutorial, you can experiment with your own images.
 ---
 
 ## Overview of Steps
-
-1. Downloading the dog and cat dataset from the GitHub repo
-2. Edit the training workflow  
-3. Run the training workflow  
-4. Edit the evaluation workflow
-5. Run the evaluation workflow
+1. Install ComfyUI-Data-Analysis extension
+2. Downloading the dog and cat dataset from the GitHub repo
+3. Edit the training workflow  
+4. Run the training workflow  
+5. Edit the evaluation workflow
+6. Run the evaluation workflow
 
 ---
+## 1. Install ComfyUI-Data-Analysis extension.
+If you haven't installed ComfyUI-Data-Analysis extension, please do so first.
 
-## 1. Download the Dog & Cat Dataset  
+## 2. Download the Dog & Cat Dataset  
 
 Visit [the GitHub repo](https://github.com/HowToSD/dog_and_cat_dataset) and go to the **Releases** page.  
 Click **"Source code (zip)"** to download the zip that contains all the images.  
@@ -42,7 +44,7 @@ Take note of the **full paths** to the `train` and `val` directories, as you'll 
 
 ---
 
-## 2. Editing the Training Workflow
+## 3. Editing the Training Workflow
 
 Drag and drop the below file into ComfyUI:  
 ```
@@ -54,7 +56,7 @@ Replace them with the paths noted earlier.
 
 ---
 
-## 3. Running the Training Workflow  
+## 4. Running the Training Workflow  
 
 Click **Queue** to start training.  
 
@@ -112,7 +114,7 @@ Once training completes, a **line chart** displaying training progress will appe
 
 ---
 
-## 4. Editing the Evaluation Workflow
+## 5. Editing the Evaluation Workflow
 Now, let's verify if the model was trained correctly. In this step, we'll feed the validation data into the trained model and compute metrics to assess its performance.
 
 Drag and drop the below file into ComfyUI:  
@@ -126,7 +128,7 @@ Update the **val dataset path**.
 
 ---
 
-## 5. Running the Evaluation Workflow  
+## 6. Running the Evaluation Workflow  
 
 Click **Queue**. The evaluation process runs much faster than training.  
 
