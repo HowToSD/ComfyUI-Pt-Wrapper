@@ -1,6 +1,6 @@
 # Model Training
 
-You can traing a PyTorch model without any coding.
+You can train a PyTorch model without any coding.
 Training is as simple as a single click!  
 Currently, classification models are supported for following architecture (node names are in parentheses):
 * Linear (Ptn Linear Model)
