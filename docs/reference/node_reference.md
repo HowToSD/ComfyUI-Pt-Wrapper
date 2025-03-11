@@ -144,6 +144,7 @@
 | [Ptv Dataset Len](ptv_dataset_len.md) | A wrapper class that calls Python len on a dataset. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
 | [Ptv Image Folder Dataset](ptv_image_folder_dataset.md) | A Torchvision ImageFolder Dataset class wrapper. |
+| [Ptv Transforms Data Augment](ptv_transforms_data_augment.md) | Applies data augmentation transformations to dataset elements. |
 | [Ptv Transforms Resize](ptv_transforms_resize.md) | Resizes and transforms elements of dataset to PyTorch tensors. |
 | [Ptv Transforms To Tensor](ptv_transforms_to_tensor.md) | Transforms elements of dataset to PyTorch tensors. |
 ## PyTorch wrapper - Transform

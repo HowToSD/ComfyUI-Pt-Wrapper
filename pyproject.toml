@@ -1,7 +1,7 @@
 [project]
 name = "pt-wrapper"
 description = "PyTorch extension for ComfyUI featuring extensive PyTorch wrapper nodes for seamless tensor operations and PyTorch model training."
-version = "3.0.4"
+version = "3.0.5"
 license = {file = "LICENSE"}
 
 [project.urls]

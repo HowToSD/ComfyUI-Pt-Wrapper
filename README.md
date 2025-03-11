@@ -12,6 +12,12 @@ Check out [this tutorial on classifying dogs and cats](docs/dog_cat_classificati
 
 For visualization or analysis features, install ComfyUI-Data-Analysis as well.
 
+The workflow directory contains an easy-to-use workflow for training a high-performing ResNet model on CIFAR-10.
+
+**ResNet model**
+![Train](docs/images/resnet_train.png)
+![Eval](docs/images/resnet_eval.png)
+
 # Getting Started
 If you're interested in direct operations on PyTorch tensors, check out the [Node Reference](docs/reference/node_reference.md) to explore the available nodes and see what operations are supported.
 

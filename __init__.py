@@ -106,6 +106,7 @@ from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
 from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
 from .modules.pytorch_wrapper.ptv_image_folder_dataset import PtvImageFolderDataset
+from .modules.pytorch_wrapper.ptv_transforms_data_augment import PtvTransformsDataAugment
 from .modules.pytorch_wrapper.ptv_transforms_resize import PtvTransformsResize
 from .modules.pytorch_wrapper.ptv_transforms_to_tensor import PtvTransformsToTensor
 T = TypeVar("T")
@@ -223,6 +224,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtvDatasetLen": PtvDatasetLen,
     "PtvDatasetLoader": PtvDatasetLoader,
     "PtvImageFolderDataset": PtvImageFolderDataset,
+    "PtvTransformsDataAugment": PtvTransformsDataAugment,
     "PtvTransformsResize": PtvTransformsResize,
     "PtvTransformsToTensor": PtvTransformsToTensor,
 }
@@ -340,6 +342,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtvDatasetLen": "Ptv Dataset Len",
     "PtvDatasetLoader": "Ptv Dataset Loader",
     "PtvImageFolderDataset": "Ptv Image Folder Dataset",
+    "PtvTransformsDataAugment": "Ptv Transforms Data Augment",
     "PtvTransformsResize": "Ptv Transforms Resize",
     "PtvTransformsToTensor": "Ptv Transforms To Tensor",
 }
