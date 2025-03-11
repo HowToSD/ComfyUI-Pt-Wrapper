@@ -21,7 +21,7 @@ Check out [the dog and cat classification tutorial](dog_cat_classification_model
 
 ## Public Datasets
 
-Currently, only Fashion MNIST has been tested. Other public datasets have not been verified yet, though they may work.  
+Currently, only Fashion MNIST and CIFAR10 have been tested. Other public datasets have not been verified yet, though they may work.  
 If you try one and it doesn't work, please create an issue so I can investigate adding support.
 
 To use the Fashion MNIST dataset, simply drag and drop the workflow files below into ComfyUI. The model will be downloaded automatically.
