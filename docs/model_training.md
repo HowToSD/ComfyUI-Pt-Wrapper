@@ -1,8 +1,13 @@
 # Model Training
 
-Experimental PyTorch model training has been added.  
-No coding is required. Training is as simple as a single click!  
-Currently, only classification is supported.
+You can traing a PyTorch model without any coding.
+Training is as simple as a single click!  
+Currently, classification models are supported for following architecture (node names are in parentheses):
+* Linear (Ptn Linear Model)
+* Convolutional Network (Ptn Conv Model)
+* ResNet (Ptn Resnet Model)
+
+You can adjust the model configuration including output dimension on the UI.
 
 The system is designed to be modular. For example, to switch from a linear model to a convolutional model, you only need to replace the model node (see screenshot below).
 
