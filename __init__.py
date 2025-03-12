@@ -93,6 +93,7 @@ from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
 from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
+from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
 from .modules.pytorch_wrapper.pt_unsqueeze import PtUnsqueeze
 from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
@@ -102,6 +103,9 @@ from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
+from .modules.pytorch_wrapper.pto_lr_scheduler_cosine_annealing import PtoLrSchedulerCosineAnnealing
+from .modules.pytorch_wrapper.pto_lr_scheduler_reduce_on_plateau import PtoLrSchedulerReduceOnPlateau
+from .modules.pytorch_wrapper.pto_lr_scheduler_step import PtoLrSchedulerStep
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
 from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
@@ -211,6 +215,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtToNumpy": PtToNumpy,
     "PtToRgbTensors": PtToRgbTensors,
     "PtTrainClassificationModel": PtTrainClassificationModel,
+    "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
     "PtUnsqueeze": PtUnsqueeze,
     "PtVar": PtVar,
     "PtView": PtView,
@@ -220,6 +225,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnLinearModel": PtnLinearModel,
     "PtnResnetModel": PtnResnetModel,
     "PtoAdam": PtoAdam,
+    "PtoLrSchedulerCosineAnnealing": PtoLrSchedulerCosineAnnealing,
+    "PtoLrSchedulerReduceOnPlateau": PtoLrSchedulerReduceOnPlateau,
+    "PtoLrSchedulerStep": PtoLrSchedulerStep,
     "PtvDataset": PtvDataset,
     "PtvDatasetLen": PtvDatasetLen,
     "PtvDatasetLoader": PtvDatasetLoader,
@@ -329,6 +337,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtToNumpy": "Pt To Numpy",
     "PtToRgbTensors": "Pt To Rgb Tensors",
     "PtTrainClassificationModel": "Pt Train Classification Model",
+    "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
     "PtUnsqueeze": "Pt Unsqueeze",
     "PtVar": "Pt Var",
     "PtView": "Pt View",
@@ -338,6 +347,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnLinearModel": "Ptn Linear Model",
     "PtnResnetModel": "Ptn Resnet Model",
     "PtoAdam": "Pto Adam",
+    "PtoLrSchedulerCosineAnnealing": "Pto Lr Scheduler Cosine Annealing",
+    "PtoLrSchedulerReduceOnPlateau": "Pto Lr Scheduler Reduce On Plateau",
+    "PtoLrSchedulerStep": "Pto Lr Scheduler Step",
     "PtvDataset": "Ptv Dataset",
     "PtvDatasetLen": "Ptv Dataset Len",
     "PtvDatasetLoader": "Ptv Dataset Loader",

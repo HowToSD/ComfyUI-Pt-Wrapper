@@ -35,10 +35,15 @@ Convolutional model
 * Evaluation: examples/workflows/fashion_mnist_eval_conv.json
 
 ResNet model
-* Training: examples/workflows/cifar10_train_v8.json
-* Evaluation: examples/workflows/cifar10_eval_v8.json
+**Training**
+* examples/workflows/cifar10_train_v8.json
+* examples/workflows/cifar10_train_v11_2nd_run.json
+  
+**Evaluation**
+* examples/workflows/cifar10_eval_v8.json
+* examples/workflows/cifar10_eval_v11_2nd_run.json
 
-This model achieved 93.12% accuracy on CIFAR-10. While not state-of-the-art, it is a strong result. Due to random initialization, data augmentation, and dataset shuffling, accuracy may vary slightly between runs. If your accuracy is significantly lower, consider running it multiple times or checking for potential issues in the training setup.
+This train_v8 model achieved 93.12% accuracy & train_v11_2nd_run model achieved 94.34 on CIFAR-10 (first run was 94.27%). train_v11_2nd_run added cosine annealing learning rate scheduler while train_v8 used fixed learning rate. While not state-of-the-art, these are strong results. Due to random initialization, data augmentation, and dataset shuffling, accuracy may vary slightly between runs. If your accuracy is significantly lower, consider running it multiple times or checking for potential issues in the training setup.
 
 **Note: Before you try these workflows, please install ComfyUI-Data-Analysis extension.**
 

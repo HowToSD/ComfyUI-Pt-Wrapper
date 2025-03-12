@@ -12,7 +12,7 @@ Check out [this tutorial on classifying dogs and cats](docs/dog_cat_classificati
 
 For visualization or analysis features, install ComfyUI-Data-Analysis as well.
 
-The workflow directory contains an easy-to-use workflow for training a high-performing ResNet model on CIFAR-10.
+The workflow directory offers user-friendly example workflows for training a high-performing ResNet model on CIFAR-10. One example achieved **94.34% accuracy** on the validation set. While not a state-of-the-art metric, it provides a solid starting point for customizing the workflow to your needs.
 
 **ResNet model**
 ![Train](docs/images/resnet_train.png)
