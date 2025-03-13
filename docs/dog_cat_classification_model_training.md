@@ -1,6 +1,6 @@
 # Dog cat classification model training tutorial
 This tutorial covers how to use **ComfyUI Data Analysis** to train an image classification model with your own image dataset.  
-We'll use a **dog and cat image dataset** created specifically for this tutorial, which is available publicly on [my GitHub repo](https://github.com/HowToSD/dog_and_cat_dataset).  
+We'll use a **dog and cat image dataset v2** created specifically for this tutorial, which is available publicly on [my Hugging Face repo](https://huggingface.co/datasets/HowToSD/dog_and_cat).  
 
 Once you complete the tutorial, you can experiment with your own images.
 
@@ -10,23 +10,27 @@ Once you complete the tutorial, you can experiment with your own images.
 
 ## Overview of Steps
 1. Install ComfyUI-Data-Analysis extension
-2. Downloading the dog and cat dataset from the GitHub repo
+2. Downloading the dog and cat dataset from the Hugging Face repo
 3. Edit the training workflow  
 4. Run the training workflow  
 5. Edit the evaluation workflow
 6. Run the evaluation workflow
-
+7. Use the trained model to classify the images generated in Stable Diffusion
 ---
 ## 1. Install ComfyUI-Data-Analysis extension.
 If you haven't installed ComfyUI-Data-Analysis extension, please do so first.
 
 ## 2. Download the Dog & Cat Dataset  
+Make sure that you have installed "git lfs".
 
-Visit [the GitHub repo](https://github.com/HowToSD/dog_and_cat_dataset) and go to the **Releases** page.  
-Click **"Source code (zip)"** to download the zip that contains all the images.  
-Extract the ZIP file using an unarchiver.  
+After that, visit [my Hugging Face repo](https://huggingface.co/datasets/HowToSD/dog_and_cat) and download the dataset.
 
-The dataset follows this directory structure:  
+To download, you can:
+```
+git clone https://huggingface.co/datasets/HowToSD/dog_and_cat
+```
+
+The downloaded dataset follows this directory structure:  
 
 ```
 dog_and_cat
@@ -48,70 +52,23 @@ Take note of the **full paths** to the `train` and `val` directories, as you'll 
 
 Drag and drop the below file into ComfyUI:  
 ```
-examples/workflow/dog_cat_classification_train_model.json
+examples/workflow/dog_cat_classification_ds2_train_model_v1.json
 ```
-Some nodes will be marked red, indicating they require edits.  
-The only required changes are the **train** and **val** dataset paths.  
-Replace them with the paths noted earlier.
-
+Update the following in relevant nodes:
+* train dataset path
+* val dataset path
+* model save path
 ---
 
 ## 4. Running the Training Workflow  
 
 Click **Queue** to start training.  
 
-Monitor the console for errors. If training runs smoothly, you should see output like this:
-
-```
-Epoch (train) 1/20, Loss: 0.6865
-Epoch (val) 1/20, Loss: 0.6801
-Epoch (train) 2/20, Loss: 0.6216
-Epoch (val) 2/20, Loss: 0.5710
-Epoch (train) 3/20, Loss: 0.4998
-Epoch (val) 3/20, Loss: 0.4716
-Epoch (train) 4/20, Loss: 0.3827
-Epoch (val) 4/20, Loss: 0.4045
-Epoch (train) 5/20, Loss: 0.2897
-Epoch (val) 5/20, Loss: 0.3297
-Epoch (train) 6/20, Loss: 0.2243
-Epoch (val) 6/20, Loss: 0.2925
-Epoch (train) 7/20, Loss: 0.1603
-Epoch (val) 7/20, Loss: 0.2916
-Epoch (train) 8/20, Loss: 0.1102
-Epoch (val) 8/20, Loss: 0.3216
-Epoch (train) 9/20, Loss: 0.0916
-Epoch (val) 9/20, Loss: 0.2706
-Epoch (train) 10/20, Loss: 0.0522
-Epoch (val) 10/20, Loss: 0.2220
-Epoch (train) 11/20, Loss: 0.0481
-Epoch (val) 11/20, Loss: 0.2820
-Epoch (train) 12/20, Loss: 0.0228
-Epoch (val) 12/20, Loss: 0.2899
-Epoch (train) 13/20, Loss: 0.0130
-Epoch (val) 13/20, Loss: 0.3056
-Epoch (train) 14/20, Loss: 0.0137
-Epoch (val) 14/20, Loss: 0.3070
-Epoch (train) 15/20, Loss: 0.0200
-Epoch (val) 15/20, Loss: 0.2714
-Epoch (train) 16/20, Loss: 0.0313
-Epoch (val) 16/20, Loss: 0.3108
-Epoch (train) 17/20, Loss: 0.0125
-Epoch (val) 17/20, Loss: 0.3388
-Epoch (train) 18/20, Loss: 0.0174
-Epoch (val) 18/20, Loss: 0.2989
-Epoch (train) 19/20, Loss: 0.0017
-Epoch (val) 19/20, Loss: 0.3165
-Epoch (train) 20/20, Loss: 0.0009
-Epoch (val) 20/20, Loss: 0.3582
-Prompt executed in 253.64 seconds
-```
+Monitor the console for errors.
 
 If you encounter an error:  
 - Ensure dataset paths are correct.  
 - Reduce **batch size** if your GPU runs out of memory (OOM error).  
-
-Once training completes, a **line chart** displaying training progress will appear at the bottom right of the canvas. You don’t need to interpret it initially.
-
 ---
 
 ## 5. Editing the Evaluation Workflow
@@ -119,21 +76,50 @@ Now, let's verify if the model was trained correctly. In this step, we'll feed t
 
 Drag and drop the below file into ComfyUI:  
 ```
-examples/workflow/dog_cat_classification_eval_model.json
+examples/workflow/dog_cat_classification_ds2_eval_model_v1.json
 ```
 
 into **ComfyUI**.  
 
-Update the **val dataset path**.
-
+Update the **val dataset path** and **model path**.
 ---
 
 ## 6. Running the Evaluation Workflow  
 
 Click **Queue**. The evaluation process runs much faster than training.  
 
-Check the **Accuracy** node—it should display a value around **0.9**, confirming successful model training.
+Check the **Accuracy** node—it should display a value above **0.9**, confirming successful model training.
 
 Congratulations! You’ve successfully trained a machine learning model from scratch without writing a single line of code.
 
 Now, you can use your own images to train the model in the same way.
+
+## 7. Use the Trained Model to Classify Images Generated in Stable Diffusion
+
+Now, let's use the trained model to classify images generated in Stable Diffusion.  
+Drop the workflow file: `examples/workflows/dog_cat_classification_ds2_prediction_after_generation_v1.json`.
+
+This workflow uses the **JuggernautXL X** model. If you have it, I recommend using this model. Otherwise, use at least a high-quality photorealistic **SDXL** model.
+
+Click **Queue**, and the workflow will generate an image, pass it to the trained classification model, and classify it as either a dog or a cat. If you generate multiple times, you may notice occasional misclassifications.
+
+### Classification Results
+From my test using this workflow, I obtained the following results:
+
+|  | Dog | Cat |
+|---|---|---|
+| **Correct** | 19 | 30 |
+| **Wrong** | 6 | 0 |
+
+I observed a tendency for some dogs to be classified as cats. Possible reasons include:
+
+- Generated images from Juggernaut differ from the training dataset.
+- The dataset might be too small.
+- The model is not state-of-the-art.
+
+The training dataset was created using **FLUX.1 \[schnell\]**, and the model does not classify images it hasn't seen during training. Although 2000 images in the training dataset might seem like a lot, training from scratch can require a significantly larger dataset for the model to generalize distinguishing features between dogs and cats.  
+
+For this workflow, I chose a traditional convolutional network to speed up training, but this also limits the model's capability. A larger model could improve performance, but it would also require a larger dataset, making it a double-edged sword.  
+
+That said, the model should classify photorealistic images correctly most of the time, as long as they are not too different from the images in the training set. You can also experiment with training a model for different types of images.
+
