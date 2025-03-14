@@ -2,13 +2,13 @@
 
 You can train a PyTorch model without any coding.
 Training is as simple as a single click!  
-Currently, classification models are supported for following architecture (node names are in parentheses):
-* Linear for classificication (Ptn Linear Model)
+Currently, following archituctures are supported (node names are in parentheses):
+* MLP (Ptn Linear Model)
 * Convolutional Network (Ptn Conv Model)
 * ResNet (Ptn Resnet Model)
 
-In addition, a single layer Linear model is supported as an example to illustrage the use (see the bottom of this page on how to use it):
-* Linear(Ptn Linear)
+In addition, a single layer Linear model is supported as an example to illustrate the use (see the bottom of this page on how to use it):
+* Linear (Ptn Linear)
 
 You can adjust the model configuration including output dimension on the UI.
 
