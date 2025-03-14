@@ -88,3 +88,11 @@ This workflow illustrates:
 If you run training, you will notice that the loss remains in the 20s–30s instead of approaching 0, as you might expect.
 
 Do you know why this happens?
+
+# Using MLP for Small Dataset Classification
+
+MLP can be used for small dataset classification.  
+Below is an example workflow for classifying the classic Iris dataset:  
+`examples/workflows/iris_classification_train_eval.json`.
+
+According to [the UCI repository](https://archive.ics.uci.edu/dataset/53/iris), the neural network baseline accuracy for this dataset ranges from 92.105% to 100%. Using this workflow, you can expect around 96% accuracy, occasionally reaching 100%, which aligns with the baseline.

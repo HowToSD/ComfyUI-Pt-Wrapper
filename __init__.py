@@ -89,11 +89,20 @@ from .modules.pytorch_wrapper.pt_sub import PtSub
 from .modules.pytorch_wrapper.pt_sum import PtSum
 from .modules.pytorch_wrapper.pt_tan import PtTan
 from .modules.pytorch_wrapper.pt_tanh import PtTanh
+from .modules.pytorch_wrapper.pt_to_bfloat16 import PtToBfloat16
+from .modules.pytorch_wrapper.pt_to_float16 import PtToFloat16
+from .modules.pytorch_wrapper.pt_to_float32 import PtToFloat32
+from .modules.pytorch_wrapper.pt_to_float64 import PtToFloat64
 from .modules.pytorch_wrapper.pt_to_image import PtToImage
 from .modules.pytorch_wrapper.pt_to_image_transpose import PtToImageTranspose
+from .modules.pytorch_wrapper.pt_to_int16 import PtToInt16
+from .modules.pytorch_wrapper.pt_to_int32 import PtToInt32
+from .modules.pytorch_wrapper.pt_to_int64 import PtToInt64
+from .modules.pytorch_wrapper.pt_to_int8 import PtToInt8
 from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
+from .modules.pytorch_wrapper.pt_to_uint8 import PtToUint8
 from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
 from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
 from .modules.pytorch_wrapper.pt_train_regression_model import PtTrainRegressionModel
@@ -216,11 +225,20 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtSum": PtSum,
     "PtTan": PtTan,
     "PtTanh": PtTanh,
+    "PtToBfloat16": PtToBfloat16,
+    "PtToFloat16": PtToFloat16,
+    "PtToFloat32": PtToFloat32,
+    "PtToFloat64": PtToFloat64,
     "PtToImage": PtToImage,
     "PtToImageTranspose": PtToImageTranspose,
+    "PtToInt16": PtToInt16,
+    "PtToInt32": PtToInt32,
+    "PtToInt64": PtToInt64,
+    "PtToInt8": PtToInt8,
     "PtToLatent": PtToLatent,
     "PtToNumpy": PtToNumpy,
     "PtToRgbTensors": PtToRgbTensors,
+    "PtToUint8": PtToUint8,
     "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
     "PtTrainRegressionModel": PtTrainRegressionModel,
@@ -343,11 +361,20 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtSum": "Pt Sum",
     "PtTan": "Pt Tan",
     "PtTanh": "Pt Tanh",
+    "PtToBfloat16": "Pt To Bfloat16",
+    "PtToFloat16": "Pt To Float16",
+    "PtToFloat32": "Pt To Float32",
+    "PtToFloat64": "Pt To Float64",
     "PtToImage": "Pt To Image",
     "PtToImageTranspose": "Pt To Image Transpose",
+    "PtToInt16": "Pt To Int16",
+    "PtToInt32": "Pt To Int32",
+    "PtToInt64": "Pt To Int64",
+    "PtToInt8": "Pt To Int8",
     "PtToLatent": "Pt To Latent",
     "PtToNumpy": "Pt To Numpy",
     "PtToRgbTensors": "Pt To Rgb Tensors",
+    "PtToUint8": "Pt To Uint8",
     "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
     "PtTrainRegressionModel": "Pt Train Regression Model",

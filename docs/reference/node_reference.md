@@ -36,6 +36,18 @@
 | [Pt Le](pt_le.md) | Tests whether elements in the first PyTorch tensor are less than or equal to the corresponding elements in the second tensor. |
 | [Pt Lt](pt_lt.md) | Tests whether elements in the first PyTorch tensor are less than the corresponding elements in the second tensor. |
 | [Pt Ne](pt_ne.md) | Tests whether two PyTorch tensors are not equal element-wise. |
+## PyTorch wrapper - Data type conversion
+| Node | Description |
+| --- | --- |
+| [Pt To Bfloat](pt_to_bfloat16.md) | Converts the input tensor's data type to bfloat16. |
+| [Pt To Float](pt_to_float16.md) | Converts the input tensor's data type to float16. |
+| [Pt To Float](pt_to_float32.md) | Converts the input tensor's data type to float32. |
+| [Pt To Float](pt_to_float64.md) | Converts the input tensor's data type to float64. |
+| [Pt To Int](pt_to_int16.md) | Converts the input tensor's data type to int16. |
+| [Pt To Int](pt_to_int32.md) | Converts the input tensor's data type to int32. |
+| [Pt To Int](pt_to_int64.md) | Converts the input tensor's data type to int64. |
+| [Pt To Int](pt_to_int8.md) | Converts the input tensor's data type to int8. |
+| [Pt To Uint](pt_to_uint8.md) | Converts the input tensor's data type to uint8. |
 ## PyTorch wrapper - Image processing
 | Node | Description |
 | --- | --- |
