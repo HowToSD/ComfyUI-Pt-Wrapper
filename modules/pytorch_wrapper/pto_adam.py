@@ -29,14 +29,14 @@ class PtoAdam:
 
     RETURN_TYPES: tuple = ("PTOPTIMIZER",)
     FUNCTION: str = "f"
-    CATEGORY: str = "Data Analysis"
+    CATEGORY: str = "Training"
 
     def f(self, model, learning_rate, beta1, beta2) -> tuple:
         """
-        Converts PyTorch tensor to NumPy ndarray.
+        Instantiates the optimizer.
 
         Args:
-            tens (torch.Tensor): PyTorch Tensor
+            model (torch.nn.Module): PyTorch model
 
         Returns:
             tuple: A tuple containing the ndarray.

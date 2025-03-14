@@ -6,7 +6,7 @@ import torch
 PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".."))
 MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
-from pytorch_wrapper.ptn_linear_model import PtnLinearModel  # Updated import to PtnLinear
+from pytorch_wrapper.ptn_linear_model import PtnLinearModel
 
 
 class TestPtnLinearModel(unittest.TestCase):

@@ -3,9 +3,12 @@
 You can train a PyTorch model without any coding.
 Training is as simple as a single click!  
 Currently, classification models are supported for following architecture (node names are in parentheses):
-* Linear (Ptn Linear Model)
+* Linear for classificication (Ptn Linear Model)
 * Convolutional Network (Ptn Conv Model)
 * ResNet (Ptn Resnet Model)
+
+In addition, a single layer Linear model is supported as an example to illustrage the use (see the bottom of this page on how to use it):
+* Linear(Ptn Linear)
 
 You can adjust the model configuration including output dimension on the UI.
 
@@ -69,3 +72,19 @@ This train_v8 model achieved 93.12% accuracy & train_v11_2nd_run model achieved 
 
 **ResNet model**
 ![Eval](images/resnet_eval.png)
+
+# Using the Single-Layer Linear Model
+
+A single-layer linear model is included to illustrate how to connect various nodes.  
+A workflow containing this model and related nodes is in the following file:  
+`examples/workflows/simple_linear_regression_train.json`.
+
+This workflow illustrates:
+- How to generate linear regression test data
+- How to plot the data
+- How to train a model by connecting it to an optimizer
+- How to make predictions using a trained model
+
+If you run training, you will notice that the loss remains in the 20s–30s instead of approaching 0, as you might expect.
+
+Do you know why this happens?

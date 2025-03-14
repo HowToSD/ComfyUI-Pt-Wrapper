@@ -10,7 +10,7 @@ import { ComfyWidgets } from "../../../scripts/widgets.js";
 
 // Displays input text on a node
 app.registerExtension({
-	name: "HowToSD.ShowTextGeneric",
+	name: "HowToSD.PtWrapperShowTextGeneric",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
 		if (["PtShowText", "PtShowSize"].includes(nodeData.name)) {  // This needs to match NODE_CLASS_MAPPINGS in Python
 			function populate(text) {

@@ -20,6 +20,7 @@ from .modules.pytorch_wrapper.pt_cos import PtCos
 from .modules.pytorch_wrapper.pt_cosh import PtCosh
 from .modules.pytorch_wrapper.pt_crop import PtCrop
 from .modules.pytorch_wrapper.pt_data_loader import PtDataLoader
+from .modules.pytorch_wrapper.pt_data_loader_from_tensors import PtDataLoaderFromTensors
 from .modules.pytorch_wrapper.pt_div import PtDiv
 from .modules.pytorch_wrapper.pt_einsum import PtEinsum
 from .modules.pytorch_wrapper.pt_eq import PtEq
@@ -64,6 +65,7 @@ from .modules.pytorch_wrapper.pt_pad import PtPad
 from .modules.pytorch_wrapper.pt_permute import PtPermute
 from .modules.pytorch_wrapper.pt_pow import PtPow
 from .modules.pytorch_wrapper.pt_predict_classification_model import PtPredictClassificationModel
+from .modules.pytorch_wrapper.pt_predict_regression_model import PtPredictRegressionModel
 from .modules.pytorch_wrapper.pt_prod import PtProd
 from .modules.pytorch_wrapper.pt_rand import PtRand
 from .modules.pytorch_wrapper.pt_rand_int import PtRandInt
@@ -94,18 +96,21 @@ from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
 from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
 from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
+from .modules.pytorch_wrapper.pt_train_regression_model import PtTrainRegressionModel
 from .modules.pytorch_wrapper.pt_unsqueeze import PtUnsqueeze
 from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
 from .modules.pytorch_wrapper.pt_where import PtWhere
 from .modules.pytorch_wrapper.pt_zeros import PtZeros
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
+from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.pto_lr_scheduler_cosine_annealing import PtoLrSchedulerCosineAnnealing
 from .modules.pytorch_wrapper.pto_lr_scheduler_reduce_on_plateau import PtoLrSchedulerReduceOnPlateau
 from .modules.pytorch_wrapper.pto_lr_scheduler_step import PtoLrSchedulerStep
+from .modules.pytorch_wrapper.pto_simple import PtoSimple
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
 from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
@@ -142,6 +147,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtCosh": PtCosh,
     "PtCrop": PtCrop,
     "PtDataLoader": PtDataLoader,
+    "PtDataLoaderFromTensors": PtDataLoaderFromTensors,
     "PtDiv": PtDiv,
     "PtEinsum": PtEinsum,
     "PtEq": PtEq,
@@ -186,6 +192,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtPermute": PtPermute,
     "PtPow": PtPow,
     "PtPredictClassificationModel": PtPredictClassificationModel,
+    "PtPredictRegressionModel": PtPredictRegressionModel,
     "PtProd": PtProd,
     "PtRand": PtRand,
     "PtRandInt": PtRandInt,
@@ -216,18 +223,21 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtToRgbTensors": PtToRgbTensors,
     "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
+    "PtTrainRegressionModel": PtTrainRegressionModel,
     "PtUnsqueeze": PtUnsqueeze,
     "PtVar": PtVar,
     "PtView": PtView,
     "PtWhere": PtWhere,
     "PtZeros": PtZeros,
     "PtnConvModel": PtnConvModel,
+    "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
     "PtnResnetModel": PtnResnetModel,
     "PtoAdam": PtoAdam,
     "PtoLrSchedulerCosineAnnealing": PtoLrSchedulerCosineAnnealing,
     "PtoLrSchedulerReduceOnPlateau": PtoLrSchedulerReduceOnPlateau,
     "PtoLrSchedulerStep": PtoLrSchedulerStep,
+    "PtoSimple": PtoSimple,
     "PtvDataset": PtvDataset,
     "PtvDatasetLen": PtvDatasetLen,
     "PtvDatasetLoader": PtvDatasetLoader,
@@ -264,6 +274,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtCosh": "Pt Cosh",
     "PtCrop": "Pt Crop",
     "PtDataLoader": "Pt Data Loader",
+    "PtDataLoaderFromTensors": "Pt Data Loader From Tensors",
     "PtDiv": "Pt Div",
     "PtEinsum": "Pt Einsum",
     "PtEq": "Pt Eq",
@@ -308,6 +319,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtPermute": "Pt Permute",
     "PtPow": "Pt Pow",
     "PtPredictClassificationModel": "Pt Predict Classification Model",
+    "PtPredictRegressionModel": "Pt Predict Regression Model",
     "PtProd": "Pt Prod",
     "PtRand": "Pt Rand",
     "PtRandInt": "Pt Rand Int",
@@ -338,18 +350,21 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtToRgbTensors": "Pt To Rgb Tensors",
     "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
+    "PtTrainRegressionModel": "Pt Train Regression Model",
     "PtUnsqueeze": "Pt Unsqueeze",
     "PtVar": "Pt Var",
     "PtView": "Pt View",
     "PtWhere": "Pt Where",
     "PtZeros": "Pt Zeros",
     "PtnConvModel": "Ptn Conv Model",
+    "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",
     "PtnResnetModel": "Ptn Resnet Model",
     "PtoAdam": "Pto Adam",
     "PtoLrSchedulerCosineAnnealing": "Pto Lr Scheduler Cosine Annealing",
     "PtoLrSchedulerReduceOnPlateau": "Pto Lr Scheduler Reduce On Plateau",
     "PtoLrSchedulerStep": "Pto Lr Scheduler Step",
+    "PtoSimple": "Pto Simple",
     "PtvDataset": "Ptv Dataset",
     "PtvDatasetLen": "Ptv Dataset Len",
     "PtvDatasetLoader": "Ptv Dataset Loader",

@@ -14,7 +14,7 @@ from pytorch_wrapper.pt_data_loader import PtDataLoader
 from pytorch_wrapper.pt_predict_classification_model import PtPredictClassificationModel
 from pytorch_wrapper.pt_load_model import PtLoadModel
  
-class TestPtPrediction(unittest.TestCase):
+class TestPtPredictionClassificationConvModel(unittest.TestCase):
 
     def setUp(self):
         """Set up test instance."""
