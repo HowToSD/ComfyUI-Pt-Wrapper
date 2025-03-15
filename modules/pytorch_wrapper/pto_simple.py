@@ -5,7 +5,9 @@ import torch.optim
 
 class SimpleOptimizer(torch.optim.Optimizer):
     """
-    Implementation of the most basic optimizer to update W using the below formula:
+    Implementation of the most basic optimizer.
+
+    This optimizer updates W using the below formula:
 
 $$
 W -= lr * G
@@ -47,11 +49,13 @@ $$
 class PtoSimple:
     """
     Pto Simple:
-    Instantiates the most basic optimizer to update W using the below formula:
+    Instantiates the most basic optimizer to update W using the below formula:  
+
 $$
 W -= lr * G
 $$
-    category: PyTorch wrapper - Training
+
+    category: PyTorch wrapper - Optimizer
     """
 
     @classmethod

@@ -15,6 +15,6 @@ Instantiates the Adam optimizer.
 | Ptoptimizer |
 
 <HR>
-Category: PyTorch wrapper - Training
+Category: PyTorch wrapper - Optimizer
 
 ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

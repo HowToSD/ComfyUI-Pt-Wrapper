@@ -110,6 +110,13 @@
 | [Pt Einsum](pt_einsum.md) | Performs Tensor operations specified in the Einstein summation equation. |
 | [Pt Mat Mul](pt_matmul.md) | Performs matrix multiplication on two PyTorch tensors. |
 | [Pt Mm](pt_mm.md) | Performs 2D matrix multiplication on two PyTorch tensors. |
+## PyTorch wrapper - Optimizer
+| Node | Description |
+| --- | --- |
+| [Pto Adam](pto_adam.md) | Instantiates the Adam optimizer. |
+| [Pto AdamW](pto_adamw.md) | Instantiates the AdamW optimizer. |
+| [Pto SGD](pto_sgd.md) | Instantiates the SGD optimizer. |
+| [Pto Simple](pto_simple.md) |     Instantiates the most basic optimizer to update W using the below formula:   |
 ## PyTorch wrapper - Reduction operation & Summary statistics
 | Node | Description |
 | --- | --- |
@@ -170,11 +177,9 @@
 | [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
 | [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
-| [Pto Adam](pto_adam.md) | Instantiates the Adam optimizer. |
 | [Pto Lr Scheduler Cosine Annealing](pto_lr_scheduler_cosine_annealing.md) | Creates a cosine annealing learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Reduce On Plateau](pto_lr_scheduler_reduce_on_plateau.md) | Creates a reduce-on-plateau learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Step](pto_lr_scheduler_step.md) | Creates a StepLR learning rate scheduler for an optimizer. |
-| [Pto Simple](pto_simple.md) |     Instantiates the most basic optimizer to update W using the below formula: |
 | [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
 | [Ptv Dataset Len](ptv_dataset_len.md) | A wrapper class that calls Python len on a dataset. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |

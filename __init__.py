@@ -127,9 +127,11 @@ from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
+from .modules.pytorch_wrapper.pto_adamw import PtoAdamW
 from .modules.pytorch_wrapper.pto_lr_scheduler_cosine_annealing import PtoLrSchedulerCosineAnnealing
 from .modules.pytorch_wrapper.pto_lr_scheduler_reduce_on_plateau import PtoLrSchedulerReduceOnPlateau
 from .modules.pytorch_wrapper.pto_lr_scheduler_step import PtoLrSchedulerStep
+from .modules.pytorch_wrapper.pto_sgd import PtoSGD
 from .modules.pytorch_wrapper.pto_simple import PtoSimple
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
@@ -274,9 +276,11 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnLinearModel": PtnLinearModel,
     "PtnResnetModel": PtnResnetModel,
     "PtoAdam": PtoAdam,
+    "PtoAdamW": PtoAdamW,
     "PtoLrSchedulerCosineAnnealing": PtoLrSchedulerCosineAnnealing,
     "PtoLrSchedulerReduceOnPlateau": PtoLrSchedulerReduceOnPlateau,
     "PtoLrSchedulerStep": PtoLrSchedulerStep,
+    "PtoSGD": PtoSGD,
     "PtoSimple": PtoSimple,
     "PtvDataset": PtvDataset,
     "PtvDatasetLen": PtvDatasetLen,
@@ -421,9 +425,11 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnLinearModel": "Ptn Linear Model",
     "PtnResnetModel": "Ptn Resnet Model",
     "PtoAdam": "Pto Adam",
+    "PtoAdamW": "Pto AdamW",
     "PtoLrSchedulerCosineAnnealing": "Pto Lr Scheduler Cosine Annealing",
     "PtoLrSchedulerReduceOnPlateau": "Pto Lr Scheduler Reduce On Plateau",
     "PtoLrSchedulerStep": "Pto Lr Scheduler Step",
+    "PtoSGD": "Pto SGD",
     "PtoSimple": "Pto Simple",
     "PtvDataset": "Ptv Dataset",
     "PtvDatasetLen": "Ptv Dataset Len",

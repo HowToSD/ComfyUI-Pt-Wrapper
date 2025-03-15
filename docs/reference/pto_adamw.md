@@ -1,15 +1,15 @@
-# Pto Simple
-Instantiates the most basic optimizer to update W using the below formula:  
-
-$$
-W -= lr * G
-$$
+# Pto AdamW
+Instantiates the AdamW optimizer.
 
 ## Input
 | Name | Data type |
 |---|---|
 | model | Ptmodel |
 | learning_rate | Float |
+| beta1 | Float |
+| beta2 | Float |
+| weight_decay | Float |
+| amsgrad | Boolean |
 
 ## Output
 | Data type |
