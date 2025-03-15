@@ -108,7 +108,7 @@ def process_python_file(file_path: str, output_dir: str, node_list: Dict[str, Li
         if isinstance(node, ast.ClassDef):
             class_info = extract_class_info(node)
             if not class_info:
-                return
+                continue
             
             input_section = extract_input_types(node)
             output_section = extract_return_types(node)

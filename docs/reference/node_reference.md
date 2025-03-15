@@ -155,6 +155,7 @@
 ## PyTorch wrapper - Training
 | Node | Description |
 | --- | --- |
+| [Instantiates the most basic optimizer to update W using the below formula](pto_simple.md) | $$ |
 | [Pt Apply Function](pt_apply_function.md) | Applies a function to the input tensor. |
 | [Pt Data Loader](pt_data_loader.md) | Loads data from a dataset node and creates a PyTorch DataLoader.   |
 | [Pt Data Loader From Tensors](pt_data_loader_from_tensors.md) | Creates a Torchvision Dataloader from a pair of tensors. |
@@ -165,6 +166,7 @@
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs.   |
 | [Pt Train Classification Model Lr](pt_train_classification_model_lr.md) | Trains a classification model using a given dataset, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Regression Model](pt_train_regression_model.md) | Trains a regression model using a given dataset, optimizer, and number of epochs.   |
+| [Ptn Chained Model](ptn_chained_model.md) | Constructs a chained PyTorch model. |
 | [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
 | [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
