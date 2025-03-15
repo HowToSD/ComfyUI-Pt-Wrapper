@@ -4,7 +4,7 @@ import torch.nn.functional
 
 class PtfSigmoid:
     """
-    A PyTorch wrapper for the sigmoid activation function.
+    The sigmoid activation function.
 
     This class provides a callable that applies the sigmoid activation function 
     from `torch.nn.functional`.

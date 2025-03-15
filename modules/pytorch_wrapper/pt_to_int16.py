@@ -3,6 +3,7 @@ import torch
 
 class PtToInt16:
     """
+    Pt To Int16:
     Converts the input tensor's data type to int16.
 
     category: PyTorch wrapper - Data type conversion

@@ -1,4 +1,4 @@
-# Pt To Int
+# Pt To Int32
 Converts the input tensor's data type to int32.
 
 ## Input

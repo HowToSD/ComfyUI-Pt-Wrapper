@@ -30,15 +30,15 @@
 ## PyTorch wrapper - Callable
 | Node | Description |
 | --- | --- |
-| [Ptf GELU](ptf_gelu.md) |  |
-| [Ptf LeakyReLU](ptf_leaky_relu.md) |  |
-| [Ptf Log Softmax](ptf_log_softmax.md) | A PyTorch wrapper for the log_softmax activation function. |
-| [Ptf ReLU](ptf_relu.md) |  |
-| [Ptf SiLU](ptf_silu.md) |  |
-| [Ptf Sigmoid](ptf_sigmoid.md) | A PyTorch wrapper for the sigmoid activation function. |
-| [Ptf Softmax](ptf_softmax.md) | A PyTorch wrapper for the softmax activation function. |
-| [Ptf Softplus](ptf_softplus.md) |  |
-| [Ptf Tanh](ptf_tanh.md) | A PyTorch wrapper for the tanh activation function. |
+| [Ptf GELU](ptf_gelu.md) | The GELU activation function. |
+| [Ptf LeakyReLU](ptf_leaky_relu.md) | The LeakyReLU activation function. |
+| [Ptf Log Softmax](ptf_log_softmax.md) | The log softmax activation function. |
+| [Ptf ReLU](ptf_relu.md) | The ReLU activation function. |
+| [Ptf SiLU](ptf_silu.md) | The SiLU activation function. |
+| [Ptf Sigmoid](ptf_sigmoid.md) | The sigmoid activation function. |
+| [Ptf Softmax](ptf_softmax.md) | The softmax activation function. |
+| [Ptf Softplus](ptf_softplus.md) | The Softplus activation function. |
+| [Ptf Tanh](ptf_tanh.md) | The tanh activation function. |
 ## PyTorch wrapper - Comparison operations
 | Node | Description |
 | --- | --- |
@@ -51,15 +51,15 @@
 ## PyTorch wrapper - Data type conversion
 | Node | Description |
 | --- | --- |
-| [Pt To Bfloat](pt_to_bfloat16.md) | Converts the input tensor's data type to bfloat16. |
-| [Pt To Float](pt_to_float16.md) | Converts the input tensor's data type to float16. |
-| [Pt To Float](pt_to_float32.md) | Converts the input tensor's data type to float32. |
-| [Pt To Float](pt_to_float64.md) | Converts the input tensor's data type to float64. |
-| [Pt To Int](pt_to_int16.md) | Converts the input tensor's data type to int16. |
-| [Pt To Int](pt_to_int32.md) | Converts the input tensor's data type to int32. |
-| [Pt To Int](pt_to_int64.md) | Converts the input tensor's data type to int64. |
-| [Pt To Int](pt_to_int8.md) | Converts the input tensor's data type to int8. |
-| [Pt To Uint](pt_to_uint8.md) | Converts the input tensor's data type to uint8. |
+| [Pt To Bfloat16](pt_to_bfloat16.md) | Converts the input tensor's data type to bfloat16. |
+| [Pt To Float16](pt_to_float16.md) | Converts the input tensor's data type to float16. |
+| [Pt To Float32](pt_to_float32.md) | Converts the input tensor's data type to float32. |
+| [Pt To Float64](pt_to_float64.md) | Converts the input tensor's data type to float64. |
+| [Pt To Int16](pt_to_int16.md) | Converts the input tensor's data type to int16. |
+| [Pt To Int32](pt_to_int32.md) | Converts the input tensor's data type to int32. |
+| [Pt To Int64](pt_to_int64.md) | Converts the input tensor's data type to int64. |
+| [Pt To Int8](pt_to_int8.md) | Converts the input tensor's data type to int8. |
+| [Pt To Uint8](pt_to_uint8.md) | Converts the input tensor's data type to uint8. |
 ## PyTorch wrapper - Image processing
 | Node | Description |
 | --- | --- |

@@ -6,7 +6,7 @@ softmax_last_axis = functools.partial(torch.nn.functional.softmax, dim=-1)
 
 class PtfSoftmax:
     """
-    A PyTorch wrapper for the softmax activation function.
+    The softmax activation function.
 
     This class provides a callable that applies the softmax activation function 
     from `torch.nn.functional`.

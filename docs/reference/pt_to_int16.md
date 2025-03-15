@@ -1,4 +1,4 @@
-# Pt To Int
+# Pt To Int16
 Converts the input tensor's data type to int16.
 
 ## Input

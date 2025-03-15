@@ -1,4 +1,4 @@
-# Pt To Int
+# Pt To Int8
 Converts the input tensor's data type to int8.
 
 ## Input

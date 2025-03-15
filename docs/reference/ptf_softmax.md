@@ -1,5 +1,5 @@
 # Ptf Softmax
-A PyTorch wrapper for the softmax activation function.
+The softmax activation function.
 
 This class provides a callable that applies the softmax activation function 
 from `torch.nn.functional`.

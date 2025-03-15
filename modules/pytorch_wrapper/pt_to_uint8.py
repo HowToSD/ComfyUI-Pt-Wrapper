@@ -3,6 +3,7 @@ import torch
 
 class PtToUint8:
     """
+    Pt To Uint8:
     Converts the input tensor's data type to uint8.
 
     category: PyTorch wrapper - Data type conversion

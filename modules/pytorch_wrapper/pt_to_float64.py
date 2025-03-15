@@ -3,6 +3,7 @@ import torch
 
 class PtToFloat64:
     """
+    Pt To Float64:
     Converts the input tensor's data type to float64.
 
     category: PyTorch wrapper - Data type conversion

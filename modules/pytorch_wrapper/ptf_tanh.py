@@ -4,7 +4,7 @@ import torch.nn.functional
 
 class PtfTanh:
     """
-    A PyTorch wrapper for the tanh activation function.
+    The tanh activation function.
 
     This class provides a callable that applies the tanh activation function 
     from `torch.nn.functional`.

@@ -1,4 +1,4 @@
-# Pt To Float
+# Pt To Float32
 Converts the input tensor's data type to float32.
 
 ## Input

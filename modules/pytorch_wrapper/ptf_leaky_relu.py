@@ -6,8 +6,7 @@ import functools
 class PtfLeakyReLU:
     """
     Ptf LeakyReLU:
-
-    A PyTorch wrapper for the LeakyReLU activation function.
+    The LeakyReLU activation function.
 
     This class provides a callable that applies the LeakyReLU activation function 
     from `torch.nn.functional`.

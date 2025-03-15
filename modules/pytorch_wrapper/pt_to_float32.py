@@ -3,6 +3,7 @@ import torch
 
 class PtToFloat32:
     """
+    Pt To Float32:
     Converts the input tensor's data type to float32.
 
     category: PyTorch wrapper - Data type conversion

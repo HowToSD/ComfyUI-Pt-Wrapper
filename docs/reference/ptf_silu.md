@@ -1,5 +1,5 @@
 # Ptf SiLU
-A PyTorch wrapper for the SiLU activation function.
+The SiLU activation function.
 
 This class provides a callable that applies the SiLU activation function 
 from `torch.nn.functional`.

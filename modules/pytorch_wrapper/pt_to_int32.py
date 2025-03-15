@@ -3,6 +3,7 @@ import torch
 
 class PtToInt32:
     """
+    Pt To Int32:
     Converts the input tensor's data type to int32.
 
     category: PyTorch wrapper - Data type conversion

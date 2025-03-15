@@ -1,5 +1,5 @@
 # Ptf Log Softmax
-A PyTorch wrapper for the log_softmax activation function.
+The log softmax activation function.
 
 This class provides a callable that applies the log_softmax activation function 
 from `torch.nn.functional`.

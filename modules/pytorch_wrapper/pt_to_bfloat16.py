@@ -3,6 +3,7 @@ import torch
 
 class PtToBfloat16:
     """
+    Pt To Bfloat16:
     Converts the input tensor's data type to bfloat16.
 
     category: PyTorch wrapper - Data type conversion

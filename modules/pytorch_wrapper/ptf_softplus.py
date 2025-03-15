@@ -5,8 +5,7 @@ import torch.nn.functional
 class PtfSoftplus:
     """
     Ptf Softplus:
-
-    A PyTorch wrapper for the Softplus activation function.
+    The Softplus activation function.
 
     This class provides a callable that applies the Softplus activation function 
     from `torch.nn.functional`.

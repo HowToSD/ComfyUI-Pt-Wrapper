@@ -3,6 +3,7 @@ import torch
 
 class PtToInt8:
     """
+    Pt To Int8:
     Converts the input tensor's data type to int8.
 
     category: PyTorch wrapper - Data type conversion

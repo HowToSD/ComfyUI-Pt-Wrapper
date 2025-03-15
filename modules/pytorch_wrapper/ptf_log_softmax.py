@@ -7,7 +7,7 @@ log_softmax_last_axis = functools.partial(torch.nn.functional.log_softmax, dim=-
 
 class PtfLogSoftmax:
     """
-    A PyTorch wrapper for the log_softmax activation function.
+    The log softmax activation function.
 
     This class provides a callable that applies the log_softmax activation function 
     from `torch.nn.functional`.

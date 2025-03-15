@@ -1,5 +1,5 @@
 # Ptf GELU
-A PyTorch wrapper for the GELU activation function.
+The GELU activation function.
 
 This class provides a callable that applies the GELU activation function 
 from `torch.nn.functional`.

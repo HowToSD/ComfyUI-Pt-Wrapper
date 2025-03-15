@@ -3,6 +3,7 @@ import torch
 
 class PtToInt64:
     """
+    Pt To Int64:
     Converts the input tensor's data type to int64.
 
     category: PyTorch wrapper - Data type conversion
