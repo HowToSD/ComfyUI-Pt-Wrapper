@@ -1,4 +1,5 @@
-# Instantiates the most basic optimizer to update W using the below formula
+# Pto Simple
+Instantiates the most basic optimizer to update W using the below formula:
 $$
 W -= lr * G
 $$

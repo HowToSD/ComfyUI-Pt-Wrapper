@@ -155,7 +155,6 @@
 ## PyTorch wrapper - Training
 | Node | Description |
 | --- | --- |
-| [Instantiates the most basic optimizer to update W using the below formula](pto_simple.md) | $$ |
 | [Pt Apply Function](pt_apply_function.md) | Applies a function to the input tensor. |
 | [Pt Data Loader](pt_data_loader.md) | Loads data from a dataset node and creates a PyTorch DataLoader.   |
 | [Pt Data Loader From Tensors](pt_data_loader_from_tensors.md) | Creates a Torchvision Dataloader from a pair of tensors. |
@@ -175,6 +174,7 @@
 | [Pto Lr Scheduler Cosine Annealing](pto_lr_scheduler_cosine_annealing.md) | Creates a cosine annealing learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Reduce On Plateau](pto_lr_scheduler_reduce_on_plateau.md) | Creates a reduce-on-plateau learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Step](pto_lr_scheduler_step.md) | Creates a StepLR learning rate scheduler for an optimizer. |
+| [Pto Simple](pto_simple.md) |     Instantiates the most basic optimizer to update W using the below formula: |
 | [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
 | [Ptv Dataset Len](ptv_dataset_len.md) | A wrapper class that calls Python len on a dataset. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
