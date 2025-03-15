@@ -24,4 +24,4 @@ Use -1 to automatically infer a dimension, e.g.:
 <HR>
 Category: PyTorch wrapper - Transform
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

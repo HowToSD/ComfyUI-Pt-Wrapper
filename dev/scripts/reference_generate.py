@@ -125,7 +125,7 @@ def process_python_file(file_path: str, output_dir: str, node_list: Dict[str, Li
                     md_file.write(output_section + "\n")
                 md_file.write("<HR>\n")
                 md_file.write(f"Category: {category}\n\n")
-                md_file.write(f"ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.\n")
+                md_file.write(f"ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.\n")
             
             node_list[category].append((class_info['title'][2:], file_name, class_info['first_sentence']))
 

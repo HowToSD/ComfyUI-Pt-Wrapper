@@ -14,4 +14,4 @@ Extracts the PyTorch Size object of a PyTorch tensor using the size() method.
 <HR>
 Category: PyTorch wrapper - Size object support
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

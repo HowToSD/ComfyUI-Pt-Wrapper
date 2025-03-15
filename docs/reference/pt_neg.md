@@ -14,4 +14,4 @@ Computes the negation of each element in a PyTorch tensor.
 <HR>
 Category: PyTorch wrapper - Math operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

@@ -15,4 +15,4 @@ Tests whether elements in the first PyTorch tensor are less than the correspondi
 <HR>
 Category: PyTorch wrapper - Comparison operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

@@ -27,6 +27,18 @@
 | [Pt Bitwise Or](pt_bitwise_or.md) | Performs a bitwise OR operation on two PyTorch tensors element-wise. |
 | [Pt Bitwise Right Shift](pt_bitwise_right_shift.md) | Performs a bitwise right shift operation on two PyTorch tensors element-wise. |
 | [Pt Bitwise Xor](pt_bitwise_xor.md) | Performs a bitwise XOR operation on two PyTorch tensors element-wise. |
+## PyTorch wrapper - Callable
+| Node | Description |
+| --- | --- |
+| [Ptf GELU](ptf_gelu.md) |  |
+| [Ptf LeakyReLU](ptf_leaky_relu.md) |  |
+| [Ptf Log Softmax](ptf_log_softmax.md) | A PyTorch wrapper for the log_softmax activation function. |
+| [Ptf ReLU](ptf_relu.md) |  |
+| [Ptf SiLU](ptf_silu.md) |  |
+| [Ptf Sigmoid](ptf_sigmoid.md) | A PyTorch wrapper for the sigmoid activation function. |
+| [Ptf Softmax](ptf_softmax.md) | A PyTorch wrapper for the softmax activation function. |
+| [Ptf Softplus](ptf_softplus.md) |  |
+| [Ptf Tanh](ptf_tanh.md) | A PyTorch wrapper for the tanh activation function. |
 ## PyTorch wrapper - Comparison operations
 | Node | Description |
 | --- | --- |
@@ -143,6 +155,7 @@
 ## PyTorch wrapper - Training
 | Node | Description |
 | --- | --- |
+| [Pt Apply Function](pt_apply_function.md) | Applies a function to the input tensor. |
 | [Pt Data Loader](pt_data_loader.md) | Loads data from a dataset node and creates a PyTorch DataLoader.   |
 | [Pt Data Loader From Tensors](pt_data_loader_from_tensors.md) | Creates a Torchvision Dataloader from a pair of tensors. |
 | [Pt Evaluate Classification Model](pt_evaluate_classification_model.md) | Performs inference on test data and computes evaluation metrics. |

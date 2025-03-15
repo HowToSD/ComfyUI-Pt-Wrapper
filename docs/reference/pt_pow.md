@@ -15,4 +15,4 @@ Raises one PyTorch tensor to the power of another element-wise.
 <HR>
 Category: PyTorch wrapper - Arithmetic operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

@@ -21,4 +21,4 @@ Supported transformations include flipping, rotation, translation, and scaling.
 <HR>
 Category: PyTorch wrapper - Training
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

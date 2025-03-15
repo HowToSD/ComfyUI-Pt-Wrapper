@@ -20,4 +20,4 @@ The steps value is converted to an int.
 <HR>
 Category: PyTorch wrapper - Tensor creation
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

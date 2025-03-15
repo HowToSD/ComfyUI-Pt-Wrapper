@@ -3,6 +3,7 @@ from typing import Dict, Type, TypeVar
 from .modules.pytorch_wrapper.pt_abs import PtAbs
 from .modules.pytorch_wrapper.pt_acos import PtAcos
 from .modules.pytorch_wrapper.pt_add import PtAdd
+from .modules.pytorch_wrapper.pt_apply_function import PtApplyFunction
 from .modules.pytorch_wrapper.pt_arange import PtArange
 from .modules.pytorch_wrapper.pt_argmax import PtArgmax
 from .modules.pytorch_wrapper.pt_argmin import PtArgmin
@@ -111,6 +112,16 @@ from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
 from .modules.pytorch_wrapper.pt_where import PtWhere
 from .modules.pytorch_wrapper.pt_zeros import PtZeros
+from .modules.pytorch_wrapper.ptf_gelu import PtfGELU
+from .modules.pytorch_wrapper.ptf_leaky_relu import PtfLeakyReLU
+from .modules.pytorch_wrapper.ptf_log_softmax import PtfLogSoftmax
+from .modules.pytorch_wrapper.ptf_relu import PtfReLU
+from .modules.pytorch_wrapper.ptf_sigmoid import PtfSigmoid
+from .modules.pytorch_wrapper.ptf_silu import PtfSiLU
+from .modules.pytorch_wrapper.ptf_softmax import PtfSoftmax
+from .modules.pytorch_wrapper.ptf_softplus import PtfSoftplus
+from .modules.pytorch_wrapper.ptf_tanh import PtfTanh
+from .modules.pytorch_wrapper.ptn_chained_model import PtnChainedModel
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
@@ -139,6 +150,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtAbs": PtAbs,
     "PtAcos": PtAcos,
     "PtAdd": PtAdd,
+    "PtApplyFunction": PtApplyFunction,
     "PtArange": PtArange,
     "PtArgmax": PtArgmax,
     "PtArgmin": PtArgmin,
@@ -247,6 +259,16 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtView": PtView,
     "PtWhere": PtWhere,
     "PtZeros": PtZeros,
+    "PtfGELU": PtfGELU,
+    "PtfLeakyReLU": PtfLeakyReLU,
+    "PtfLogSoftmax": PtfLogSoftmax,
+    "PtfReLU": PtfReLU,
+    "PtfSiLU": PtfSiLU,
+    "PtfSigmoid": PtfSigmoid,
+    "PtfSoftmax": PtfSoftmax,
+    "PtfSoftplus": PtfSoftplus,
+    "PtfTanh": PtfTanh,
+    "PtnChainedModel": PtnChainedModel,
     "PtnConvModel": PtnConvModel,
     "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
@@ -275,6 +297,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtAbs": "Pt Abs",
     "PtAcos": "Pt Acos",
     "PtAdd": "Pt Add",
+    "PtApplyFunction": "Pt Apply Function",
     "PtArange": "Pt Arange",
     "PtArgmax": "Pt Argmax",
     "PtArgmin": "Pt Argmin",
@@ -383,6 +406,16 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtView": "Pt View",
     "PtWhere": "Pt Where",
     "PtZeros": "Pt Zeros",
+    "PtfGELU": "Ptf GELU",
+    "PtfLeakyReLU": "Ptf Leaky ReLU",
+    "PtfLogSoftmax": "Ptf Log Softmax",
+    "PtfReLU": "Ptf ReLU",
+    "PtfSiLU": "Ptf SiLU",
+    "PtfSigmoid": "Ptf Sigmoid",
+    "PtfSoftmax": "Ptf Softmax",
+    "PtfSoftplus": "Ptf Softplus",
+    "PtfTanh": "Ptf Tanh",
+    "PtnChainedModel": "Ptn Chained Model",
     "PtnConvModel": "Ptn Conv Model",
     "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",

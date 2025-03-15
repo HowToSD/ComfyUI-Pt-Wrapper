@@ -14,4 +14,4 @@ Flattens a PyTorch tensor into a 1D tensor.
 <HR>
 Category: PyTorch wrapper - Transform
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

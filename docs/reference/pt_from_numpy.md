@@ -14,4 +14,4 @@ Converts a NumPy ndarray to a PyTorch tensor while preserving its data type.
 <HR>
 Category: PyTorch wrapper - Tensor creation
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

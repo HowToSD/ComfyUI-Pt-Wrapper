@@ -15,4 +15,4 @@ A wrapper class for saving a PyTorch model.
 <HR>
 Category: IO
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

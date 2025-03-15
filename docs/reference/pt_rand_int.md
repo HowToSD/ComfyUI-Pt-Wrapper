@@ -19,4 +19,4 @@ enter [2,3,96,32] for size, 0 for min_value, and 10 for max_value.
 <HR>
 Category: PyTorch wrapper - Tensor creation
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

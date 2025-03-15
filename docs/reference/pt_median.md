@@ -26,4 +26,4 @@ Note that PtMedian calls torch.median(), which returns the lower of the two numb
 <HR>
 Category: PyTorch wrapper - Reduction operation & Summary statistics
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

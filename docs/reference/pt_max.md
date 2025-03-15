@@ -21,4 +21,4 @@ Specify the dimension(s) in the `dim` field using an integer, a list, or a tuple
 <HR>
 Category: PyTorch wrapper - Reduction operation & Summary statistics
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

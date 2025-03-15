@@ -56,4 +56,4 @@ Let's analyze the case where `dim = 1`:
 <HR>
 Category: PyTorch wrapper - Indexing and Slicing Operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

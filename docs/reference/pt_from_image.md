@@ -14,4 +14,4 @@ Casts an Image tensor as a PyTorch tensor.
 <HR>
 Category: PyTorch wrapper - Image processing
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

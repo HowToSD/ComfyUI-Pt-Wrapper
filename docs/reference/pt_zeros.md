@@ -17,4 +17,4 @@ For example, if you want to create a 4D tensor of batch size=2, channel=3, heigh
 <HR>
 Category: PyTorch wrapper - Tensor creation
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

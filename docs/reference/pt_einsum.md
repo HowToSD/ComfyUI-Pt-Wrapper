@@ -23,4 +23,4 @@ Sublist format is not supported.
 <HR>
 Category: PyTorch wrapper - Matrix operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

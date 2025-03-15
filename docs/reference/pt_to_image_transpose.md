@@ -14,4 +14,4 @@ Casts a PyTorch tensor as an Image tensor and transposes it from (C, H, W) to (H
 <HR>
 Category: PyTorch wrapper - Image processing
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

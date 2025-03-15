@@ -14,4 +14,4 @@ Displays PyTorch Size object as a string.
 <HR>
 Category: Display data
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

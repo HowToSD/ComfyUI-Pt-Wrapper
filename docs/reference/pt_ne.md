@@ -15,4 +15,4 @@ Tests whether two PyTorch tensors are not equal element-wise.
 <HR>
 Category: PyTorch wrapper - Comparison operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

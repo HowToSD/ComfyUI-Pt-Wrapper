@@ -22,4 +22,4 @@ Specify the new axis order in the `new_axes` field using brackets, as shown belo
 <HR>
 Category: PyTorch wrapper - Transform
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

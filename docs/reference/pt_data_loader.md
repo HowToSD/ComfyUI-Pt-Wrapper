@@ -26,4 +26,4 @@ If True, shuffles the dataset before each epoch.
 <HR>
 Category: PyTorch wrapper - Training
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

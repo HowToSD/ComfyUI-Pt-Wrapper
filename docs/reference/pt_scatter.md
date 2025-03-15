@@ -21,4 +21,4 @@ Generates a new tensor by replacing values at specified positions using an index
 <HR>
 Category: PyTorch wrapper - Indexing and Slicing Operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

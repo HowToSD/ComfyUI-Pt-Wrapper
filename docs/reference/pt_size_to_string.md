@@ -14,4 +14,4 @@ Converts PyTorch Size object to a Python string.
 <HR>
 Category: PyTorch wrapper - Size object support
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

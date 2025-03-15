@@ -14,4 +14,4 @@ Computes the hyperbolic sine of a PyTorch tensor element-wise.
 <HR>
 Category: PyTorch wrapper - Math operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

@@ -14,4 +14,4 @@ Performs a logical NOT operation on a PyTorch tensor element-wise.
 <HR>
 Category: PyTorch wrapper - Logical operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

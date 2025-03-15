@@ -25,4 +25,4 @@ or
 <HR>
 Category: PyTorch wrapper - Reduction operation & Summary statistics
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

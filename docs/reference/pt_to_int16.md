@@ -14,4 +14,4 @@ Converts the input tensor's data type to int16.
 <HR>
 Category: PyTorch wrapper - Data type conversion
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

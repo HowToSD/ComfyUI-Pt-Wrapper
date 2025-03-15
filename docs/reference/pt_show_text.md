@@ -15,4 +15,4 @@ the tensor contains more elements than the threshold set internally.
 <HR>
 Category: Display data
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

@@ -15,4 +15,4 @@ Performs batched matrix multiplication on two 3D PyTorch tensors.
 <HR>
 Category: PyTorch wrapper - Matrix operations
 
-ComfyUI Data Analysis Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
+ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.
