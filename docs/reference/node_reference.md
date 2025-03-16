@@ -120,6 +120,8 @@
 | [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
 | [Ptn Max Pool](ptn_max_pool2d.md) | A maxpool layer.   |
+| [Ptn Pre Add Channel Axis](ptn_pre_add_channel_axis.md) | Adds a channel axis after the batch axis if the input is rank 3 (bs, h, w) |
+| [Ptn Pre Flatten](ptn_pre_flatten.md) | Flattens the input tensor before processing the tensor in the specified model. |
 | [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
 ## PyTorch wrapper - Optimizer
 | Node | Description |

@@ -25,7 +25,7 @@ t.
 | dilation | String |
 | groups | Int |
 | bias | Boolean |
-| padding_mode | Zeros |
+| padding_mode |  |
 
 ## Output
 | Data type |

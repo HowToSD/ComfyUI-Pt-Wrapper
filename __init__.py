@@ -128,6 +128,8 @@ from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_max_pool2d import PtnMaxPool2d
+from .modules.pytorch_wrapper.ptn_pre_add_channel_axis import PtnPreAddChannelAxis
+from .modules.pytorch_wrapper.ptn_pre_flatten import PtnPreFlatten
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.pto_adamw import PtoAdamW
@@ -280,6 +282,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
     "PtnMaxPool2d": PtnMaxPool2d,
+    "PtnPreAddChannelAxis": PtnPreAddChannelAxis,
+    "PtnPreFlatten": PtnPreFlatten,
     "PtnResnetModel": PtnResnetModel,
     "PtoAdam": PtoAdam,
     "PtoAdamW": PtoAdamW,
@@ -432,6 +436,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",
     "PtnMaxPool2d": "Ptn Max Pool2d",
+    "PtnPreAddChannelAxis": "Ptn Pre Add Channel Axis",
+    "PtnPreFlatten": "Ptn Pre Flatten",
     "PtnResnetModel": "Ptn Resnet Model",
     "PtoAdam": "Pto Adam",
     "PtoAdamW": "Pto AdamW",

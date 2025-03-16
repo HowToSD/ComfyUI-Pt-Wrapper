@@ -29,12 +29,13 @@ class ConvSingleLayer(nn.Module):
                  kernel_size: int,
                  padding: int,
                  downsample: bool,
-                 bias:bool = False,
+                 bias:bool = True,
                  apply_activation: bool = True) -> None:
         super().__init__()
         self.conv = nn.Conv2d(in_channels=in_channels,
                               out_channels=out_channels,
                               kernel_size=kernel_size,
+                              bias=bias,
                               padding=padding)
         self.apply_activation = apply_activation
         self.activation = nn.ReLU()

@@ -7,12 +7,11 @@ Currently, following archituctures are supported (node names are in parentheses)
 * Convolutional Network (Ptn Conv Model)
 * ResNet (Ptn Resnet Model)
 
-In addition, a single layer Linear model is supported as an example to illustrate the use (see the bottom of this page on how to use it):
-* Linear (Ptn Linear)
-
 You can adjust the model configuration including output dimension on the UI.
 
 The system is designed to be modular. For example, to switch from a linear model to a convolutional model, you only need to replace the model node (see screenshot below).
+
+You can also build a model from scratch by sequentially combining basic models such as `Conv2D` and `Linear` by using the **Pt Chained Model** node.  See [Building a Model from Scratch](building_a_model_from_scratch.md) for details.
 
 You can choose to:
 * Use your own images
