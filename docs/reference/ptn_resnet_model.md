@@ -23,6 +23,6 @@ A Resnet model consisting of multiple Resnet layers.
 | Ptmodel |
 
 <HR>
-Category: PyTorch wrapper - Training
+Category: PyTorch wrapper - Model
 
 ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

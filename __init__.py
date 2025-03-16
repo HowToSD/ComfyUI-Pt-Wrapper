@@ -121,10 +121,13 @@ from .modules.pytorch_wrapper.ptf_silu import PtfSiLU
 from .modules.pytorch_wrapper.ptf_softmax import PtfSoftmax
 from .modules.pytorch_wrapper.ptf_softplus import PtfSoftplus
 from .modules.pytorch_wrapper.ptf_tanh import PtfTanh
+from .modules.pytorch_wrapper.ptn_avg_pool2d import PtnAvgPool2d
 from .modules.pytorch_wrapper.ptn_chained_model import PtnChainedModel
+from .modules.pytorch_wrapper.ptn_conv2d import PtnConv2d
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
+from .modules.pytorch_wrapper.ptn_max_pool2d import PtnMaxPool2d
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.pto_adamw import PtoAdamW
@@ -270,10 +273,13 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtfSoftmax": PtfSoftmax,
     "PtfSoftplus": PtfSoftplus,
     "PtfTanh": PtfTanh,
+    "PtnAvgPool2d": PtnAvgPool2d,
     "PtnChainedModel": PtnChainedModel,
+    "PtnConv2d": PtnConv2d,
     "PtnConvModel": PtnConvModel,
     "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
+    "PtnMaxPool2d": PtnMaxPool2d,
     "PtnResnetModel": PtnResnetModel,
     "PtoAdam": PtoAdam,
     "PtoAdamW": PtoAdamW,
@@ -419,10 +425,13 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtfSoftmax": "Ptf Softmax",
     "PtfSoftplus": "Ptf Softplus",
     "PtfTanh": "Ptf Tanh",
+    "PtnAvgPool2d": "Ptn Avg Pool2d",
     "PtnChainedModel": "Ptn Chained Model",
+    "PtnConv2d": "Ptn Conv2d",
     "PtnConvModel": "Ptn Conv Model",
     "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",
+    "PtnMaxPool2d": "Ptn Max Pool2d",
     "PtnResnetModel": "Ptn Resnet Model",
     "PtoAdam": "Pto Adam",
     "PtoAdamW": "Pto AdamW",

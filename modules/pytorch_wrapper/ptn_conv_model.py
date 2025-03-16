@@ -30,7 +30,7 @@ class PtnConvModel:
     - `downsample_list`: A string representing a Python list of boolean values indicating whether to downsample at each layer.  
       Example: `"[True,True,True,True,False]"`.  
 
-    category: PyTorch wrapper - Training
+    category: PyTorch wrapper - Model
     """
 
     @classmethod

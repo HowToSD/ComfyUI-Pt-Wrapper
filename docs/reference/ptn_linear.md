@@ -19,6 +19,6 @@ A linear model consisting of a single dense layer.
 | Ptmodel |
 
 <HR>
-Category: PyTorch wrapper - Training
+Category: PyTorch wrapper - Model
 
 ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

@@ -40,6 +40,6 @@ A convolutional model consisting of multiple convolutional layers.
 | Ptmodel |
 
 <HR>
-Category: PyTorch wrapper - Training
+Category: PyTorch wrapper - Model
 
 ComfyUI Pt Wrapper Node Reference. © 2025 Hide Inada (HowToSD.com). All rights reserved.

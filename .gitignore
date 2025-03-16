@@ -4,3 +4,4 @@ models/
 *.pth
 /datasets/
 examples/datasets/.~lock*
+.vscode

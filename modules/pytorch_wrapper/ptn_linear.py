@@ -12,7 +12,7 @@ class PtnLinear:
     - `out_features`: The number of output features.
     - `bias`: Use bias or not.
 
-    category: PyTorch wrapper - Training
+    category: PyTorch wrapper - Model
     """
 
     @classmethod

@@ -25,7 +25,7 @@ class PtnLinearModel:
 
     - `num_layers`: The number of layers in the model.  
 
-    category: PyTorch wrapper - Training
+    category: PyTorch wrapper - Model
     """
 
     @classmethod
@@ -38,8 +38,8 @@ class PtnLinearModel:
         """
         return {
             "required": {
-                "dim_list": ("STRING", {"default": "784,10"}),
-                "bias_list": ("STRING", {"default": "{True}"}),
+                "dim_list": ("STRING", {"default": "[784,10]"}),
+                "bias_list": ("STRING", {"default": "[True]"}),
                 "num_layers": ("INT", {"default": 1, "min": 1, "max": 2000}),
             }
         }

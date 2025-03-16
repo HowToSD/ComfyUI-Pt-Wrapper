@@ -110,6 +110,17 @@
 | [Pt Einsum](pt_einsum.md) | Performs Tensor operations specified in the Einstein summation equation. |
 | [Pt Mat Mul](pt_matmul.md) | Performs matrix multiplication on two PyTorch tensors. |
 | [Pt Mm](pt_mm.md) | Performs 2D matrix multiplication on two PyTorch tensors. |
+## PyTorch wrapper - Model
+| Node | Description |
+| --- | --- |
+| [Ptn Avg Pool](ptn_avg_pool2d.md) | An avgpool layer.   |
+| [Ptn Chained Model](ptn_chained_model.md) | Constructs a chained PyTorch model. |
+| [Ptn Conv](ptn_conv2d.md) |     A convolutional model consisting of a single conv2d layer.   |
+| [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
+| [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
+| [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
+| [Ptn Max Pool](ptn_max_pool2d.md) | A maxpool layer.   |
+| [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
 ## PyTorch wrapper - Optimizer
 | Node | Description |
 | --- | --- |
@@ -172,11 +183,6 @@
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs.   |
 | [Pt Train Classification Model Lr](pt_train_classification_model_lr.md) | Trains a classification model using a given dataset, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Regression Model](pt_train_regression_model.md) | Trains a regression model using a given dataset, optimizer, and number of epochs.   |
-| [Ptn Chained Model](ptn_chained_model.md) | Constructs a chained PyTorch model. |
-| [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
-| [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
-| [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
-| [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
 | [Pto Lr Scheduler Cosine Annealing](pto_lr_scheduler_cosine_annealing.md) | Creates a cosine annealing learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Reduce On Plateau](pto_lr_scheduler_reduce_on_plateau.md) | Creates a reduce-on-plateau learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Step](pto_lr_scheduler_step.md) | Creates a StepLR learning rate scheduler for an optimizer. |

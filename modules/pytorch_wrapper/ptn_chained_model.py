@@ -59,7 +59,7 @@ class PtnChainedModel:
     - model_b: Second model in the chain.
     - closure: Optional differentiable function to be called at the end of forward.
 
-    category: PyTorch wrapper - Training
+    category: PyTorch wrapper - Model
     """
 
     @classmethod

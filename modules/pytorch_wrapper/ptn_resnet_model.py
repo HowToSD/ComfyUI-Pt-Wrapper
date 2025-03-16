@@ -17,7 +17,7 @@ class PtnResnetModel:
 
     - `num_blocks`: Number of Resnet blocks for 64 channel blocks. Same number of blocks will be created for 128 channel and 256 channel blocks.
 
-    category: PyTorch wrapper - Training
+    category: PyTorch wrapper - Model
     """
 
     @classmethod
