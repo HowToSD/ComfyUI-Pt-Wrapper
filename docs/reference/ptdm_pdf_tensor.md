@@ -1,15 +1,15 @@
-# Ptdm Pdf
-Computes the probability density for the input distribution.
+# Ptdm Pdf Tensor
+Computes the probability density for the input distribution.  This nodes accepts a tensor so it can be used to compute pdf for multiple values contained in a tensor.
 
 Args:
         distribution (torch.distributions.distribution.Distribution): Distribution.
-        x (float): Value
+        tens (torch.Tensor): Value(s) in Tensor.
 
 ## Input
 | Name | Data type |
 |---|---|
 | distribution | Ptdistribution |
-| x | String |
+| tens | Tensor |
 
 ## Output
 | Data type |

@@ -1,15 +1,15 @@
-# Ptdm Log Prob
-Computes the log of probability for the input distribution.
+# Ptdm Log Prob Tensor
+Computes the log of probability for the input distribution.  This nodes accepts a tensor so it can be used to compute log of probability for multiple values contained in a tensor.
 
 Args:
         distribution (torch.distributions.distribution.Distribution): Distribution.  
-        value (Union[int,float]): Value (Number of successes for PMF).
+        tens (torch.Tensor): Value(s) in Tensor.
 
 ## Input
 | Name | Data type |
 |---|---|
 | distribution | Ptdistribution |
-| x | String |
+| tens | Tensor |
 
 ## Output
 | Data type |

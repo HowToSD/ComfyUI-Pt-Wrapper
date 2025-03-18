@@ -1,15 +1,15 @@
-# Ptdm Pdf
-Computes the probability density for the input distribution.
+# Ptdm Pmf Tensor
+Computes the probability for the input distribution.  This nodes accepts a tensor so it can be used to compute pmf for multiple values contained in a tensor.
 
 Args:
         distribution (torch.distributions.distribution.Distribution): Distribution.
-        x (float): Value
+        tens (torch.Tensor): k(s) in Tensor.
 
 ## Input
 | Name | Data type |
 |---|---|
 | distribution | Ptdistribution |
-| x | String |
+| tens | Tensor |
 
 ## Output
 | Data type |

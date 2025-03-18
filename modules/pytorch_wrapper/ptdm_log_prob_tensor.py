@@ -1,15 +1,14 @@
 from typing import Any, Dict
-import ast
 import torch
-from torch.distributions import *
 
-class PtdmLogProb:
+
+class PtdmLogProbTensor:
     """
-    Computes the log of probability for the input distribution.
+    Computes the log of probability for the input distribution.  This nodes accepts a tensor so it can be used to compute log of probability for multiple values contained in a tensor.
 
     Args:
             distribution (torch.distributions.distribution.Distribution): Distribution.  
-            value (Union[int,float]): Value (Number of successes for PMF).  
+            tens (torch.Tensor): Value(s) in Tensor.
 
     category: PyTorch wrapper - Distribution
     """
@@ -25,7 +24,7 @@ class PtdmLogProb:
         return {
             "required": {
                 "distribution": ("PTDISTRIBUTION", {}),
-                "x": ("STRING", {"default": ""})
+                "tens": ("TENSOR", {})
             }
         }
 
@@ -35,27 +34,16 @@ class PtdmLogProb:
 
     def f(self,
           distribution:torch.distributions.distribution.Distribution,
-          x: str) -> tuple:
+          tens: torch.Tensor) -> tuple:
         """
         Computes the probability for the input distribution.
 
         Args:
             distribution (torch.distributions.distribution.Distribution): Distribution.
-            x (Union[int,float])): Value or number of successes.
+            tens (torch.Tensor): Value(s) in Tensor.
 
         Returns:
             tuple containing the log of probability
         """
-
-        v = ast.literal_eval(x)
-        if isinstance(v, int) is False and isinstance(v, float) is False :
-            if isinstance(distribution, Dirichlet) is False:
-                raise ValueError("You need to specify a float or an int.")
-
-        if isinstance(distribution, (Poisson, Categorical, Multinomial, Binomial, NegativeBinomial)):
-            tens = torch.tensor(v, dtype=torch.int64)
-        else:
-            tens = torch.tensor(v, dtype=torch.float32)
-
         return (distribution.log_prob(tens),)
     

@@ -1,15 +1,14 @@
 from typing import Any, Dict
 import torch
-from torch.distributions import *
-import ast
 
-class PtdmPdf:
+
+class PtdmPmfTensor:
     """
-    Computes the probability density for the input distribution.
+    Computes the probability for the input distribution.  This nodes accepts a tensor so it can be used to compute pmf for multiple values contained in a tensor.
 
     Args:
             distribution (torch.distributions.distribution.Distribution): Distribution.
-            x (float): Value
+            tens (torch.Tensor): k(s) in Tensor.
 
     category: PyTorch wrapper - Distribution
     """
@@ -25,7 +24,7 @@ class PtdmPdf:
         return {
             "required": {
                 "distribution": ("PTDISTRIBUTION", {}),
-                "x": ("STRING", {"default": ""})
+                "tens": ("TENSOR", {})
             }
         }
 
@@ -33,25 +32,15 @@ class PtdmPdf:
     FUNCTION: str = "f"
     CATEGORY: str = "Distribution"
 
-    def f(self, distribution: torch.distributions.Distribution, x: str) -> tuple:
+    def f(self, distribution: torch.distributions.Distribution, tens: torch.Tensor) -> tuple:
         """
         Computes the probability for the input distribution.
 
         Args:
             distribution (torch.distributions.Distribution): Distribution.
-            x (str): Value
+            tens (torch.Tensor): Value(s) in Tensor.
 
         Returns:
             tuple containing the probability
         """
-        v2 = ast.literal_eval(x)
-        if isinstance(v2, int) is False and isinstance(v2, float) is False :
-            if isinstance(distribution, Dirichlet) is False:
-                raise ValueError("You need to specify a float or an int.")
-
-        if isinstance(distribution, (Poisson, Categorical, Multinomial, Binomial, NegativeBinomial)):
-            tens = torch.tensor(v2, dtype=torch.int64)
-        else:
-            tens = torch.tensor(v2, dtype=torch.float32)
-
         return (torch.exp(distribution.log_prob(tens)),)

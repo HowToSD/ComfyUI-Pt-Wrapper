@@ -6,13 +6,13 @@ Cdf is not supported for all distributions in PyTorch.
 
 Args:
         distribution (torch.distributions.distribution.Distribution): Distribution.
-        v (float): Value
+        x (float): Value
 
 ## Input
 | Name | Data type |
 |---|---|
 | distribution | Ptdistribution |
-| v | String |
+| x | String |
 
 ## Output
 | Data type |

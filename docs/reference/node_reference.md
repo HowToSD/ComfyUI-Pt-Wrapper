@@ -75,9 +75,13 @@
 | [Ptd Student T](ptd_student_t.md) | Instantiates a StudentT distribution object. |
 | [Ptd Uniform](ptd_uniform.md) | Instantiates a Uniform distribution object. |
 | [Ptdm Cdf](ptdm_cdf.md) | Computes the cumulative distribution function for the input distribution. |
+| [Ptdm Cdf Tensor](ptdm_cdf_tensor.md) | Computes the cumulative distribution function for the input distribution. This nodes accepts a tensor so it can be used to compute cdf for multiple values contained in a tensor. |
 | [Ptdm Log Prob](ptdm_log_prob.md) | Computes the log of probability for the input distribution. |
+| [Ptdm Log Prob Tensor](ptdm_log_prob_tensor.md) | Computes the log of probability for the input distribution.  This nodes accepts a tensor so it can be used to compute log of probability for multiple values contained in a tensor. |
 | [Ptdm Pdf](ptdm_pdf.md) | Computes the probability density for the input distribution. |
+| [Ptdm Pdf Tensor](ptdm_pdf_tensor.md) | Computes the probability density for the input distribution.  This nodes accepts a tensor so it can be used to compute pdf for multiple values contained in a tensor. |
 | [Ptdm Pmf](ptdm_pmf.md) | Computes the probability for the input distribution. |
+| [Ptdm Pmf Tensor](ptdm_pmf_tensor.md) | Computes the probability for the input distribution.  This nodes accepts a tensor so it can be used to compute pmf for multiple values contained in a tensor. |
 | [Ptdm Sample](ptdm_sample.md) | Samples from the input distribution. |
 ## PyTorch wrapper - Image processing
 | Node | Description |

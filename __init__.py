@@ -124,9 +124,13 @@ from .modules.pytorch_wrapper.ptd_poisson import PtdPoisson
 from .modules.pytorch_wrapper.ptd_student_t import PtdStudentT
 from .modules.pytorch_wrapper.ptd_uniform import PtdUniform
 from .modules.pytorch_wrapper.ptdm_cdf import PtdmCdf
+from .modules.pytorch_wrapper.ptdm_cdf_tensor import PtdmCdfTensor
 from .modules.pytorch_wrapper.ptdm_log_prob import PtdmLogProb
+from .modules.pytorch_wrapper.ptdm_log_prob_tensor import PtdmLogProbTensor
 from .modules.pytorch_wrapper.ptdm_pdf import PtdmPdf
+from .modules.pytorch_wrapper.ptdm_pdf_tensor import PtdmPdfTensor
 from .modules.pytorch_wrapper.ptdm_pmf import PtdmPmf
+from .modules.pytorch_wrapper.ptdm_pmf_tensor import PtdmPmfTensor
 from .modules.pytorch_wrapper.ptdm_sample import PtdmSample
 from .modules.pytorch_wrapper.ptf_gelu import PtfGELU
 from .modules.pytorch_wrapper.ptf_leaky_relu import PtfLeakyReLU
@@ -294,9 +298,13 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtdStudentT": PtdStudentT,
     "PtdUniform": PtdUniform,
     "PtdmCdf": PtdmCdf,
+    "PtdmCdfTensor": PtdmCdfTensor,
     "PtdmLogProb": PtdmLogProb,
+    "PtdmLogProbTensor": PtdmLogProbTensor,
     "PtdmPdf": PtdmPdf,
+    "PtdmPdfTensor": PtdmPdfTensor,
     "PtdmPmf": PtdmPmf,
+    "PtdmPmfTensor": PtdmPmfTensor,
     "PtdmSample": PtdmSample,
     "PtfGELU": PtfGELU,
     "PtfLeakyReLU": PtfLeakyReLU,
@@ -464,9 +472,13 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtdStudentT": "Ptd Student T",
     "PtdUniform": "Ptd Uniform",
     "PtdmCdf": "Ptdm Cdf",
+    "PtdmCdfTensor": "Ptdm Cdf Tensor",
     "PtdmLogProb": "Ptdm Log Prob",
+    "PtdmLogProbTensor": "Ptdm Log Prob Tensor",
     "PtdmPdf": "Ptdm Pdf",
+    "PtdmPdfTensor": "Ptdm Pdf Tensor",
     "PtdmPmf": "Ptdm Pmf",
+    "PtdmPmfTensor": "Ptdm Pmf Tensor",
     "PtdmSample": "Ptdm Sample",
     "PtfGELU": "Ptf GELU",
     "PtfLeakyReLU": "Ptf Leaky ReLU",

@@ -1,15 +1,18 @@
-# Ptdm Pdf
-Computes the probability density for the input distribution.
+# Ptdm Cdf Tensor
+Computes the cumulative distribution function for the input distribution. This nodes accepts a tensor so it can be used to compute cdf for multiple values contained in a tensor.
+
+**Note**  
+Cdf is not supported for all distributions in PyTorch.
 
 Args:
         distribution (torch.distributions.distribution.Distribution): Distribution.
-        x (float): Value
+        tens (torch.Tensor): Value(s) in Tensor.
 
 ## Input
 | Name | Data type |
 |---|---|
 | distribution | Ptdistribution |
-| x | String |
+| tens | Tensor |
 
 ## Output
 | Data type |
