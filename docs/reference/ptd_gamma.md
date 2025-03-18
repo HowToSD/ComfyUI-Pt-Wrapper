@@ -2,8 +2,8 @@
 Instantiates a Gamma distribution object.
 
     Args:
-        alpha: Rate. Mean of the distsribution. You can specify a scalar or a tuple of float.  
-        beta: Rate. Standard deviation of the distribution. You can specify a scalar or a tuple of float.
+        alpha: Shape. You can specify a scalar or a tuple of float.  
+        beta: Rate. You can specify a scalar or a tuple of float.
 
 ## Input
 | Name | Data type |
