@@ -112,6 +112,22 @@ from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
 from .modules.pytorch_wrapper.pt_where import PtWhere
 from .modules.pytorch_wrapper.pt_zeros import PtZeros
+from .modules.pytorch_wrapper.ptd_bernoulli import PtdBernoulli
+from .modules.pytorch_wrapper.ptd_beta import PtdBeta
+from .modules.pytorch_wrapper.ptd_binomial import PtdBinomial
+from .modules.pytorch_wrapper.ptd_categorical import PtdCategorical
+from .modules.pytorch_wrapper.ptd_chi2 import PtdChi2
+from .modules.pytorch_wrapper.ptd_exponential import PtdExponential
+from .modules.pytorch_wrapper.ptd_gamma import PtdGamma
+from .modules.pytorch_wrapper.ptd_normal import PtdNormal
+from .modules.pytorch_wrapper.ptd_poisson import PtdPoisson
+from .modules.pytorch_wrapper.ptd_student_t import PtdStudentT
+from .modules.pytorch_wrapper.ptd_uniform import PtdUniform
+from .modules.pytorch_wrapper.ptdm_cdf import PtdmCdf
+from .modules.pytorch_wrapper.ptdm_log_prob import PtdmLogProb
+from .modules.pytorch_wrapper.ptdm_pdf import PtdmPdf
+from .modules.pytorch_wrapper.ptdm_pmf import PtdmPmf
+from .modules.pytorch_wrapper.ptdm_sample import PtdmSample
 from .modules.pytorch_wrapper.ptf_gelu import PtfGELU
 from .modules.pytorch_wrapper.ptf_leaky_relu import PtfLeakyReLU
 from .modules.pytorch_wrapper.ptf_log_softmax import PtfLogSoftmax
@@ -266,6 +282,22 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtView": PtView,
     "PtWhere": PtWhere,
     "PtZeros": PtZeros,
+    "PtdBernoulli": PtdBernoulli,
+    "PtdBeta": PtdBeta,
+    "PtdBinomial": PtdBinomial,
+    "PtdCategorical": PtdCategorical,
+    "PtdChi2": PtdChi2,
+    "PtdExponential": PtdExponential,
+    "PtdGamma": PtdGamma,
+    "PtdNormal": PtdNormal,
+    "PtdPoisson": PtdPoisson,
+    "PtdStudentT": PtdStudentT,
+    "PtdUniform": PtdUniform,
+    "PtdmCdf": PtdmCdf,
+    "PtdmLogProb": PtdmLogProb,
+    "PtdmPdf": PtdmPdf,
+    "PtdmPmf": PtdmPmf,
+    "PtdmSample": PtdmSample,
     "PtfGELU": PtfGELU,
     "PtfLeakyReLU": PtfLeakyReLU,
     "PtfLogSoftmax": PtfLogSoftmax,
@@ -420,6 +452,22 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtView": "Pt View",
     "PtWhere": "Pt Where",
     "PtZeros": "Pt Zeros",
+    "PtdBernoulli": "Ptd Bernoulli",
+    "PtdBeta": "Ptd Beta",
+    "PtdBinomial": "Ptd Binomial",
+    "PtdCategorical": "Ptd Categorical",
+    "PtdChi2": "Ptd Chi2",
+    "PtdExponential": "Ptd Exponential",
+    "PtdGamma": "Ptd Gamma",
+    "PtdNormal": "Ptd Normal",
+    "PtdPoisson": "Ptd Poisson",
+    "PtdStudentT": "Ptd Student T",
+    "PtdUniform": "Ptd Uniform",
+    "PtdmCdf": "Ptdm Cdf",
+    "PtdmLogProb": "Ptdm Log Prob",
+    "PtdmPdf": "Ptdm Pdf",
+    "PtdmPmf": "Ptdm Pmf",
+    "PtdmSample": "Ptdm Sample",
     "PtfGELU": "Ptf GELU",
     "PtfLeakyReLU": "Ptf Leaky ReLU",
     "PtfLogSoftmax": "Ptf Log Softmax",

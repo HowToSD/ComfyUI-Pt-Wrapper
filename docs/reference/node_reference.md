@@ -60,6 +60,25 @@
 | [Pt To Int64](pt_to_int64.md) | Converts the input tensor's data type to int64. |
 | [Pt To Int8](pt_to_int8.md) | Converts the input tensor's data type to int8. |
 | [Pt To Uint8](pt_to_uint8.md) | Converts the input tensor's data type to uint8. |
+## PyTorch wrapper - Distribution
+| Node | Description |
+| --- | --- |
+| [Ptd Bernoulli](ptd_bernoulli.md) | Instantiates a Bernoulli distribution object. |
+| [Ptd Beta](ptd_beta.md) | Instantiates a Beta distribution object. |
+| [Ptd Binomial](ptd_binomial.md) | Instantiates a Binomial distribution object. |
+| [Ptd Categorical](ptd_categorical.md) | Instantiates a Categorical distribution object from the input probabilities or logits. You have to specify one of them and not both. |
+| [Ptd Chi2](ptd_chi2.md) | Instantiates a Chi-squared distribution object. |
+| [Ptd Exponential](ptd_exponential.md) | Instantiates a Exponential distribution object. |
+| [Ptd Gamma](ptd_gamma.md) | Instantiates a Gamma distribution object. |
+| [Ptd Normal](ptd_normal.md) | Instantiates a Normal distribution object. |
+| [Ptd Poisson](ptd_poisson.md) | Instantiates a Poisson distribution object. |
+| [Ptd Student T](ptd_student_t.md) | Instantiates a StudentT distribution object. |
+| [Ptd Uniform](ptd_uniform.md) | Instantiates a Uniform distribution object. |
+| [Ptdm Cdf](ptdm_cdf.md) | Computes the cumulative distribution function for the input distribution. |
+| [Ptdm Log Prob](ptdm_log_prob.md) | Computes the log of probability for the input distribution. |
+| [Ptdm Pdf](ptdm_pdf.md) | Computes the probability density for the input distribution. |
+| [Ptdm Pmf](ptdm_pmf.md) | Computes the probability for the input distribution. |
+| [Ptdm Sample](ptdm_sample.md) | Samples from the input distribution. |
 ## PyTorch wrapper - Image processing
 | Node | Description |
 | --- | --- |
