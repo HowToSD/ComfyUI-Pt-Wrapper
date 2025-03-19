@@ -27,6 +27,23 @@ class StudentTEx(StudentT):
         outputs = scst.t.cdf((a - loc)/scale, df)
         return torch.tensor(outputs, dtype=torch.float32).to(x.device)
 
+    def icdf(self, q: torch.Tensor):
+        """
+        Computes the inverse of cumulative distribution function (CDF) of the StudentT distribution.
+
+        Args:
+            q (torch.Tensor): Input tensor containing values where the ICDF is evaluated.
+
+        Returns:
+            torch.Tensor: Tensor containing the inverse of cumulative probabilities.
+        """
+        a = q.detach().cpu().numpy()
+        df = self.df.detach().cpu().item()
+        loc = self.loc.detach().cpu().numpy()
+        scale = self.scale.detach().cpu().numpy()
+        outputs = scst.t.ppf(a, df) * scale + loc
+        return torch.tensor(outputs, dtype=torch.float32).to(q.device)
+
 
 class PtdStudentT:
     """

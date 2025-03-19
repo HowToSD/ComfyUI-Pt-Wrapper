@@ -2,6 +2,29 @@ from typing import Any, Dict
 import ast
 import torch
 from torch.distributions import Chi2
+import scipy.stats as scst
+
+class Chi2Ex(Chi2):
+    """
+    A class to extend Chi2 to add missing functionality.
+
+    pragma: skip_doc
+    """
+    def icdf(self, q: torch.Tensor):
+        """
+        Computes the inverse of cumulative distribution function (CDF) of the Chi-squared distribution.
+
+        Args:
+            q (torch.Tensor): Input tensor containing values where the ICDF is evaluated.
+
+        Returns:
+            torch.Tensor: Tensor containing the inverse of cumulative probabilities.
+        """
+        a = q.detach().cpu().numpy()
+        df = self.df.detach().cpu().item()
+        outputs = scst.chi2.ppf(a, df)
+        return torch.tensor(outputs, dtype=torch.float32).to(q.device)
+
 
 class PtdChi2:
     """
@@ -45,6 +68,6 @@ class PtdChi2:
         """
         d = ast.literal_eval(df)
 
-        dist = Chi2(
+        dist = Chi2Ex(
             df=torch.tensor(d, dtype=torch.float32))
         return (dist,)

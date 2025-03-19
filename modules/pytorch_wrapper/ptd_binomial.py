@@ -24,7 +24,24 @@ class BinomialEx(Binomial):
         n = self.total_count.detach().cpu().numpy()
         probs = self.probs.detach().cpu().numpy()
         outputs = scst.binom.cdf(a, n, probs)
-        return torch.tensor(outputs, dtype=torch.float32)
+        return torch.tensor(outputs, dtype=torch.float32).to(x.device)
+
+    def icdf(self, q: torch.Tensor):
+        """
+        Computes the inverse of cumulative distribution function (CDF) of the Binomial distribution.
+
+        Args:
+            q (torch.Tensor): Input tensor containing values where the ICDF is evaluated.
+
+        Returns:
+            torch.Tensor: Tensor containing the inverse of cumulative probabilities.
+        """
+        a = q.detach().cpu().numpy()
+        n = self.total_count.detach().cpu().numpy()
+        probs = self.probs.detach().cpu().numpy()
+        outputs = scst.binom.ppf(a, n, probs)
+        return torch.tensor(outputs, dtype=torch.float32).to(q.device)
+
 
 
 class PtdBinomial:

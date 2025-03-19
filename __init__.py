@@ -127,6 +127,8 @@ from .modules.pytorch_wrapper.ptd_student_t import PtdStudentT
 from .modules.pytorch_wrapper.ptd_uniform import PtdUniform
 from .modules.pytorch_wrapper.ptdm_cdf import PtdmCdf
 from .modules.pytorch_wrapper.ptdm_cdf_tensor import PtdmCdfTensor
+from .modules.pytorch_wrapper.ptdm_icdf import PtdmIcdf
+from .modules.pytorch_wrapper.ptdm_icdf_tensor import PtdmIcdfTensor
 from .modules.pytorch_wrapper.ptdm_log_prob import PtdmLogProb
 from .modules.pytorch_wrapper.ptdm_log_prob_tensor import PtdmLogProbTensor
 from .modules.pytorch_wrapper.ptdm_pdf import PtdmPdf
@@ -303,6 +305,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtdUniform": PtdUniform,
     "PtdmCdf": PtdmCdf,
     "PtdmCdfTensor": PtdmCdfTensor,
+    "PtdmIcdf": PtdmIcdf,
+    "PtdmIcdfTensor": PtdmIcdfTensor,
     "PtdmLogProb": PtdmLogProb,
     "PtdmLogProbTensor": PtdmLogProbTensor,
     "PtdmPdf": PtdmPdf,
@@ -479,6 +483,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtdUniform": "Ptd Uniform",
     "PtdmCdf": "Ptdm Cdf",
     "PtdmCdfTensor": "Ptdm Cdf Tensor",
+    "PtdmIcdf": "Ptdm Icdf",
+    "PtdmIcdfTensor": "Ptdm Icdf Tensor",
     "PtdmLogProb": "Ptdm Log Prob",
     "PtdmLogProbTensor": "Ptdm Log Prob Tensor",
     "PtdmPdf": "Ptdm Pdf",

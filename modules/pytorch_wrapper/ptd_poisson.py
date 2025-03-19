@@ -23,7 +23,22 @@ class PoissonEx(Poisson):
         a = x.detach().cpu().numpy()
         rate = self.rate.detach().cpu().numpy()
         outputs = scst.poisson.cdf(a, rate)
-        return torch.tensor(outputs, dtype=torch.float32)
+        return torch.tensor(outputs, dtype=torch.float32).to(x.device)
+
+    def icdf(self, q: torch.Tensor):
+        """
+        Computes the inverse of cumulative distribution function (CDF) of the Poisson distribution.
+
+        Args:
+            q (torch.Tensor): Input tensor containing values where the ICDF is evaluated.
+
+        Returns:
+            torch.Tensor: Tensor containing the inverse of cumulative probabilities.
+        """
+        a = q.detach().cpu().numpy()
+        rate = self.rate.detach().cpu().numpy()
+        outputs = scst.poisson.ppf(a, rate)
+        return torch.tensor(outputs, dtype=torch.float32).to(q.device)
 
 
 class PtdPoisson:

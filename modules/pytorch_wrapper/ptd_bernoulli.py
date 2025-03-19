@@ -24,7 +24,22 @@ class BernoulliEx(Bernoulli):
         a = x.detach().cpu().numpy()
         probs = self.probs.detach().cpu().numpy()
         outputs = scst.bernoulli.cdf(a, probs)
-        return torch.tensor(outputs, dtype=torch.float32)
+        return torch.tensor(outputs, dtype=torch.float32).to(x.device)
+
+    def icdf(self, q: torch.Tensor):
+        """
+        Computes the inverse of cumulative distribution function (CDF) of the Bernoulli distribution.
+
+        Args:
+            q (torch.Tensor): Input tensor containing q.
+
+        Returns:
+            torch.Tensor: Tensor containing the inverse of cumulative probabilities.
+        """
+        a = q.detach().cpu().numpy()
+        probs = self.probs.detach().cpu().numpy()
+        outputs = scst.bernoulli.ppf(a, probs)
+        return torch.tensor(outputs, dtype=torch.float32).to(q.device)
 
 
 class PtdBernoulli:

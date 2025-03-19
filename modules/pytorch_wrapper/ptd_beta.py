@@ -26,6 +26,22 @@ class BetaEx(Beta):
         outputs = scst.beta.cdf(x2, a, b)
         return torch.tensor(outputs, dtype=torch.float32).to(x.device)
 
+    def icdf(self, q: torch.Tensor):
+        """
+        Computes the inverse of cumulative distribution function (CDF) of the Beta distribution.
+
+        Args:
+            q (torch.Tensor): Input tensor containing values where the ICDF is evaluated.
+
+        Returns:
+            torch.Tensor: Tensor containing the inverse of cumulative probabilities.
+        """
+        x2 = q.detach().cpu().numpy()
+        a = self.concentration1.detach().cpu().item()
+        b = self.concentration0.detach().cpu().item()
+        outputs = scst.beta.ppf(x2, a, b)
+        return torch.tensor(outputs, dtype=torch.float32).to(q.device)
+
 
 class PtdBeta:
     """

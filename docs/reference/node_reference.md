@@ -76,6 +76,8 @@
 | [Ptd Uniform](ptd_uniform.md) | Instantiates a Uniform distribution object. |
 | [Ptdm Cdf](ptdm_cdf.md) | Computes the cumulative distribution function for the input distribution. |
 | [Ptdm Cdf Tensor](ptdm_cdf_tensor.md) | Computes the cumulative distribution function for the input distribution. This nodes accepts a tensor so it can be used to compute cdf for multiple values contained in a tensor. |
+| [Ptdm Icdf](ptdm_icdf.md) | Computes the inverse of the cumulative distribution function for the input distribution. |
+| [Ptdm Icdf Tensor](ptdm_icdf_tensor.md) | Computes the inverse of cumulative distribution function for the input distribution. This nodes accepts a tensor so it can be used to compute cdf for multiple values contained in a tensor. |
 | [Ptdm Log Prob](ptdm_log_prob.md) | Computes the log of probability for the input distribution. |
 | [Ptdm Log Prob Tensor](ptdm_log_prob_tensor.md) | Computes the log of probability for the input distribution.  This nodes accepts a tensor so it can be used to compute log of probability for multiple values contained in a tensor. |
 | [Ptdm Pdf](ptdm_pdf.md) | Computes the probability density for the input distribution. |
