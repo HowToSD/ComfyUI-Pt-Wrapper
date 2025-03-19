@@ -2,6 +2,29 @@ from typing import Any, Dict
 import ast
 import torch
 from torch.distributions import Poisson
+import scipy.stats as scst
+
+class PoissonEx(Poisson):
+    """
+    A class to extend Poisson to add missing functionality.
+
+    pragma: skip_doc
+    """
+    def cdf(self, x: torch.Tensor):
+        """
+        Computes the cumulative distribution function (CDF) of the Poisson distribution.
+
+        Args:
+            x (torch.Tensor): Input tensor containing values where the CDF is evaluated.
+
+        Returns:
+            torch.Tensor: Tensor containing the cumulative probabilities.
+        """
+        a = x.detach().cpu().numpy()
+        rate = self.rate.detach().cpu().numpy()
+        outputs = scst.poisson.cdf(a, rate)
+        return torch.tensor(outputs, dtype=torch.float32)
+
 
 class PtdPoisson:
     """
@@ -43,6 +66,6 @@ class PtdPoisson:
         """
         r = ast.literal_eval(rate)
 
-        dist = Poisson(
+        dist = PoissonEx(
             rate=torch.tensor(r, dtype=torch.float32))
         return (dist,)

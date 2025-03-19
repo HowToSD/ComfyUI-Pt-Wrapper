@@ -221,9 +221,11 @@
 ## PyTorch wrapper - Transform
 | Node | Description |
 | --- | --- |
+| [Pt Concat](pt_concat.md) | Concatenates two PyTorch tensors. |
 | [Pt Flatten](pt_flatten.md) | Flattens a PyTorch tensor into a 1D tensor. |
 | [Pt Permute](pt_permute.md) | Permutes the dimensions of a PyTorch tensor according to the specified order. |
 | [Pt Reshape](pt_reshape.md) | Reshapes a PyTorch tensor into a specified shape using `torch.reshape()`. |
 | [Pt Squeeze](pt_squeeze.md) | Removes a dimension at the specified position in the input tensor if it is of size 1. |
+| [Pt Stack](pt_stack.md) | Creates a new axis and stacks two PyTorch tensors along the new axis. |
 | [Pt Unsqueeze](pt_unsqueeze.md) | Adds a singleton dimension at the specified position in the input tensor. |
 | [Pt View](pt_view.md) | Reshapes a PyTorch tensor into a specified shape using `torch.view()`. |

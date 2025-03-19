@@ -17,6 +17,7 @@ from .modules.pytorch_wrapper.pt_bitwise_right_shift import PtBitwiseRightShift
 from .modules.pytorch_wrapper.pt_bitwise_xor import PtBitwiseXor
 from .modules.pytorch_wrapper.pt_bmm import PtBmm
 from .modules.pytorch_wrapper.pt_bool_create import PtBoolCreate
+from .modules.pytorch_wrapper.pt_concat import PtConcat
 from .modules.pytorch_wrapper.pt_cos import PtCos
 from .modules.pytorch_wrapper.pt_cosh import PtCosh
 from .modules.pytorch_wrapper.pt_crop import PtCrop
@@ -85,6 +86,7 @@ from .modules.pytorch_wrapper.pt_size_to_numpy import PtSizeToNumpy
 from .modules.pytorch_wrapper.pt_size_to_string import PtSizeToString
 from .modules.pytorch_wrapper.pt_sqrt import PtSqrt
 from .modules.pytorch_wrapper.pt_squeeze import PtSqueeze
+from .modules.pytorch_wrapper.pt_stack import PtStack
 from .modules.pytorch_wrapper.pt_std import PtStd
 from .modules.pytorch_wrapper.pt_sub import PtSub
 from .modules.pytorch_wrapper.pt_sum import PtSum
@@ -191,6 +193,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtBitwiseXor": PtBitwiseXor,
     "PtBmm": PtBmm,
     "PtBoolCreate": PtBoolCreate,
+    "PtConcat": PtConcat,
     "PtCos": PtCos,
     "PtCosh": PtCosh,
     "PtCrop": PtCrop,
@@ -259,6 +262,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtSizeToString": PtSizeToString,
     "PtSqrt": PtSqrt,
     "PtSqueeze": PtSqueeze,
+    "PtStack": PtStack,
     "PtStd": PtStd,
     "PtSub": PtSub,
     "PtSum": PtSum,
@@ -365,6 +369,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtBitwiseXor": "Pt Bitwise Xor",
     "PtBmm": "Pt Bmm",
     "PtBoolCreate": "Pt Bool Create",
+    "PtConcat": "Pt Concat",
     "PtCos": "Pt Cos",
     "PtCosh": "Pt Cosh",
     "PtCrop": "Pt Crop",
@@ -433,6 +438,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtSizeToString": "Pt Size To String",
     "PtSqrt": "Pt Sqrt",
     "PtSqueeze": "Pt Squeeze",
+    "PtStack": "Pt Stack",
     "PtStd": "Pt Std",
     "PtSub": "Pt Sub",
     "PtSum": "Pt Sum",

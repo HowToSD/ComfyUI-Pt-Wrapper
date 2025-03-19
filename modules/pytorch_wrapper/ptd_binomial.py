@@ -2,6 +2,30 @@ from typing import Any, Dict
 import ast
 import torch
 from torch.distributions import Binomial
+import scipy.stats as scst
+
+class BinomialEx(Binomial):
+    """
+    A class to extend Binomial to add missing functionality.
+
+    pragma: skip_doc
+    """
+    def cdf(self, x: torch.Tensor):
+        """
+        Computes the cumulative distribution function (CDF) of the Binomial distribution.
+
+        Args:
+            x (torch.Tensor): Input tensor containing values where the CDF is evaluated.
+
+        Returns:
+            torch.Tensor: Tensor containing the cumulative probabilities.
+        """
+        a = x.detach().cpu().numpy()
+        n = self.total_count.detach().cpu().numpy()
+        probs = self.probs.detach().cpu().numpy()
+        outputs = scst.binom.cdf(a, n, probs)
+        return torch.tensor(outputs, dtype=torch.float32)
+
 
 class PtdBinomial:
     """
@@ -58,11 +82,11 @@ class PtdBinomial:
             raise ValueError("You have to specify either probabilities or logits")
         
         if p is not None:
-            dist = Binomial(
+            dist = BinomialEx(
                 total_count=torch.tensor(n, dtype=torch.int64),
                 probs=torch.tensor(p, dtype=torch.float32))
         elif l is not None:
-            dist = Binomial(
+            dist = BinomialEx(
                 total_count=torch.tensor(n, dtype=torch.int64),
                 logits=torch.tensor(l, dtype=torch.float32))
             
