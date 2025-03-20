@@ -1,4 +1,4 @@
-# Ptn Avg Pool
+# Ptn Avg Pool 2d
 An avgpool layer.  
 
     Args:

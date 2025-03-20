@@ -1,4 +1,4 @@
-# Ptn Max Pool
+# Ptn Max Pool 2d
 A maxpool layer.  
 
     Args:

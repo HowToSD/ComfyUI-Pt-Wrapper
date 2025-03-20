@@ -1,4 +1,4 @@
-# Ptn Conv
+# Ptn Conv 2d
 A convolutional model consisting of a single conv2d layer.  
 
         Args:

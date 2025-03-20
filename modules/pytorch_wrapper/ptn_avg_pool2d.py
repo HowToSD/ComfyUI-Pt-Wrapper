@@ -5,6 +5,7 @@ from .utils import str_to_dim
 
 class PtnAvgPool2d:
     """
+    Ptn Avg Pool 2d:
     An avgpool layer.  
 
         Args:

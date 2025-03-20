@@ -6,6 +6,7 @@ from .utils import str_to_dim
 
 class PtnConv2d:
     """
+    Ptn Conv 2d:
     A convolutional model consisting of a single conv2d layer.  
 
         Args:

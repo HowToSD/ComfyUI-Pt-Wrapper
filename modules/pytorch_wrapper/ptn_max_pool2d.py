@@ -5,6 +5,7 @@ from .utils import str_to_dim
 
 class PtnMaxPool2d:
     """
+    Ptn Max Pool 2d:
     A maxpool layer.  
 
         Args:

@@ -90,7 +90,8 @@ def format_display_name(class_name):
         ("MPL Scatter", "MPL Scatter Plot"),
         ("SNS Bar", "SNS Bar Chart"),
         ("SNS Line", "SNS Line Plot"),
-        ("SNS Scatter", "SNS Scatter Plot")
+        ("SNS Scatter", "SNS Scatter Plot"),
+        ("2d", " 2d"),
     ]
     for p in replace_pairs:
         final_result = final_result.replace(p[0], p[1])

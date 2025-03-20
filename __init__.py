@@ -146,9 +146,12 @@ from .modules.pytorch_wrapper.ptf_softmax import PtfSoftmax
 from .modules.pytorch_wrapper.ptf_softplus import PtfSoftplus
 from .modules.pytorch_wrapper.ptf_tanh import PtfTanh
 from .modules.pytorch_wrapper.ptn_avg_pool2d import PtnAvgPool2d
+from .modules.pytorch_wrapper.ptn_batch_norm2d import PtnBatchNorm2d
 from .modules.pytorch_wrapper.ptn_chained_model import PtnChainedModel
 from .modules.pytorch_wrapper.ptn_conv2d import PtnConv2d
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
+from .modules.pytorch_wrapper.ptn_instance_norm2d import PtnInstanceNorm2d
+from .modules.pytorch_wrapper.ptn_layer_norm import PtnLayerNorm
 from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_max_pool2d import PtnMaxPool2d
@@ -324,9 +327,12 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtfSoftplus": PtfSoftplus,
     "PtfTanh": PtfTanh,
     "PtnAvgPool2d": PtnAvgPool2d,
+    "PtnBatchNorm2d": PtnBatchNorm2d,
     "PtnChainedModel": PtnChainedModel,
     "PtnConv2d": PtnConv2d,
     "PtnConvModel": PtnConvModel,
+    "PtnInstanceNorm2d": PtnInstanceNorm2d,
+    "PtnLayerNorm": PtnLayerNorm,
     "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
     "PtnMaxPool2d": PtnMaxPool2d,
@@ -501,13 +507,16 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtfSoftmax": "Ptf Softmax",
     "PtfSoftplus": "Ptf Softplus",
     "PtfTanh": "Ptf Tanh",
-    "PtnAvgPool2d": "Ptn Avg Pool2d",
+    "PtnAvgPool2d": "Ptn Avg Pool 2d",
+    "PtnBatchNorm2d": "Ptn Batch Norm 2d",
     "PtnChainedModel": "Ptn Chained Model",
-    "PtnConv2d": "Ptn Conv2d",
+    "PtnConv2d": "Ptn Conv 2d",
     "PtnConvModel": "Ptn Conv Model",
+    "PtnInstanceNorm2d": "Ptn Instance Norm 2d",
+    "PtnLayerNorm": "Ptn Layer Norm",
     "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",
-    "PtnMaxPool2d": "Ptn Max Pool2d",
+    "PtnMaxPool2d": "Ptn Max Pool 2d",
     "PtnPreAddChannelAxis": "Ptn Pre Add Channel Axis",
     "PtnPreFlatten": "Ptn Pre Flatten",
     "PtnResnetModel": "Ptn Resnet Model",

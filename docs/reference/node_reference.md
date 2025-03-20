@@ -138,13 +138,16 @@
 ## PyTorch wrapper - Model
 | Node | Description |
 | --- | --- |
-| [Ptn Avg Pool](ptn_avg_pool2d.md) | An avgpool layer.   |
+| [Ptn Avg Pool 2d](ptn_avg_pool2d.md) | An avgpool layer.   |
+| [Ptn Batch Norm 2d](ptn_batch_norm2d.md) | A normalization model to normalize over the batch and spatial axes for each channel. |
 | [Ptn Chained Model](ptn_chained_model.md) | Constructs a chained PyTorch model. |
-| [Ptn Conv](ptn_conv2d.md) |     A convolutional model consisting of a single conv2d layer.   |
+| [Ptn Conv 2d](ptn_conv2d.md) |     A convolutional model consisting of a single conv2d layer.   |
 | [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
+| [Ptn Instance Norm 2d](ptn_instance_norm2d.md) | A normalization model to normalize elements over spatial axes within each channel for each sample. |
+| [Ptn Layer Norm](ptn_layer_norm.md) | A normalization model to normalize elements over specified axes. |
 | [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
-| [Ptn Max Pool](ptn_max_pool2d.md) | A maxpool layer.   |
+| [Ptn Max Pool 2d](ptn_max_pool2d.md) | A maxpool layer.   |
 | [Ptn Pre Add Channel Axis](ptn_pre_add_channel_axis.md) | Adds a channel axis after the batch axis if the input is rank 3 (bs, h, w) |
 | [Ptn Pre Flatten](ptn_pre_flatten.md) | Flattens the input tensor before processing the tensor in the specified model. |
 | [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
