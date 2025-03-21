@@ -95,3 +95,7 @@ Below is an example workflow for classifying the classic Iris dataset:
 `examples/workflows/iris_classification_train_eval.json`.
 
 According to [the UCI repository](https://archive.ics.uci.edu/dataset/53/iris), the neural network baseline accuracy for this dataset ranges from 92.105% to 100%. Using this workflow, you can expect around 96% accuracy, occasionally reaching 100%, which aligns with the baseline.
+
+# Specifying a loss function for training
+If you want to specify a loss function for training instead of using the default one in the trainer, use the `Pt Train Model` node. Create a loss function node (e.g., `Pt Cross Entropy Loss`) and connect it to the trainer node.
+Refer to `examples/workflows/train_model_with_custom_loss_example.json` for an example. (This workflow is intended to demonstrate node connections and is not optimized for high CIFAR10 accuracy. It runs for only 10 epochs to allow a quick check and reaches 88.9% accuracy.) You should adjust the hyperparameters according to your specific goals.

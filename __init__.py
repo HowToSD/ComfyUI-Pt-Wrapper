@@ -109,6 +109,7 @@ from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
 from .modules.pytorch_wrapper.pt_to_uint8 import PtToUint8
 from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
 from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
+from .modules.pytorch_wrapper.pt_train_model import PtTrainModel
 from .modules.pytorch_wrapper.pt_train_regression_model import PtTrainRegressionModel
 from .modules.pytorch_wrapper.pt_unsqueeze import PtUnsqueeze
 from .modules.pytorch_wrapper.pt_var import PtVar
@@ -300,6 +301,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtToUint8": PtToUint8,
     "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
+    "PtTrainModel": PtTrainModel,
     "PtTrainRegressionModel": PtTrainRegressionModel,
     "PtUnsqueeze": PtUnsqueeze,
     "PtVar": PtVar,
@@ -491,6 +493,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtToUint8": "Pt To Uint8",
     "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
+    "PtTrainModel": "Pt Train Model",
     "PtTrainRegressionModel": "Pt Train Regression Model",
     "PtUnsqueeze": "Pt Unsqueeze",
     "PtVar": "Pt Var",
