@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".
 MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
 
-from pytorch_wrapper.pto_lr_scheduler_reduce_on_plateau import PtoLrSchedulerReduceOnPlateau  # Updated import
+from pytorch_wrapper.pto_lr_scheduler_reduce_on_plateau import PtoLrSchedulerReduceOnPlateau
 
 
 class TestPtoLrSchedulerReduceOnPlateau(unittest.TestCase):

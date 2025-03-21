@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".
 MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
 
-from pytorch_wrapper.pto_lr_scheduler_step import PtoLrSchedulerStep  # Updated import
+from pytorch_wrapper.pto_lr_scheduler_step import PtoLrSchedulerStep
 
 
 class TestPtoLrSchedulerStep(unittest.TestCase):

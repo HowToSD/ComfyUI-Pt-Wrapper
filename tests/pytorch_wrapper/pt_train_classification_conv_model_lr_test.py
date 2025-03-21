@@ -15,7 +15,7 @@ from pytorch_wrapper.ptv_transforms_to_tensor import PtvTransformsToTensor
 from pytorch_wrapper.pt_data_loader import PtDataLoader
 from pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
 from pytorch_wrapper.pt_save_model import PtSaveModel
-from pytorch_wrapper.pto_lr_scheduler_step import PtoLrSchedulerStep  # Updated import
+from pytorch_wrapper.pto_lr_scheduler_step import PtoLrSchedulerStep
 
 
 class TestPtTrainClassificationConvModelLr(unittest.TestCase):

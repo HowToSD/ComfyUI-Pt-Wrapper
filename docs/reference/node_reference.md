@@ -111,6 +111,18 @@
 | [Pt Logical Not](pt_logical_not.md) | Performs a logical NOT operation on a PyTorch tensor element-wise. |
 | [Pt Logical Or](pt_logical_or.md) | Performs a logical OR operation on two PyTorch tensors element-wise. |
 | [Pt Logical Xor](pt_logical_xor.md) | Performs a logical XOR operation on two PyTorch tensors element-wise. |
+## PyTorch wrapper - Loss function
+| Node | Description |
+| --- | --- |
+| [Ptn BCE Loss](ptn_bce_loss.md) | A class to compute the binary cross entropy loss. |
+| [Ptn BCE With Logits Loss](ptn_bce_with_logits_loss.md) | A class to compute the sigmoid then binary cross entropy loss. |
+| [Ptn Cross Entropy Loss](ptn_cross_entropy_loss.md) | A class to compute the cross entropy loss. |
+| [Ptn Huber Loss](ptn_huber_loss.md) |  |
+| [Ptn KL Div Loss](ptn_kl_div_loss.md) | A class to compute the KL divergence loss. |
+| [Ptn L1 Loss](ptn_l1_loss.md) | A class to compute the L1 loss. |
+| [Ptn MSE Loss](ptn_mse_loss.md) | A class to compute the squared loss. |
+| [Ptn NLL Loss](ptn_nll_loss.md) | A model to compute the negative log likelihood (NLL) loss. |
+| [Ptn Smooth L1 Loss](ptn_smooth_l1_loss.md) |  |
 ## PyTorch wrapper - Math operations
 | Node | Description |
 | --- | --- |
@@ -204,6 +216,7 @@
 | Node | Description |
 | --- | --- |
 | [Pt Apply Function](pt_apply_function.md) | Applies a function to the input tensor. |
+| [Pt Compute Loss](pt_compute_loss.md) | Computes loss for the input with the target using the specified loss function. |
 | [Pt Data Loader](pt_data_loader.md) | Loads data from a dataset node and creates a PyTorch DataLoader.   |
 | [Pt Data Loader From Tensors](pt_data_loader_from_tensors.md) | Creates a Torchvision Dataloader from a pair of tensors. |
 | [Pt Evaluate Classification Model](pt_evaluate_classification_model.md) | Performs inference on test data and computes evaluation metrics. |

@@ -17,6 +17,7 @@ from .modules.pytorch_wrapper.pt_bitwise_right_shift import PtBitwiseRightShift
 from .modules.pytorch_wrapper.pt_bitwise_xor import PtBitwiseXor
 from .modules.pytorch_wrapper.pt_bmm import PtBmm
 from .modules.pytorch_wrapper.pt_bool_create import PtBoolCreate
+from .modules.pytorch_wrapper.pt_compute_loss import PtComputeLoss
 from .modules.pytorch_wrapper.pt_concat import PtConcat
 from .modules.pytorch_wrapper.pt_cos import PtCos
 from .modules.pytorch_wrapper.pt_cosh import PtCosh
@@ -147,17 +148,26 @@ from .modules.pytorch_wrapper.ptf_softplus import PtfSoftplus
 from .modules.pytorch_wrapper.ptf_tanh import PtfTanh
 from .modules.pytorch_wrapper.ptn_avg_pool2d import PtnAvgPool2d
 from .modules.pytorch_wrapper.ptn_batch_norm2d import PtnBatchNorm2d
+from .modules.pytorch_wrapper.ptn_bce_loss import PtnBCELoss
+from .modules.pytorch_wrapper.ptn_bce_with_logits_loss import PtnBCEWithLogitsLoss
 from .modules.pytorch_wrapper.ptn_chained_model import PtnChainedModel
 from .modules.pytorch_wrapper.ptn_conv2d import PtnConv2d
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
+from .modules.pytorch_wrapper.ptn_cross_entropy_loss import PtnCrossEntropyLoss
+from .modules.pytorch_wrapper.ptn_huber_loss import PtnHuberLoss
 from .modules.pytorch_wrapper.ptn_instance_norm2d import PtnInstanceNorm2d
+from .modules.pytorch_wrapper.ptn_kl_div_loss import PtnKLDivLoss
+from .modules.pytorch_wrapper.ptn_l1_loss import PtnL1Loss
 from .modules.pytorch_wrapper.ptn_layer_norm import PtnLayerNorm
 from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_max_pool2d import PtnMaxPool2d
+from .modules.pytorch_wrapper.ptn_mse_loss import PtnMSELoss
+from .modules.pytorch_wrapper.ptn_nll_loss import PtnNLLLoss
 from .modules.pytorch_wrapper.ptn_pre_add_channel_axis import PtnPreAddChannelAxis
 from .modules.pytorch_wrapper.ptn_pre_flatten import PtnPreFlatten
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
+from .modules.pytorch_wrapper.ptn_smooth_l1_loss import PtnSmoothL1Loss
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.pto_adamw import PtoAdamW
 from .modules.pytorch_wrapper.pto_lr_scheduler_cosine_annealing import PtoLrSchedulerCosineAnnealing
@@ -198,6 +208,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtBitwiseXor": PtBitwiseXor,
     "PtBmm": PtBmm,
     "PtBoolCreate": PtBoolCreate,
+    "PtComputeLoss": PtComputeLoss,
     "PtConcat": PtConcat,
     "PtCos": PtCos,
     "PtCosh": PtCosh,
@@ -327,18 +338,27 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtfSoftplus": PtfSoftplus,
     "PtfTanh": PtfTanh,
     "PtnAvgPool2d": PtnAvgPool2d,
+    "PtnBCELoss": PtnBCELoss,
+    "PtnBCEWithLogitsLoss": PtnBCEWithLogitsLoss,
     "PtnBatchNorm2d": PtnBatchNorm2d,
     "PtnChainedModel": PtnChainedModel,
     "PtnConv2d": PtnConv2d,
     "PtnConvModel": PtnConvModel,
+    "PtnCrossEntropyLoss": PtnCrossEntropyLoss,
+    "PtnHuberLoss": PtnHuberLoss,
     "PtnInstanceNorm2d": PtnInstanceNorm2d,
+    "PtnKLDivLoss": PtnKLDivLoss,
+    "PtnL1Loss": PtnL1Loss,
     "PtnLayerNorm": PtnLayerNorm,
     "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
+    "PtnMSELoss": PtnMSELoss,
     "PtnMaxPool2d": PtnMaxPool2d,
+    "PtnNLLLoss": PtnNLLLoss,
     "PtnPreAddChannelAxis": PtnPreAddChannelAxis,
     "PtnPreFlatten": PtnPreFlatten,
     "PtnResnetModel": PtnResnetModel,
+    "PtnSmoothL1Loss": PtnSmoothL1Loss,
     "PtoAdam": PtoAdam,
     "PtoAdamW": PtoAdamW,
     "PtoLrSchedulerCosineAnnealing": PtoLrSchedulerCosineAnnealing,
@@ -379,6 +399,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtBitwiseXor": "Pt Bitwise Xor",
     "PtBmm": "Pt Bmm",
     "PtBoolCreate": "Pt Bool Create",
+    "PtComputeLoss": "Pt Compute Loss",
     "PtConcat": "Pt Concat",
     "PtCos": "Pt Cos",
     "PtCosh": "Pt Cosh",
@@ -508,18 +529,27 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtfSoftplus": "Ptf Softplus",
     "PtfTanh": "Ptf Tanh",
     "PtnAvgPool2d": "Ptn Avg Pool 2d",
+    "PtnBCELoss": "Ptn BCE Loss",
+    "PtnBCEWithLogitsLoss": "Ptn BCE With Logits Loss",
     "PtnBatchNorm2d": "Ptn Batch Norm 2d",
     "PtnChainedModel": "Ptn Chained Model",
     "PtnConv2d": "Ptn Conv 2d",
     "PtnConvModel": "Ptn Conv Model",
+    "PtnCrossEntropyLoss": "Ptn Cross Entropy Loss",
+    "PtnHuberLoss": "Ptn Huber Loss",
     "PtnInstanceNorm2d": "Ptn Instance Norm 2d",
+    "PtnKLDivLoss": "Ptn KL Div Loss",
+    "PtnL1Loss": "Ptn L1 Loss",
     "PtnLayerNorm": "Ptn Layer Norm",
     "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",
+    "PtnMSELoss": "Ptn MSE Loss",
     "PtnMaxPool2d": "Ptn Max Pool 2d",
+    "PtnNLLLoss": "Ptn NLL Loss",
     "PtnPreAddChannelAxis": "Ptn Pre Add Channel Axis",
     "PtnPreFlatten": "Ptn Pre Flatten",
     "PtnResnetModel": "Ptn Resnet Model",
+    "PtnSmoothL1Loss": "Ptn Smooth L1 Loss",
     "PtoAdam": "Pto Adam",
     "PtoAdamW": "Pto AdamW",
     "PtoLrSchedulerCosineAnnealing": "Pto Lr Scheduler Cosine Annealing",

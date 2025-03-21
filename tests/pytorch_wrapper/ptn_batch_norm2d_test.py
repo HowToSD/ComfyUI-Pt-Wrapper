@@ -29,6 +29,7 @@ class TestPtnBatchNorm2d(unittest.TestCase):
         mean_after = out.mean(dim=(0, 2, 3))
 
         # Ensure std is not one before normalization
+        # Reference value: [2.2758, 2.4911, 2.2218]
         self.assertFalse(
             torch.allclose(
                 std_before,
@@ -36,12 +37,14 @@ class TestPtnBatchNorm2d(unittest.TestCase):
                 atol=1e-1))
 
         # Ensure normalization happened (std should be 1 unless elements are very close)
+        # Reference value: [1.0190, 1.0190, 1.0190]
         self.assertTrue(
             torch.allclose(
                 std_after,
                 torch.ones_like(std_after),
                 atol=1e-1))
-    
+
+        # Reference value: [0.0000e+00, 0.0000e+00, 2.2076e-09]
         self.assertTrue(
             torch.allclose(
                 mean_after,

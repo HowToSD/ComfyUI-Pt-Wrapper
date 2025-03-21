@@ -7,7 +7,7 @@ PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".
 MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
 
-from pytorch_wrapper.pt_neg import PtNeg  # Updated import to PtNeg
+from pytorch_wrapper.pt_neg import PtNeg
 
 
 class TestPtNeg(unittest.TestCase):

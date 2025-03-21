@@ -43,6 +43,6 @@ class PtApplyFunction:
             closure (Callable): Differentiable function to apply to the tensor.
 
         Returns:
-            Tuple[nn.Module]: A tuple containing the instantiated model.
+            Tuple[nn.Module]: A tuple containing the tensor.
         """
         return (closure(tens),)

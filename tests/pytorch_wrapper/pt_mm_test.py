@@ -7,7 +7,7 @@ PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".
 MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
 
-from pytorch_wrapper.pt_mm import PtMm  # Updated import to PtMm
+from pytorch_wrapper.pt_mm import PtMm
 
 
 class TestPtMm(unittest.TestCase):
