@@ -10,7 +10,7 @@ A class to compute the L1 loss.
 ## Input
 | Name | Data type |
 |---|---|
-| reduction | Mean |
+| reduction |  |
 
 ## Output
 | Data type |

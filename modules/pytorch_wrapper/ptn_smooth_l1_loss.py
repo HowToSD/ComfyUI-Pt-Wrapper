@@ -6,7 +6,6 @@ import torch.nn as nn
 class PtnSmoothL1Loss:
     """
     Ptn Smooth L1 Loss:
-
     A class to compute the Smooth L1 loss.
 
     Please see [PyTorch documentation](https://pytorch.org/docs/stable/generated/torch.nn.SmoothL1Loss.html) for details and exact formulation.

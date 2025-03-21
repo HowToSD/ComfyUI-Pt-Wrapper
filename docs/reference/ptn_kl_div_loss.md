@@ -14,7 +14,7 @@ A class to compute the KL divergence loss.
 ## Input
 | Name | Data type |
 |---|---|
-| reduction | None |
+| reduction |  |
 | log_target | Boolean |
 
 ## Output

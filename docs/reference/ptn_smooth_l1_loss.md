@@ -14,7 +14,7 @@ Please see [PyTorch documentation](https://pytorch.org/docs/stable/generated/tor
 ## Input
 | Name | Data type |
 |---|---|
-| reduction | Mean |
+| reduction |  |
 | beta | Float |
 
 ## Output

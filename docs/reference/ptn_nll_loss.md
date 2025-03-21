@@ -12,7 +12,7 @@ Unlike Ptn Cross Entropy which takes input in logits, input to this nodes needs 
 ## Input
 | Name | Data type |
 |---|---|
-| reduction | Mean |
+| reduction |  |
 
 ## Output
 | Data type |

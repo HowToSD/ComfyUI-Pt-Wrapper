@@ -12,7 +12,7 @@ Unlike the Ptn BCE Loss With Logits node, which takes logits as input, this node
 ## Input
 | Name | Data type |
 |---|---|
-| reduction | Mean |
+| reduction |  |
 
 ## Output
 | Data type |

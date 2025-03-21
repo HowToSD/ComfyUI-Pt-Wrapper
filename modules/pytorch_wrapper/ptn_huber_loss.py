@@ -6,7 +6,6 @@ import torch.nn as nn
 class PtnHuberLoss:
     """
     Ptn Huber Loss:
-
     A class to compute the Huber loss.
 
     Please see [PyTorch documentation](https://pytorch.org/docs/stable/generated/torch.nn.HuberLoss.html) for details.

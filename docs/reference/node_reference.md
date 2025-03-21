@@ -117,12 +117,12 @@
 | [Ptn BCE Loss](ptn_bce_loss.md) | A class to compute the binary cross entropy loss. |
 | [Ptn BCE With Logits Loss](ptn_bce_with_logits_loss.md) | A class to compute the sigmoid then binary cross entropy loss. |
 | [Ptn Cross Entropy Loss](ptn_cross_entropy_loss.md) | A class to compute the cross entropy loss. |
-| [Ptn Huber Loss](ptn_huber_loss.md) |  |
+| [Ptn Huber Loss](ptn_huber_loss.md) | A class to compute the Huber loss. |
 | [Ptn KL Div Loss](ptn_kl_div_loss.md) | A class to compute the KL divergence loss. |
 | [Ptn L1 Loss](ptn_l1_loss.md) | A class to compute the L1 loss. |
 | [Ptn MSE Loss](ptn_mse_loss.md) | A class to compute the squared loss. |
 | [Ptn NLL Loss](ptn_nll_loss.md) | A model to compute the negative log likelihood (NLL) loss. |
-| [Ptn Smooth L1 Loss](ptn_smooth_l1_loss.md) |  |
+| [Ptn Smooth L1 Loss](ptn_smooth_l1_loss.md) | A class to compute the Smooth L1 loss. |
 ## PyTorch wrapper - Math operations
 | Node | Description |
 | --- | --- |

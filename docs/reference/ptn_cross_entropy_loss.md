@@ -12,7 +12,7 @@ Unlike Ptn NLL Loss node which takes log probabilities for input, input to this 
 ## Input
 | Name | Data type |
 |---|---|
-| reduction | Mean |
+| reduction |  |
 
 ## Output
 | Data type |

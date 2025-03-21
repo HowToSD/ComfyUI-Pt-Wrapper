@@ -10,7 +10,7 @@ A class to compute the sigmoid then binary cross entropy loss.
 ## Input
 | Name | Data type |
 |---|---|
-| reduction | Mean |
+| reduction |  |
 
 ## Output
 | Data type |
