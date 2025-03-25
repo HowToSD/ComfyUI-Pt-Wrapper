@@ -99,3 +99,6 @@ According to [the UCI repository](https://archive.ics.uci.edu/dataset/53/iris), 
 # Specifying a loss function for training
 If you want to specify a loss function for training instead of using the default one in the trainer, use the `Pt Train Model` node. Create a loss function node (e.g., `Pt Cross Entropy Loss`) and connect it to the trainer node.
 Refer to `examples/workflows/train_model_with_custom_loss_example.json` for an example. (This workflow is intended to demonstrate node connections and is not optimized for high CIFAR10 accuracy. It runs for only 10 epochs to allow a quick check and reaches 88.9% accuracy.) You should adjust the hyperparameters according to your specific goals.
+
+# Training RNN
+Refer to [Training RNN for text classification](training_rnn_for_classification.md)
