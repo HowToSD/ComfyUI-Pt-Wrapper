@@ -162,6 +162,8 @@
 | [Ptn Max Pool 2d](ptn_max_pool2d.md) | A maxpool layer.   |
 | [Ptn Pre Add Channel Axis](ptn_pre_add_channel_axis.md) | Adds a channel axis after the batch axis if the input is rank 3 (bs, h, w) |
 | [Ptn Pre Flatten](ptn_pre_flatten.md) | Flattens the input tensor before processing the tensor in the specified model. |
+| [Ptn RNN](ptn_rnn.md) | A recurrent neural network (RNN) model consisting of one or more of a recurrent layer.   |
+| [Ptn RNN Linear](ptn_rnn_linear.md) | A recurrent neural network (RNN) model with a linear head. |
 | [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
 ## PyTorch wrapper - Optimizer
 | Node | Description |
@@ -226,6 +228,7 @@
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs.   |
 | [Pt Train Classification Model Lr](pt_train_classification_model_lr.md) | Trains a classification model using a given dataset, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Model](pt_train_model.md) | Trains a model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
+| [Pt Train R N N Model](pt_train_rnn_model.md) | Trains an RNN model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Regression Model](pt_train_regression_model.md) | Trains a regression model using a given dataset, optimizer, and number of epochs.   |
 | [Pto Lr Scheduler Cosine Annealing](pto_lr_scheduler_cosine_annealing.md) | Creates a cosine annealing learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Reduce On Plateau](pto_lr_scheduler_reduce_on_plateau.md) | Creates a reduce-on-plateau learning rate scheduler for an optimizer. |
@@ -233,7 +236,9 @@
 | [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
 | [Ptv Dataset Len](ptv_dataset_len.md) | A wrapper class that calls Python len on a dataset. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
+| [Ptv Hf Glove Dataset](ptv_hf_glove_dataset.md) | A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to embedding using Glove. |
 | [Ptv Image Folder Dataset](ptv_image_folder_dataset.md) | A Torchvision ImageFolder Dataset class wrapper. |
+| [Ptv Sequential Tensor Dataset](ptv_sequential_tensor_dataset.md) | Creates a sequential tensor Dataset. |
 | [Ptv Transforms Data Augment](ptv_transforms_data_augment.md) | Applies data augmentation transformations to dataset elements. |
 | [Ptv Transforms Resize](ptv_transforms_resize.md) | Resizes and transforms elements of dataset to PyTorch tensors. |
 | [Ptv Transforms To Tensor](ptv_transforms_to_tensor.md) | Transforms elements of dataset to PyTorch tensors. |

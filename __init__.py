@@ -111,6 +111,7 @@ from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassi
 from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
 from .modules.pytorch_wrapper.pt_train_model import PtTrainModel
 from .modules.pytorch_wrapper.pt_train_regression_model import PtTrainRegressionModel
+from .modules.pytorch_wrapper.pt_train_rnn_model import PtTrainRNNModel
 from .modules.pytorch_wrapper.pt_unsqueeze import PtUnsqueeze
 from .modules.pytorch_wrapper.pt_var import PtVar
 from .modules.pytorch_wrapper.pt_view import PtView
@@ -168,6 +169,8 @@ from .modules.pytorch_wrapper.ptn_nll_loss import PtnNLLLoss
 from .modules.pytorch_wrapper.ptn_pre_add_channel_axis import PtnPreAddChannelAxis
 from .modules.pytorch_wrapper.ptn_pre_flatten import PtnPreFlatten
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
+from .modules.pytorch_wrapper.ptn_rnn import PtnRNN
+from .modules.pytorch_wrapper.ptn_rnn_linear import PtnRNNLinear
 from .modules.pytorch_wrapper.ptn_smooth_l1_loss import PtnSmoothL1Loss
 from .modules.pytorch_wrapper.pto_adam import PtoAdam
 from .modules.pytorch_wrapper.pto_adamw import PtoAdamW
@@ -179,7 +182,9 @@ from .modules.pytorch_wrapper.pto_simple import PtoSimple
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
 from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
+from .modules.pytorch_wrapper.ptv_hf_glove_dataset import PtvHfGloveDataset
 from .modules.pytorch_wrapper.ptv_image_folder_dataset import PtvImageFolderDataset
+from .modules.pytorch_wrapper.ptv_sequential_tensor_dataset import PtvSequentialTensorDataset
 from .modules.pytorch_wrapper.ptv_transforms_data_augment import PtvTransformsDataAugment
 from .modules.pytorch_wrapper.ptv_transforms_resize import PtvTransformsResize
 from .modules.pytorch_wrapper.ptv_transforms_to_tensor import PtvTransformsToTensor
@@ -302,6 +307,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
     "PtTrainModel": PtTrainModel,
+    "PtTrainRNNModel": PtTrainRNNModel,
     "PtTrainRegressionModel": PtTrainRegressionModel,
     "PtUnsqueeze": PtUnsqueeze,
     "PtVar": PtVar,
@@ -359,6 +365,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnNLLLoss": PtnNLLLoss,
     "PtnPreAddChannelAxis": PtnPreAddChannelAxis,
     "PtnPreFlatten": PtnPreFlatten,
+    "PtnRNN": PtnRNN,
+    "PtnRNNLinear": PtnRNNLinear,
     "PtnResnetModel": PtnResnetModel,
     "PtnSmoothL1Loss": PtnSmoothL1Loss,
     "PtoAdam": PtoAdam,
@@ -371,7 +379,9 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtvDataset": PtvDataset,
     "PtvDatasetLen": PtvDatasetLen,
     "PtvDatasetLoader": PtvDatasetLoader,
+    "PtvHfGloveDataset": PtvHfGloveDataset,
     "PtvImageFolderDataset": PtvImageFolderDataset,
+    "PtvSequentialTensorDataset": PtvSequentialTensorDataset,
     "PtvTransformsDataAugment": PtvTransformsDataAugment,
     "PtvTransformsResize": PtvTransformsResize,
     "PtvTransformsToTensor": PtvTransformsToTensor,
@@ -494,6 +504,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
     "PtTrainModel": "Pt Train Model",
+    "PtTrainRNNModel": "Pt Train RNN Model",
     "PtTrainRegressionModel": "Pt Train Regression Model",
     "PtUnsqueeze": "Pt Unsqueeze",
     "PtVar": "Pt Var",
@@ -551,6 +562,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnNLLLoss": "Ptn NLL Loss",
     "PtnPreAddChannelAxis": "Ptn Pre Add Channel Axis",
     "PtnPreFlatten": "Ptn Pre Flatten",
+    "PtnRNN": "Ptn RNN",
+    "PtnRNNLinear": "Ptn RNN Linear",
     "PtnResnetModel": "Ptn Resnet Model",
     "PtnSmoothL1Loss": "Ptn Smooth L1 Loss",
     "PtoAdam": "Pto Adam",
@@ -563,7 +576,9 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtvDataset": "Ptv Dataset",
     "PtvDatasetLen": "Ptv Dataset Len",
     "PtvDatasetLoader": "Ptv Dataset Loader",
+    "PtvHfGloveDataset": "Ptv Hf Glove Dataset",
     "PtvImageFolderDataset": "Ptv Image Folder Dataset",
+    "PtvSequentialTensorDataset": "Ptv Sequential Tensor Dataset",
     "PtvTransformsDataAugment": "Ptv Transforms Data Augment",
     "PtvTransformsResize": "Ptv Transforms Resize",
     "PtvTransformsToTensor": "Ptv Transforms To Tensor",
