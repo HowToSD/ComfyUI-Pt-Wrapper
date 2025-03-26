@@ -1,7 +1,7 @@
 ## Update (3/25/2025) 
 
-GRU support has been added.
-Check out new example workflow at `examples/workflows/gru_classification.json` which achieves approximately **87% validation accuracy** for IMDB sentiment classification (which is in the expected range for GRU).
+LSTM & GRU support has been added.
+Check out new example workflows at `examples/workflows/lstm_classification.json` & `examples/workflows/gru_classification.json`. Both of them achieve approximately **87% validation accuracy** for IMDB sentiment classification (which is in the expected range for LSTM & GRU).
 
 ---
 # ComfyUI-Pt-Wrapper  

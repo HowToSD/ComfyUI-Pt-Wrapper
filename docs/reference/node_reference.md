@@ -158,6 +158,8 @@
 | [Ptn GRU](ptn_gru.md) | A gated recurrent unit (GRU) model consisting of one or more of a recurrent layer.   |
 | [Ptn GRU Linear](ptn_gru_linear.md) | A recurrent neural network (GRU) model with a linear head. |
 | [Ptn Instance Norm 2d](ptn_instance_norm2d.md) | A normalization model to normalize elements over spatial axes within each channel for each sample. |
+| [Ptn LSTM](ptn_lstm.md) | A long short-term memory  (LSTM) model consisting of one or more of a recurrent layer.   |
+| [Ptn LSTM Linear](ptn_lstm_linear.md) | A recurrent neural network (LSTM) model with a linear head. |
 | [Ptn Layer Norm](ptn_layer_norm.md) | A normalization model to normalize elements over specified axes. |
 | [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |

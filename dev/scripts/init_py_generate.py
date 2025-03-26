@@ -80,6 +80,7 @@ def format_display_name(class_name):
         (" N A", " NA"),
         ("R N N", "RNN"),
         ("G R U", "GRU"),
+        ("L S T M", "LSTM"),
         ("Adam W", "AdamW"),
         ("Re L U", "ReLU"),
         ("Si L U", "SiLU"),

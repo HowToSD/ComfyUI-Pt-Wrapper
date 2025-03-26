@@ -165,6 +165,8 @@ from .modules.pytorch_wrapper.ptn_l1_loss import PtnL1Loss
 from .modules.pytorch_wrapper.ptn_layer_norm import PtnLayerNorm
 from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
+from .modules.pytorch_wrapper.ptn_lstm import PtnLSTM
+from .modules.pytorch_wrapper.ptn_lstm_linear import PtnLSTMLinear
 from .modules.pytorch_wrapper.ptn_max_pool2d import PtnMaxPool2d
 from .modules.pytorch_wrapper.ptn_mse_loss import PtnMSELoss
 from .modules.pytorch_wrapper.ptn_nll_loss import PtnNLLLoss
@@ -361,6 +363,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnInstanceNorm2d": PtnInstanceNorm2d,
     "PtnKLDivLoss": PtnKLDivLoss,
     "PtnL1Loss": PtnL1Loss,
+    "PtnLSTM": PtnLSTM,
+    "PtnLSTMLinear": PtnLSTMLinear,
     "PtnLayerNorm": PtnLayerNorm,
     "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
@@ -560,6 +564,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnInstanceNorm2d": "Ptn Instance Norm 2d",
     "PtnKLDivLoss": "Ptn KL Div Loss",
     "PtnL1Loss": "Ptn L1 Loss",
+    "PtnLSTM": "Ptn LSTM",
+    "PtnLSTMLinear": "Ptn LSTM Linear",
     "PtnLayerNorm": "Ptn Layer Norm",
     "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",
