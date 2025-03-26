@@ -156,6 +156,8 @@ from .modules.pytorch_wrapper.ptn_chained_model import PtnChainedModel
 from .modules.pytorch_wrapper.ptn_conv2d import PtnConv2d
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_cross_entropy_loss import PtnCrossEntropyLoss
+from .modules.pytorch_wrapper.ptn_gru import PtnGRU
+from .modules.pytorch_wrapper.ptn_gru_linear import PtnGRULinear
 from .modules.pytorch_wrapper.ptn_huber_loss import PtnHuberLoss
 from .modules.pytorch_wrapper.ptn_instance_norm2d import PtnInstanceNorm2d
 from .modules.pytorch_wrapper.ptn_kl_div_loss import PtnKLDivLoss
@@ -353,6 +355,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnConv2d": PtnConv2d,
     "PtnConvModel": PtnConvModel,
     "PtnCrossEntropyLoss": PtnCrossEntropyLoss,
+    "PtnGRU": PtnGRU,
+    "PtnGRULinear": PtnGRULinear,
     "PtnHuberLoss": PtnHuberLoss,
     "PtnInstanceNorm2d": PtnInstanceNorm2d,
     "PtnKLDivLoss": PtnKLDivLoss,
@@ -550,6 +554,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnConv2d": "Ptn Conv 2d",
     "PtnConvModel": "Ptn Conv Model",
     "PtnCrossEntropyLoss": "Ptn Cross Entropy Loss",
+    "PtnGRU": "Ptn GRU",
+    "PtnGRULinear": "Ptn GRU Linear",
     "PtnHuberLoss": "Ptn Huber Loss",
     "PtnInstanceNorm2d": "Ptn Instance Norm 2d",
     "PtnKLDivLoss": "Ptn KL Div Loss",

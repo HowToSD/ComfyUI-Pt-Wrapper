@@ -1,3 +1,9 @@
+## Update (3/25/2025) 
+
+GRU support has been added.
+Check out new example workflow at `examples/workflows/gru_classification.json` which achieves approximately **87% validation accuracy** for IMDB sentiment classification (which is in the expected range for GRU).
+
+---
 # ComfyUI-Pt-Wrapper  
 
 ComfyUI-Pt-Wrapper is a spin-off of [ComfyUI-Data-Analysis](https://github.com/HowToSD/ComfyUI-Data-Analysis), designed as a dedicated extension for PyTorch wrapper nodes originally included in the analysis extension.

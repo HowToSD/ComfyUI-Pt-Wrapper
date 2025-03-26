@@ -3,6 +3,7 @@
 You can use **ComfyUI-Pt-Wrapper** to train an RNN for text classification, such as sentiment analysis on a movie review dataset.
 
 You can find the workflow at `examples/workflows/rnn_classification.json`.
+You can also use GRU workflow at `examples/workflows/gru_classification.json`.
 
 ![Workflow](images/rnn_classification.png)
 
@@ -42,3 +43,4 @@ You can also enable `classification_metrics` to print validation accuracy to the
 ## Expected Accuracy
 
 Using this workflow, you should get around **83% validation accuracy** on the Hugging Face version of the IMDB dataset, which is a solid result for an RNN.
+The GRU workflow achieves approximately **87% validation accuracy**.

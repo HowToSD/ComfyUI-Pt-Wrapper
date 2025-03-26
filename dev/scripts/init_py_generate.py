@@ -79,6 +79,7 @@ def format_display_name(class_name):
         ("SN S", "SNS"),
         (" N A", " NA"),
         ("R N N", "RNN"),
+        ("G R U", "GRU"),
         ("Adam W", "AdamW"),
         ("Re L U", "ReLU"),
         ("Si L U", "SiLU"),

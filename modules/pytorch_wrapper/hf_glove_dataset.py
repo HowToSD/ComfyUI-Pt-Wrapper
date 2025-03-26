@@ -72,6 +72,9 @@ class HfGloveDataset(Dataset):
         # This strips punctuation like "!", ".", "(", but keeps words and numbers
         text = re.sub(r"[^a-zA-Z0-9\s]", " ", text)
 
+        # Replace consecutive white space to a single white space
+        text = re.sub(r"  +", " ", text)
+
         # Convert to lowercase and split by whitespace to get token list
         return text.lower().split()
 

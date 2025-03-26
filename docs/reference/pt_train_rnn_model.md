@@ -1,4 +1,4 @@
-# Pt Train R N N Model
+# Pt Train RNN Model
 Trains an RNN model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.  
 
    Args:  
@@ -15,7 +15,8 @@ Trains an RNN model using a given dataset, loss function, optimizer, and number 
         classification_metrics (bool): If True and if val_loader is set, print out classification metrics.  This is only valid for classification model training.  
         use_valid_token_mean (bool): Computes the mean of the RNN output for non-zero inputs and feeds to the linear layer.
         val_loader (PTDATALOADER): DataLoader for validation dataset (optional).  
-        scheduler (PTLRSCHEDULER): Learning rate scheduler.
+        scheduler (PTLRSCHEDULER): Learning rate scheduler.  
+        h_0 (TENSOR): Optional initial hidden state. For unidirectional models, the shape is [num_layers, batch_size, hidden_size]. For bidirectional models, it is [2 * num_layers, batch_size, hidden_size]. If not provided, a zero tensor is used.
 
 ## Input
 | Name | Data type |
@@ -34,6 +35,7 @@ Trains an RNN model using a given dataset, loss function, optimizer, and number 
 | use_valid_token_mean | Boolean |
 | scheduler | Ptlrscheduler |
 | val_loader | Ptdataloader |
+| h_0 | Tensor |
 
 ## Output
 | Data type |

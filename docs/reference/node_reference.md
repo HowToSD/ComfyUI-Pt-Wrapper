@@ -155,6 +155,8 @@
 | [Ptn Chained Model](ptn_chained_model.md) | Constructs a chained PyTorch model. |
 | [Ptn Conv 2d](ptn_conv2d.md) |     A convolutional model consisting of a single conv2d layer.   |
 | [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
+| [Ptn GRU](ptn_gru.md) | A gated recurrent unit (GRU) model consisting of one or more of a recurrent layer.   |
+| [Ptn GRU Linear](ptn_gru_linear.md) | A recurrent neural network (GRU) model with a linear head. |
 | [Ptn Instance Norm 2d](ptn_instance_norm2d.md) | A normalization model to normalize elements over spatial axes within each channel for each sample. |
 | [Ptn Layer Norm](ptn_layer_norm.md) | A normalization model to normalize elements over specified axes. |
 | [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
@@ -228,7 +230,7 @@
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs.   |
 | [Pt Train Classification Model Lr](pt_train_classification_model_lr.md) | Trains a classification model using a given dataset, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Model](pt_train_model.md) | Trains a model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
-| [Pt Train R N N Model](pt_train_rnn_model.md) | Trains an RNN model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
+| [Pt Train RNN Model](pt_train_rnn_model.md) | Trains an RNN model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Regression Model](pt_train_regression_model.md) | Trains a regression model using a given dataset, optimizer, and number of epochs.   |
 | [Pto Lr Scheduler Cosine Annealing](pto_lr_scheduler_cosine_annealing.md) | Creates a cosine annealing learning rate scheduler for an optimizer. |
 | [Pto Lr Scheduler Reduce On Plateau](pto_lr_scheduler_reduce_on_plateau.md) | Creates a reduce-on-plateau learning rate scheduler for an optimizer. |

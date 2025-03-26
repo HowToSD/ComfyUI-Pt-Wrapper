@@ -9,6 +9,7 @@ from .rnn_output_reshape import extract_rnn_return_value_with_adjusted_label
 
 class PtTrainRNNModel:
     """
+    Pt Train RNN Model:
     Trains an RNN model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.  
 
        Args:  
@@ -26,6 +27,7 @@ class PtTrainRNNModel:
             use_valid_token_mean (bool): Computes the mean of the RNN output for non-zero inputs and feeds to the linear layer.
             val_loader (PTDATALOADER): DataLoader for validation dataset (optional).  
             scheduler (PTLRSCHEDULER): Learning rate scheduler.  
+            h_0 (TENSOR): Optional initial hidden state. For unidirectional models, the shape is [num_layers, batch_size, hidden_size]. For bidirectional models, it is [2 * num_layers, batch_size, hidden_size]. If not provided, a zero tensor is used.
 
     category: PyTorch wrapper - Training
     """
@@ -56,6 +58,7 @@ class PtTrainRNNModel:
             "optional": {
                 "scheduler": ("PTLRSCHEDULER", {}),
                 "val_loader": ("PTDATALOADER", {}),
+                "h_0": ("TENSOR", {}),
             }
         }
 
@@ -82,7 +85,8 @@ class PtTrainRNNModel:
           classification_metrics:bool,
           use_valid_token_mean: bool,
           scheduler: Optional[Union[torch.optim.lr_scheduler._LRScheduler, torch.optim.lr_scheduler.ReduceLROnPlateau]] = None,
-          val_loader: Optional[torch.utils.data.DataLoader] = None) -> Tuple[nn.Module, torch.Tensor, torch.Tensor]:
+          val_loader: Optional[torch.utils.data.DataLoader] = None,
+          h_0: Optional[torch.Tensor] = None) -> Tuple[nn.Module, torch.Tensor, torch.Tensor]:
         """
         Trains an RNN model.
 
@@ -101,6 +105,7 @@ class PtTrainRNNModel:
             use_valid_token_mean (bool): Computes the mean of the RNN output for non-zero inputs and feeds to the linear layer.
             val_loader (Optional[torch.utils.data.DataLoader]): DataLoader for validation dataset (optional).
             scheduler (Optional[Union[torch.optim.lr_scheduler._LRScheduler, torch.optim.lr_scheduler.ReduceLROnPlateau]]): Learning rate scheduler.
+            h_0 (optional[torch.Tensor]): Optional initial hidden state. For unidirectional models, the shape is [num_layers, batch_size, hidden_size]. For bidirectional models, it is [2 * num_layers, batch_size, hidden_size]. If not provided, a zero tensor is used.
 
         Returns:
             Tuple[torch.nn.Module, torch.Tensor, torch.Tensor]: A tuple containing the trained model, 
@@ -142,14 +147,20 @@ class PtTrainRNNModel:
                         y = y.to("cuda")
                     optimizer.zero_grad()
                     if linear_head:
-                        y_hat = model(x)
+                        if h_0:
+                            y_hat = model(x, hx=h_0)  # Note that both RNN and GRU use hx. See PyTorch code. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/nn/modules/rnn.py
+                        else:
+                            y_hat = model(x)
                         if y.dim() == 3:
                             y = y[:,-1,:]  # Grab last token
                         elif y.dim() == 1:
                             y = torch.unsqueeze(y, dim=-1)
                             y = y.to(torch.float32)
                     else:
-                        output_seq, _ = model(x)
+                        if h_0:
+                            output_seq, _ = model(x, hx=h_0)
+                        else:
+                            output_seq, _ = model(x)
                         outputs, adjusted_labels = extract_rnn_return_value_with_adjusted_label(
                             x,
                             y,
