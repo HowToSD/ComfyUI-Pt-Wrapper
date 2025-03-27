@@ -1,18 +1,17 @@
-from typing import Any, Dict, Tuple
+from typing import Any, Dict, Tuple, Callable
 import torch
 
 
-class PtvHfGloveDataset:
+class PtvHfDatasetWithTokenEncode:
     """
-    A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to embedding using Glove.
+    A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to token IDs.
 
         Args:  
             name (str): Name of the dataset class.  
             split (str): The name of the subset of dataset to retrieve or the split specifier.
-            embed_dim (int): Embedding dimension for Glove.
-            max_seq_len (int): Sequence length.
             sample_field_name (str): Field name for text samples.
             label_field_name (str): Field name for labels.
+            encode (PTCALLABLE): The reference to a token encoder function.
 
     category: PyTorch wrapper - Training
     """
@@ -29,10 +28,9 @@ class PtvHfGloveDataset:
             "required": {
                 "name": ("STRING", {"default": "", "multiline": False}),
                 "split": ("STRING", {"default": "train","multiline": False}),
-                "embed_dim": ("INT", {"default": 100, "min":32, "max": 4096}),
-                "max_seq_len": ("INT", {"default": 256, "min":8, "max": 4096}),
                 "sample_field_name": ("STRING", {"default": "text","multiline": False}),
                 "label_field_name": ("STRING", {"default": "label","multiline": False}),
+                "encode": ("PTCALLABLE", {}),
             }
         }
 
@@ -47,34 +45,31 @@ class PtvHfGloveDataset:
     def f(self, 
           name: str,
           split: str,
-          embed_dim: int,
-          max_seq_len: int,
           sample_field_name: str,
-          label_field_name: str) -> Tuple:
+          label_field_name: str,
+          encode: Callable) -> Tuple:
         """
         Loads a dataset from Hugging Face with specified parameters.  
         
         Args:  
-            name (str): Name of the dataset class.  
+            name (str): Name of the dataset class (e.g., MNIST, FashionMNIST).  
             split (str): The name of the subset of dataset to retrieve or the split specifier.
-            embed_dim (int): Embedding dimension for Glove.
-            max_seq_len (int): Sequence length.
             sample_field_name (str): Field name for text samples.
             label_field_name (str): Field name for labels.
+            encode (Callable): The reference to a token encoder function.
 
         Returns:  
             Tuple: A tuple containing the dataset instance.  
         """
         # Keep import within this method so that relevant packages are imported
         # only when they are actually needed.
-        from .hf_glove_dataset import HfGloveDataset
+        from .hf_dataset_with_token_encode import HfDatasetWithTokenEncode
 
         with torch.inference_mode(False):
-            dc = HfGloveDataset(
+            dc = HfDatasetWithTokenEncode(
                 dataset_name=name,
                 split=split,
-                glove_dim=embed_dim,
-                max_seq_len=max_seq_len,
                 sample_field_name=sample_field_name,
-                label_field_name=label_field_name)
+                label_field_name=label_field_name,
+                encode=encode)
             return (dc,)

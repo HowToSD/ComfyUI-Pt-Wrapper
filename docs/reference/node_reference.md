@@ -30,6 +30,7 @@
 ## PyTorch wrapper - Callable
 | Node | Description |
 | --- | --- |
+| [Pt Tokenizer](pt_tokenizer.md) | The tokenizer to encode a string or a list of string to token IDs. |
 | [Ptf GELU](ptf_gelu.md) | The GELU activation function. |
 | [Ptf LeakyReLU](ptf_leaky_relu.md) | The LeakyReLU activation function. |
 | [Ptf Log Softmax](ptf_log_softmax.md) | The log softmax activation function. |
@@ -155,6 +156,7 @@
 | [Ptn Chained Model](ptn_chained_model.md) | Constructs a chained PyTorch model. |
 | [Ptn Conv 2d](ptn_conv2d.md) |     A convolutional model consisting of a single conv2d layer.   |
 | [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
+| [Ptn Embedding](ptn_embedding.md) | Constructs an embedding layer. |
 | [Ptn GRU](ptn_gru.md) | A gated recurrent unit (GRU) model consisting of one or more of a recurrent layer.   |
 | [Ptn GRU Linear](ptn_gru_linear.md) | A recurrent neural network (GRU) model with a linear head. |
 | [Ptn Instance Norm 2d](ptn_instance_norm2d.md) | A normalization model to normalize elements over spatial axes within each channel for each sample. |
@@ -167,6 +169,7 @@
 | [Ptn Pre Add Channel Axis](ptn_pre_add_channel_axis.md) | Adds a channel axis after the batch axis if the input is rank 3 (bs, h, w) |
 | [Ptn Pre Flatten](ptn_pre_flatten.md) | Flattens the input tensor before processing the tensor in the specified model. |
 | [Ptn RNN](ptn_rnn.md) | A recurrent neural network (RNN) model consisting of one or more of a recurrent layer.   |
+| [Ptn RNN Linear](ptn_embedding_rnn_linear.md) | A recurrent neural network (RNN) model with a linear head. |
 | [Ptn RNN Linear](ptn_rnn_linear.md) | A recurrent neural network (RNN) model with a linear head. |
 | [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
 ## PyTorch wrapper - Optimizer
@@ -240,12 +243,15 @@
 | [Ptv Dataset](ptv_dataset.md) | A Torchvision Dataset class wrapper. |
 | [Ptv Dataset Len](ptv_dataset_len.md) | A wrapper class that calls Python len on a dataset. |
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
+| [Ptv Hf Dataset With Token Encode](ptv_hf_dataset_with_token_encode.md) | A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to token IDs. |
 | [Ptv Hf Glove Dataset](ptv_hf_glove_dataset.md) | A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to embedding using Glove. |
 | [Ptv Image Folder Dataset](ptv_image_folder_dataset.md) | A Torchvision ImageFolder Dataset class wrapper. |
 | [Ptv Sequential Tensor Dataset](ptv_sequential_tensor_dataset.md) | Creates a sequential tensor Dataset. |
 | [Ptv Transforms Data Augment](ptv_transforms_data_augment.md) | Applies data augmentation transformations to dataset elements. |
 | [Ptv Transforms Resize](ptv_transforms_resize.md) | Resizes and transforms elements of dataset to PyTorch tensors. |
 | [Ptv Transforms To Tensor](ptv_transforms_to_tensor.md) | Transforms elements of dataset to PyTorch tensors. |
+| [Sp Encode](sp_encode.md) | SentencePiece wrapper for encoding text into token ID tensors. |
+| [Sp Load Model](sp_load_model.md) | A wrapper class for loading a SentencePiece tokenization model. |
 ## PyTorch wrapper - Transform
 | Node | Description |
 | --- | --- |

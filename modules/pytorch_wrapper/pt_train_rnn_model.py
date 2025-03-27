@@ -143,7 +143,10 @@ class PtTrainRNNModel:
                 total_samples = len(train_loader.dataset)
                 for x, y in train_loader:
                     if use_gpu:
-                        x = x.to("cuda")
+                        if isinstance(x, list):
+                            x = [e.to("cuda") for e in x]
+                        else:
+                            x = x.to("cuda")
                         y = y.to("cuda")
                     optimizer.zero_grad()
                     if linear_head:
@@ -192,7 +195,10 @@ class PtTrainRNNModel:
                         total_samples = len(val_loader.dataset)
                         for x, y in val_loader:
                             if use_gpu:
-                                x = x.to("cuda")
+                                if isinstance(x, list):
+                                    x = [e.to("cuda") for e in x]
+                                else:
+                                    x = x.to("cuda")
                                 y = y.to("cuda")
                             if linear_head:
                                 y_hat = model(x)

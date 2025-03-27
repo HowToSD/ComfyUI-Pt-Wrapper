@@ -107,6 +107,7 @@ from .modules.pytorch_wrapper.pt_to_latent import PtToLatent
 from .modules.pytorch_wrapper.pt_to_numpy import PtToNumpy
 from .modules.pytorch_wrapper.pt_to_rgb_tensors import PtToRgbTensors
 from .modules.pytorch_wrapper.pt_to_uint8 import PtToUint8
+from .modules.pytorch_wrapper.pt_tokenizer import PtTokenizer
 from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
 from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
 from .modules.pytorch_wrapper.pt_train_model import PtTrainModel
@@ -156,6 +157,8 @@ from .modules.pytorch_wrapper.ptn_chained_model import PtnChainedModel
 from .modules.pytorch_wrapper.ptn_conv2d import PtnConv2d
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_cross_entropy_loss import PtnCrossEntropyLoss
+from .modules.pytorch_wrapper.ptn_embedding import PtnEmbedding
+from .modules.pytorch_wrapper.ptn_embedding_rnn_linear import PtnEmbeddingRNNLinear
 from .modules.pytorch_wrapper.ptn_gru import PtnGRU
 from .modules.pytorch_wrapper.ptn_gru_linear import PtnGRULinear
 from .modules.pytorch_wrapper.ptn_huber_loss import PtnHuberLoss
@@ -186,12 +189,15 @@ from .modules.pytorch_wrapper.pto_simple import PtoSimple
 from .modules.pytorch_wrapper.ptv_dataset import PtvDataset
 from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
 from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
+from .modules.pytorch_wrapper.ptv_hf_dataset_with_token_encode import PtvHfDatasetWithTokenEncode
 from .modules.pytorch_wrapper.ptv_hf_glove_dataset import PtvHfGloveDataset
 from .modules.pytorch_wrapper.ptv_image_folder_dataset import PtvImageFolderDataset
 from .modules.pytorch_wrapper.ptv_sequential_tensor_dataset import PtvSequentialTensorDataset
 from .modules.pytorch_wrapper.ptv_transforms_data_augment import PtvTransformsDataAugment
 from .modules.pytorch_wrapper.ptv_transforms_resize import PtvTransformsResize
 from .modules.pytorch_wrapper.ptv_transforms_to_tensor import PtvTransformsToTensor
+from .modules.sentencepiece_wrapper.sp_encode import SpEncode
+from .modules.sentencepiece_wrapper.sp_load_model import SpLoadModel
 T = TypeVar("T")
 
 
@@ -308,6 +314,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtToNumpy": PtToNumpy,
     "PtToRgbTensors": PtToRgbTensors,
     "PtToUint8": PtToUint8,
+    "PtTokenizer": PtTokenizer,
     "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
     "PtTrainModel": PtTrainModel,
@@ -357,6 +364,8 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnConv2d": PtnConv2d,
     "PtnConvModel": PtnConvModel,
     "PtnCrossEntropyLoss": PtnCrossEntropyLoss,
+    "PtnEmbedding": PtnEmbedding,
+    "PtnEmbeddingRNNLinear": PtnEmbeddingRNNLinear,
     "PtnGRU": PtnGRU,
     "PtnGRULinear": PtnGRULinear,
     "PtnHuberLoss": PtnHuberLoss,
@@ -387,12 +396,15 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtvDataset": PtvDataset,
     "PtvDatasetLen": PtvDatasetLen,
     "PtvDatasetLoader": PtvDatasetLoader,
+    "PtvHfDatasetWithTokenEncode": PtvHfDatasetWithTokenEncode,
     "PtvHfGloveDataset": PtvHfGloveDataset,
     "PtvImageFolderDataset": PtvImageFolderDataset,
     "PtvSequentialTensorDataset": PtvSequentialTensorDataset,
     "PtvTransformsDataAugment": PtvTransformsDataAugment,
     "PtvTransformsResize": PtvTransformsResize,
     "PtvTransformsToTensor": PtvTransformsToTensor,
+    "SpEncode": SpEncode,
+    "SpLoadModel": SpLoadModel,
 }
 
 
@@ -509,6 +521,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtToNumpy": "Pt To Numpy",
     "PtToRgbTensors": "Pt To Rgb Tensors",
     "PtToUint8": "Pt To Uint8",
+    "PtTokenizer": "Pt Tokenizer",
     "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
     "PtTrainModel": "Pt Train Model",
@@ -558,6 +571,8 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnConv2d": "Ptn Conv 2d",
     "PtnConvModel": "Ptn Conv Model",
     "PtnCrossEntropyLoss": "Ptn Cross Entropy Loss",
+    "PtnEmbedding": "Ptn Embedding",
+    "PtnEmbeddingRNNLinear": "Ptn Embedding RNN Linear",
     "PtnGRU": "Ptn GRU",
     "PtnGRULinear": "Ptn GRU Linear",
     "PtnHuberLoss": "Ptn Huber Loss",
@@ -588,12 +603,15 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtvDataset": "Ptv Dataset",
     "PtvDatasetLen": "Ptv Dataset Len",
     "PtvDatasetLoader": "Ptv Dataset Loader",
+    "PtvHfDatasetWithTokenEncode": "Ptv Hf Dataset With Token Encode",
     "PtvHfGloveDataset": "Ptv Hf Glove Dataset",
     "PtvImageFolderDataset": "Ptv Image Folder Dataset",
     "PtvSequentialTensorDataset": "Ptv Sequential Tensor Dataset",
     "PtvTransformsDataAugment": "Ptv Transforms Data Augment",
     "PtvTransformsResize": "Ptv Transforms Resize",
     "PtvTransformsToTensor": "Ptv Transforms To Tensor",
+    "SpEncode": "Sp Encode",
+    "SpLoadModel": "Sp Load Model",
 }
 
 

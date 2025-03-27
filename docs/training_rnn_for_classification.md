@@ -3,7 +3,11 @@
 You can use **ComfyUI-Pt-Wrapper** to train an RNN for text classification, such as sentiment analysis on a movie review dataset.
 
 You can find the workflow at `examples/workflows/rnn_classification.json`.
-You can also use GRU workflow at `examples/workflows/gru_classification.json` or LSTM workflow at `examples/workflows/lstm_classification.json`.
+
+There are also other workflows:
+* GRU workflow: `examples/workflows/gru_classification.json`
+* LSTM workflow: `examples/workflows/lstm_classification.json`.
+* RNN workflow with training embedding from scratch: `examples/workflows/embedding_rnn_classification.json` (Refer to the end of this document for more information)
 
 ![Workflow](images/rnn_classification.png)
 
@@ -44,3 +48,16 @@ You can also enable `classification_metrics` to print validation accuracy to the
 
 Using this workflow, you should get around **83% validation accuracy** on the Hugging Face version of the IMDB dataset, which is a solid result for an RNN.
 Both GRU & LSTM workflows achieve approximately **87% validation accuracy**.
+
+# RNN Workflow with Training Embedding from Scratch
+
+**Workflow:** `examples/workflows/embedding_rnn_classification.json`
+
+This workflow demonstrates how to use a SentencePiece tokenizer to convert text into token IDs and train an RNN classification model with an embedding layer initialized from scratch. The embedding layer learns to map token IDs to word embeddings during training.
+
+SentencePiece requires a pretrained model file for tokenization. A compatible model file is included in this package, sourced from [google-t5/t5-base](https://huggingface.co/google-t5/t5-base/tree/main), part of the T5 model published by Google under the Apache License 2.0.
+
+When configuring the workflow, set the vocabulary size to **32000** to match the included model.
+
+This setup achieves approximately **83% validation accuracy** on the Hugging Face version of the IMDB dataset.
+

@@ -1,6 +1,6 @@
 import os
 import ast
-from typing import Optional, Tuple, Union
+from typing import Optional, Tuple, Union, List
 import random
 import numpy as np
 import torch
@@ -75,7 +75,7 @@ def get_resource_full_path(resource_name: str, resource_path: str) -> str:
     return resource_full_path
 
 
-def get_model_full_path(model_path: str) -> str:
+def get_model_full_path(model_path: str, sub_model_dir_name: str=None) -> str:
     """
     Resolves the absolute path to a model file within the "models" directory and 
     ensures that the directory exists.
@@ -83,11 +83,15 @@ def get_model_full_path(model_path: str) -> str:
     Args:
         model_path (str): The path to the model file. If the path is a relative path,
         the path is considered relative to the `models` directory of this extension.
-
+        sub_model_dir_name (str): The subdirectory specific to the type of model (e.g. SentencePiece).
     Returns:
         str: The absolute path to the model file.
     """
-    return get_resource_full_path("models", model_path)
+    if sub_model_dir_name:
+        model_dir = os.path.join("models", sub_model_dir_name)
+    else:
+        model_dir = "models"
+    return get_resource_full_path(model_dir, model_path)
 
 
 def get_dataset_full_path(dataset_path: str) -> str:
@@ -153,3 +157,83 @@ def set_seed(seed=42) -> None:
         torch.cuda.manual_seed_all(seed)
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False
+
+
+def pad_truncate_sequence(
+    token_tensor_list: List[torch.Tensor],
+    padding: bool,
+    padding_method: str,
+    padding_value: Union[int, torch.Tensor],
+    truncation: bool,
+    max_length: int
+) -> Union[
+    Tuple[torch.Tensor, torch.Tensor],
+    Tuple[List[torch.Tensor], List[torch.Tensor]]
+]:
+    """
+    Pads and/or truncates a list of 1D token tensors to a uniform length.
+
+    Args:
+        token_tensor_list (List[torch.Tensor]): List of 1D token tensors.
+        padding (bool): Whether to apply padding.
+        padding_method (str): 'longest' or 'max_length'.
+            - 'longest': pad to the longest sequence length after truncation in this batch.
+            - 'max_length': pad all sequences to the fixed length `max_length`.
+        padding_value (Union[int, torch.Tensor]): A scalar value or scalar tensor used for padding.
+        truncation (bool): Whether to truncate sequences to `max_length`.
+        max_length (int): The target length for truncation or padding.
+
+    Returns:
+        Union[
+            Tuple[torch.Tensor, torch.Tensor],  # (tokens, masks) if padding is True or list has 1 element
+            Tuple[List[torch.Tensor], List[torch.Tensor]]  # (tokens, masks) as lists otherwise
+        ]
+    """
+    assert isinstance(token_tensor_list, list) and all(isinstance(t, torch.Tensor) for t in token_tensor_list), \
+        "token_tensor_list must be a list of torch.Tensor"
+    if isinstance(padding_value, torch.Tensor):
+        assert padding_value.numel() == 1, "padding_value must be a scalar tensor"
+        padding_value = padding_value.item()
+
+    if padding_method not in ("max_length", "longest"):
+        raise ValueError("Invalid padding_method. Use 'max_length' or 'longest'.")
+
+    token_list = []
+    mask_list = []
+
+    # Apply truncation and collect post-truncation lengths
+    truncated_list = []
+    for t in token_tensor_list:
+        if t.dim() != 1:
+            raise ValueError("Expecting 1D tensor")
+        if truncation:
+            t = t[:max_length]  # Out of bounds check is not needed as PyTorch handles that.
+        truncated_list.append(t)
+
+    if padding and padding_method == "longest":
+        padding_target_length = max(t.size(0) for t in truncated_list)
+    elif padding and padding_method == "max_length":
+        padding_target_length = max_length
+
+    for t in truncated_list:
+        tensor_length = t.size(0)
+
+        # Apply padding if needed
+        if padding and tensor_length < padding_target_length:
+            filler_count = padding_target_length - tensor_length
+            pad_tensor = torch.full((filler_count,), padding_value, dtype=t.dtype, device=t.device)
+            t = torch.cat([t, pad_tensor], dim=0)
+
+        # Create attention mask
+        if padding:
+            mask = (t != padding_value).long()
+        else:
+            mask = torch.ones_like(t)
+
+        token_list.append(t)
+        mask_list.append(mask)
+
+    if padding or len(token_tensor_list) == 1:
+        return torch.stack(token_list), torch.stack(mask_list)
+    else:
+        return token_list, mask_list
