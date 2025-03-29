@@ -18,7 +18,7 @@ The flow consists of the following groups of nodes:
 
 ## Loading Data
 
-Specify a Hugging Face text dataset using **Ptf Hf Glove Dataset** to load the text data, and encode each word using GloVe embeddings.  
+Specify a Hugging Face text dataset using **Ptv Hf Glove Dataset** to load the text data, and encode each word using GloVe embeddings.  
 Then use **Pt Data Loader** to batch the data and feed it into the training node.
 
 ## Setting Up Optimizer and Scheduler

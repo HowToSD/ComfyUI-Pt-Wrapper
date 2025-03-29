@@ -102,3 +102,6 @@ Refer to `examples/workflows/train_model_with_custom_loss_example.json` for an e
 
 # Training RNN
 Refer to [Training RNN for text classification](training_rnn_for_classification.md)
+
+# Training Transformer
+Refer to [Training Transformer for text classification](training_transformer_for_classification.md)

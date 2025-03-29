@@ -1,7 +1,7 @@
-## Update (3/26/2025) 
+## Update (3/28/2025) 
 
-LSTM & GRU support has been added.
-Check out new example workflows at `examples/workflows/lstm_classification.json` & `examples/workflows/gru_classification.json`. Both of them achieve approximately **87% validation accuracy** for IMDB sentiment classification (which is in the expected range for LSTM & GRU).
+Transformer support has been added.
+Check out the new example workflow at `examples/workflows/embedding_transformer_classification.json`. This workflow achieves approximately 83% validation accuracy on the IMDB sentiment classification task using the Hugging Face version of the dataset, which is within the expected range for training a Transformer from scratch with limited data.
 
 ---
 # ComfyUI-Pt-Wrapper  
