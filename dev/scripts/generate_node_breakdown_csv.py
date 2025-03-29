@@ -25,19 +25,13 @@ def process_import_lines(file_path: str) -> Dict[str, int]:
     with open(file_path, "r") as f:
         for line in f:
             if "import" in line:
+                if line.startswith("from typing"):
+                    continue
                 module_name = re.sub(r"^.*import ", "", line).strip()
-                if module_name.startswith("SNS"):
-                    increment_count(category_counts, "Seaborn")
-                elif module_name.startswith("MPL"):
-                    increment_count(category_counts, "Matplotlib")
+                if module_name.startswith("SP"):
+                    increment_count(category_counts, "SentencePiece")
                 elif module_name.startswith("Pt"):
                     increment_count(category_counts, "PyTorch")
-                elif module_name.startswith("Pandas"):
-                    increment_count(category_counts, "Pandas")
-                elif module_name.startswith(("CDA", "Python")):
-                    increment_count(category_counts, "Misc")
-                elif module_name.startswith("Numpy"):
-                    increment_count(category_counts, "NumPy")
                 else:
                     increment_count(category_counts, "Misc")
     

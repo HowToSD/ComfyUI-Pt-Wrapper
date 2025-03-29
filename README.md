@@ -21,7 +21,7 @@ Originally a focused spin-off of [ComfyUI-Data-Analysis](https://github.com/HowT
 - Use pre-built model nodes for major architecture such as ResNet, LSTM, GRU, Transformer, or create your own model from various model nodes.
 - Perform tensor operations like `add`, `gather`, `scatter`, `where`, etc.
 - Support for processing text (e.g. tokenization, embedding) to feed to a model
-
+- Featuring **200 nodes** as of March 28, 2025.
 ---
 
 ## Example Workflows
