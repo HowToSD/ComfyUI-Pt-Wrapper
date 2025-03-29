@@ -32,7 +32,7 @@ Train an image classifier on your own dataset—entirely in ComfyUI nodes.
 [Step-by-step guide](docs/dog_cat_classification_model_training.md)
 
 ### ResNet on CIFAR-10
-Train a ResNet achieving **94.34% validation accuracy**. A flexible baseline for your own image classification tasks.
+Train a ResNet achieving **94% validation accuracy**. A flexible baseline for your own image classification tasks.
 
 ![Training](docs/images/resnet_train.png)  
 ![Evaluation](docs/images/resnet_eval.png)
