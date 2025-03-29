@@ -2,10 +2,15 @@
 
 You can train a PyTorch model without any coding.
 Training is as simple as a single click!  
-Currently, following archituctures are supported (node names are in parentheses):
-* MLP (Ptn Linear Model)
-* Convolutional Network (Ptn Conv Model)
-* ResNet (Ptn Resnet Model)
+Currently, following archituctures are supported:
+* MLP
+* Convolutional Network
+* ResNet
+* RNN
+* GRU
+* LSTM
+* Transformer
+* Chained model (to build a custom model)
 
 You can adjust the model configuration including output dimension on the UI.
 
@@ -13,6 +18,7 @@ The system is designed to be modular. For example, to switch from a linear model
 
 You can also build a model from scratch by sequentially combining basic models such as `Conv2D` and `Linear` by using the **Pt Chained Model** node.  See [Building a Model from Scratch](building_a_model_from_scratch.md) for details.
 
+# Image classification
 You can choose to:
 * Use your own images
 * Use a public dataset
@@ -100,7 +106,7 @@ According to [the UCI repository](https://archive.ics.uci.edu/dataset/53/iris), 
 If you want to specify a loss function for training instead of using the default one in the trainer, use the `Pt Train Model` node. Create a loss function node (e.g., `Pt Cross Entropy Loss`) and connect it to the trainer node.
 Refer to `examples/workflows/train_model_with_custom_loss_example.json` for an example. (This workflow is intended to demonstrate node connections and is not optimized for high CIFAR10 accuracy. It runs for only 10 epochs to allow a quick check and reaches 88.9% accuracy.) You should adjust the hyperparameters according to your specific goals.
 
-# Training RNN
+# Training RNN, GRU, LSTM
 Refer to [Training RNN for text classification](training_rnn_for_classification.md)
 
 # Training Transformer
