@@ -54,7 +54,7 @@ class PtoLrSchedulerCosineAnnealing:
             "required": {
                 "optimizer": ("PTOPTIMIZER", {}),
                 "num_epochs": ("INT", {"default": 10, "min": 1, "max": int(1e8)}),
-                "minimum_lr": ("FLOAT", {"default": 0, "min": 0, "max": 1.0, "step": 1e-8}),
+                "minimum_lr": ("FLOAT", {"default": 0, "min": 0, "max": 1.0, "step": 1e-9}),
             }
         }
 

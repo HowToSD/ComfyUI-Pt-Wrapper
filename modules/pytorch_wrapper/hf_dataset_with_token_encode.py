@@ -1,4 +1,6 @@
-from typing import Tuple, Callable
+from typing import Tuple, Callable, Optional
+import re
+from html import unescape
 import torch
 from torch.utils.data import Dataset
 from datasets import load_dataset  # Hugging Face (not PyTorch)
@@ -15,7 +17,8 @@ class HfDatasetWithTokenEncode(Dataset):
                  split: str,
                  sample_field_name: str = "text",
                  label_field_name: str = "label",
-                 encode: Callable=None) -> None:
+                 encode: Optional[Callable]=None,
+                 remove_html_tags:Optional[bool]=False) -> None:
         """
         Initializes the dataset by loading Hugging Face dataset.
 
@@ -24,12 +27,14 @@ class HfDatasetWithTokenEncode(Dataset):
             split (str): The dataset split (e.g., 'train').
              sample_field_name (str): Field name for text samples.
             label_field_name (str): Field name for labels.
-            encode (Callable): Token encode function
+            encode (Optional[Callable]): Token encode function
+            remove_html_tags (Optional[bool]): Remove html tags in text if True.
         """
         self.dataset = load_dataset(dataset_name, split=split)
         self.sample_field_name = sample_field_name
         self.label_field_name = label_field_name
         self.encode = encode
+        self.remove_html_tags = remove_html_tags
 
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, torch.Tensor]:
@@ -46,7 +51,21 @@ class HfDatasetWithTokenEncode(Dataset):
         """
         # Get a text sample from database and convert to a word embedding
         sample = self.dataset[idx]
-        tokens, masks = self.encode(sample[self.sample_field_name])
+        if self.remove_html_tags:
+            # Decode HTML entities like "&amp;", "&lt;", etc. to their actual characters
+            text = unescape(sample[self.sample_field_name])
+            
+            # Remove HTML tags (like <br />, <p>, etc.)
+            # The regex "<.*?>" uses .*? (non-greedy match) to ensure it matches one tag at a time,
+            # instead of greedily removing everything between the first '<' and last '>'
+            text = re.sub(r"<.*?>", " ", text)
+
+            # Replace consecutive white space to a single white space
+            text = re.sub(r"  +", " ", text)
+        else:
+            text = sample[self.sample_field_name]
+
+        tokens, masks = self.encode(text)
 
         # Get a corresponding label
         label = torch.tensor(sample[self.label_field_name], dtype=torch.long)

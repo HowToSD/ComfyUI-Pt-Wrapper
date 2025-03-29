@@ -36,7 +36,8 @@ class TestPtvHfDatasetWithTokenEncode(unittest.TestCase):
             "train", #split
             "text",
             "label",
-            encode
+            encode,
+            False  # remove_html_tags
         )[0]
 
 

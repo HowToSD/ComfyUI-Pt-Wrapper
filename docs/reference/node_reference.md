@@ -157,6 +157,7 @@
 | [Ptn Conv 2d](ptn_conv2d.md) |     A convolutional model consisting of a single conv2d layer.   |
 | [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
 | [Ptn Embedding](ptn_embedding.md) | Constructs an embedding layer. |
+| [Ptn Embedding Transformer Linear](ptn_embedding_transformer_linear.md) | A Transformer encoder model with a linear head. |
 | [Ptn GRU](ptn_gru.md) | A gated recurrent unit (GRU) model consisting of one or more of a recurrent layer.   |
 | [Ptn GRU Linear](ptn_gru_linear.md) | A recurrent neural network (GRU) model with a linear head. |
 | [Ptn Instance Norm 2d](ptn_instance_norm2d.md) | A normalization model to normalize elements over spatial axes within each channel for each sample. |
@@ -234,6 +235,7 @@
 | [Pt Predict Regression Model](pt_predict_regression_model.md) | Performs inference on input data. |
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs.   |
 | [Pt Train Classification Model Lr](pt_train_classification_model_lr.md) | Trains a classification model using a given dataset, optimizer, and number of epochs with learning rate decay.   |
+| [Pt Train Classification Transformer Model](pt_train_classification_transformer_model.md) | Trains a classification Transformer model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Model](pt_train_model.md) | Trains a model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train RNN Model](pt_train_rnn_model.md) | Trains an RNN model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Regression Model](pt_train_regression_model.md) | Trains a regression model using a given dataset, optimizer, and number of epochs.   |

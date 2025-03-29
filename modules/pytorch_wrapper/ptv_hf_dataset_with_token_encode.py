@@ -12,6 +12,7 @@ class PtvHfDatasetWithTokenEncode:
             sample_field_name (str): Field name for text samples.
             label_field_name (str): Field name for labels.
             encode (PTCALLABLE): The reference to a token encoder function.
+            remove_html_tags (bool): Remove html tags in text if True.
 
     category: PyTorch wrapper - Training
     """
@@ -31,6 +32,7 @@ class PtvHfDatasetWithTokenEncode:
                 "sample_field_name": ("STRING", {"default": "text","multiline": False}),
                 "label_field_name": ("STRING", {"default": "label","multiline": False}),
                 "encode": ("PTCALLABLE", {}),
+                "remove_html_tags": ("BOOLEAN", {"default": False}),
             }
         }
 
@@ -47,7 +49,8 @@ class PtvHfDatasetWithTokenEncode:
           split: str,
           sample_field_name: str,
           label_field_name: str,
-          encode: Callable) -> Tuple:
+          encode: Callable,
+          remove_html_tags:bool) -> Tuple:
         """
         Loads a dataset from Hugging Face with specified parameters.  
         
@@ -57,6 +60,7 @@ class PtvHfDatasetWithTokenEncode:
             sample_field_name (str): Field name for text samples.
             label_field_name (str): Field name for labels.
             encode (Callable): The reference to a token encoder function.
+            remove_html_tags (bool): Remove html tags in text if True.
 
         Returns:  
             Tuple: A tuple containing the dataset instance.  
@@ -71,5 +75,6 @@ class PtvHfDatasetWithTokenEncode:
                 split=split,
                 sample_field_name=sample_field_name,
                 label_field_name=label_field_name,
-                encode=encode)
+                encode=encode,
+                remove_html_tags=remove_html_tags)
             return (dc,)

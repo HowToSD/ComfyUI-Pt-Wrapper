@@ -110,6 +110,7 @@ from .modules.pytorch_wrapper.pt_to_uint8 import PtToUint8
 from .modules.pytorch_wrapper.pt_tokenizer import PtTokenizer
 from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
 from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
+from .modules.pytorch_wrapper.pt_train_classification_transformer_model import PtTrainClassificationTransformerModel
 from .modules.pytorch_wrapper.pt_train_model import PtTrainModel
 from .modules.pytorch_wrapper.pt_train_regression_model import PtTrainRegressionModel
 from .modules.pytorch_wrapper.pt_train_rnn_model import PtTrainRNNModel
@@ -159,6 +160,7 @@ from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_cross_entropy_loss import PtnCrossEntropyLoss
 from .modules.pytorch_wrapper.ptn_embedding import PtnEmbedding
 from .modules.pytorch_wrapper.ptn_embedding_rnn_linear import PtnEmbeddingRNNLinear
+from .modules.pytorch_wrapper.ptn_embedding_transformer_linear import PtnEmbeddingTransformerLinear
 from .modules.pytorch_wrapper.ptn_gru import PtnGRU
 from .modules.pytorch_wrapper.ptn_gru_linear import PtnGRULinear
 from .modules.pytorch_wrapper.ptn_huber_loss import PtnHuberLoss
@@ -317,6 +319,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtTokenizer": PtTokenizer,
     "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
+    "PtTrainClassificationTransformerModel": PtTrainClassificationTransformerModel,
     "PtTrainModel": PtTrainModel,
     "PtTrainRNNModel": PtTrainRNNModel,
     "PtTrainRegressionModel": PtTrainRegressionModel,
@@ -366,6 +369,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnCrossEntropyLoss": PtnCrossEntropyLoss,
     "PtnEmbedding": PtnEmbedding,
     "PtnEmbeddingRNNLinear": PtnEmbeddingRNNLinear,
+    "PtnEmbeddingTransformerLinear": PtnEmbeddingTransformerLinear,
     "PtnGRU": PtnGRU,
     "PtnGRULinear": PtnGRULinear,
     "PtnHuberLoss": PtnHuberLoss,
@@ -524,6 +528,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtTokenizer": "Pt Tokenizer",
     "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
+    "PtTrainClassificationTransformerModel": "Pt Train Classification Transformer Model",
     "PtTrainModel": "Pt Train Model",
     "PtTrainRNNModel": "Pt Train RNN Model",
     "PtTrainRegressionModel": "Pt Train Regression Model",
@@ -573,6 +578,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnCrossEntropyLoss": "Ptn Cross Entropy Loss",
     "PtnEmbedding": "Ptn Embedding",
     "PtnEmbeddingRNNLinear": "Ptn Embedding RNN Linear",
+    "PtnEmbeddingTransformerLinear": "Ptn Embedding Transformer Linear",
     "PtnGRU": "Ptn GRU",
     "PtnGRULinear": "Ptn GRU Linear",
     "PtnHuberLoss": "Ptn Huber Loss",

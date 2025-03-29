@@ -37,9 +37,36 @@ class TestHfDatasetWithTokenEncode(unittest.TestCase):
             "train", #split
             encode=encode,
         )
+        
+        self.ds_remove_html = HfDatasetWithTokenEncode(
+            "imdb", # dataset_name
+            "train", #split
+            encode=encode,
+            remove_html_tags=True
+        )
 
     def test_loading(self):
         it = iter(self.ds)
+        (sample, mask), label = next(it)
+
+        # Compare text
+        actual = sample.size()
+        expected = torch.Size((self.max_length, ))
+        self.assertEqual(expected, actual, f"expected {expected} and actual {actual} do not match.")
+
+        # Compare mask
+        actual = mask.size()
+        expected = torch.Size((self.max_length, ))
+        self.assertEqual(expected, actual, f"expected {expected} and actual {actual} do not match.")
+
+        # Compare label
+        actual = label
+        expected = torch.tensor(0, dtype=torch.int64)
+        self.assertEqual(expected, actual, f"expected {expected} and actual {actual} do not match.")
+
+
+    def test_loading_remove_html(self):
+        it = iter(self.ds_remove_html)
         (sample, mask), label = next(it)
 
         # Compare text

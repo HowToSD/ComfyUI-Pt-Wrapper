@@ -7,6 +7,7 @@ A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to
         sample_field_name (str): Field name for text samples.
         label_field_name (str): Field name for labels.
         encode (PTCALLABLE): The reference to a token encoder function.
+        remove_html_tags (bool): Remove html tags in text if True.
 
 ## Input
 | Name | Data type |
@@ -16,6 +17,7 @@ A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to
 | sample_field_name | String |
 | label_field_name | String |
 | encode | Ptcallable |
+| remove_html_tags | Boolean |
 
 ## Output
 | Data type |
