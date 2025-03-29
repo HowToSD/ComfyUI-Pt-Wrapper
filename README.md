@@ -1,3 +1,5 @@
+![Logo](docs/images/main_logo.png)
+
 ## Update — March 28, 2025
 
 **Now with Transformer support**  
