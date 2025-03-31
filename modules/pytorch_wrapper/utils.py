@@ -4,7 +4,7 @@ from typing import Optional, Tuple, Union, List
 import random
 import numpy as np
 import torch
-
+import torch.nn as nn
 
 DTYPE_MAPPING = {
     "float32": torch.float32,
@@ -237,3 +237,16 @@ def pad_truncate_sequence(
         return torch.stack(token_list), torch.stack(mask_list)
     else:
         return token_list, mask_list
+
+
+def set_requires_grad(module: nn.Module, requires_grad: bool) -> None:
+    """
+    Enables or disables gradient computation for all parameters in a given module.
+
+    Args:
+        module (nn.Module): The PyTorch module whose parameters should be modified.
+        requires_grad (bool): If False, freezes the module (no gradients computed).
+                              If True, unfreezes the module (gradients computed).
+    """
+    for param in module.parameters():
+        param.requires_grad = requires_grad

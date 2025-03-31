@@ -123,7 +123,7 @@ class PtnRNNLinear:
                 "nonlinearity": (("tanh", "relu"),),
                 "bias": ("BOOLEAN", {"default": True}),
                 "batch_first": ("BOOLEAN", {"default": True}),
-                "dropout": ("FLOAT", {"default": 0, "min": 0, "max": 1}),
+                "dropout": ("FLOAT", {"default": 0, "min": 0, "max": 1, "step": 0.001}),
                 "bidirectional": ("BOOLEAN", {"default": False}),
                 "linear_output_size": ("INT", {"default": 1, "min": 1, "max": 1e6}),
                 "linear_bias": ("BOOLEAN", {"default": True}),

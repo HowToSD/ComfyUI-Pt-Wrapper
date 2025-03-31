@@ -1,5 +1,6 @@
 # This file is auto-generated. Do not edit manually.
 from typing import Dict, Type, TypeVar
+from .modules.hugging_face_wrapper.hf_tokenizer_encode import HfTokenizerEncode
 from .modules.pytorch_wrapper.pt_abs import PtAbs
 from .modules.pytorch_wrapper.pt_acos import PtAcos
 from .modules.pytorch_wrapper.pt_add import PtAdd
@@ -111,6 +112,7 @@ from .modules.pytorch_wrapper.pt_tokenizer import PtTokenizer
 from .modules.pytorch_wrapper.pt_train_classification_model import PtTrainClassificationModel
 from .modules.pytorch_wrapper.pt_train_classification_model_lr import PtTrainClassificationModelLr
 from .modules.pytorch_wrapper.pt_train_classification_transformer_model import PtTrainClassificationTransformerModel
+from .modules.pytorch_wrapper.pt_train_fine_tune_classification_transformer_model import PtTrainFineTuneClassificationTransformerModel
 from .modules.pytorch_wrapper.pt_train_model import PtTrainModel
 from .modules.pytorch_wrapper.pt_train_regression_model import PtTrainRegressionModel
 from .modules.pytorch_wrapper.pt_train_rnn_model import PtTrainRNNModel
@@ -163,6 +165,7 @@ from .modules.pytorch_wrapper.ptn_embedding_rnn_linear import PtnEmbeddingRNNLin
 from .modules.pytorch_wrapper.ptn_embedding_transformer_linear import PtnEmbeddingTransformerLinear
 from .modules.pytorch_wrapper.ptn_gru import PtnGRU
 from .modules.pytorch_wrapper.ptn_gru_linear import PtnGRULinear
+from .modules.pytorch_wrapper.ptn_hf_fine_tuned_classification_model import PtnHfFineTunedClassificationModel
 from .modules.pytorch_wrapper.ptn_huber_loss import PtnHuberLoss
 from .modules.pytorch_wrapper.ptn_instance_norm2d import PtnInstanceNorm2d
 from .modules.pytorch_wrapper.ptn_kl_div_loss import PtnKLDivLoss
@@ -209,6 +212,7 @@ NODE_CLASS_MAPPINGS (Dict[str, Type[T]]):
 """
 
 NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
+    "HfTokenizerEncode": HfTokenizerEncode,
     "PtAbs": PtAbs,
     "PtAcos": PtAcos,
     "PtAdd": PtAdd,
@@ -320,6 +324,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtTrainClassificationModel": PtTrainClassificationModel,
     "PtTrainClassificationModelLr": PtTrainClassificationModelLr,
     "PtTrainClassificationTransformerModel": PtTrainClassificationTransformerModel,
+    "PtTrainFineTuneClassificationTransformerModel": PtTrainFineTuneClassificationTransformerModel,
     "PtTrainModel": PtTrainModel,
     "PtTrainRNNModel": PtTrainRNNModel,
     "PtTrainRegressionModel": PtTrainRegressionModel,
@@ -372,6 +377,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnEmbeddingTransformerLinear": PtnEmbeddingTransformerLinear,
     "PtnGRU": PtnGRU,
     "PtnGRULinear": PtnGRULinear,
+    "PtnHfFineTunedClassificationModel": PtnHfFineTunedClassificationModel,
     "PtnHuberLoss": PtnHuberLoss,
     "PtnInstanceNorm2d": PtnInstanceNorm2d,
     "PtnKLDivLoss": PtnKLDivLoss,
@@ -418,6 +424,7 @@ NODE_DISPLAY_NAME_MAPPINGS (Dict[str, str]):
 """
 
 NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
+    "HfTokenizerEncode": "Hf Tokenizer Encode",
     "PtAbs": "Pt Abs",
     "PtAcos": "Pt Acos",
     "PtAdd": "Pt Add",
@@ -529,6 +536,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtTrainClassificationModel": "Pt Train Classification Model",
     "PtTrainClassificationModelLr": "Pt Train Classification Model Lr",
     "PtTrainClassificationTransformerModel": "Pt Train Classification Transformer Model",
+    "PtTrainFineTuneClassificationTransformerModel": "Pt Train Fine Tune Classification Transformer Model",
     "PtTrainModel": "Pt Train Model",
     "PtTrainRNNModel": "Pt Train RNN Model",
     "PtTrainRegressionModel": "Pt Train Regression Model",
@@ -581,6 +589,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnEmbeddingTransformerLinear": "Ptn Embedding Transformer Linear",
     "PtnGRU": "Ptn GRU",
     "PtnGRULinear": "Ptn GRU Linear",
+    "PtnHfFineTunedClassificationModel": "Ptn Hf Fine Tuned Classification Model",
     "PtnHuberLoss": "Ptn Huber Loss",
     "PtnInstanceNorm2d": "Ptn Instance Norm 2d",
     "PtnKLDivLoss": "Ptn KL Div Loss",

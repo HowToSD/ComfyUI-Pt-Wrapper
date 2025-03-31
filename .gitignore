@@ -5,6 +5,7 @@ models/
 /datasets/
 examples/datasets/.~lock*
 .vscode
+output.txt
 
 # But don't ignore these paths:
 !models/sentencepiece/

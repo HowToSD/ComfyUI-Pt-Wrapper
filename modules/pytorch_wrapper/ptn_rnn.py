@@ -37,7 +37,7 @@ class PtnRNN:
                 "nonlinearity": (("tanh", "relu"),),
                 "bias": ("BOOLEAN", {"default": True}),
                 "batch_first": ("BOOLEAN", {"default": True}),
-                "dropout": ("FLOAT", {"default": 0, "min": 0, "max": 1}),
+                "dropout": ("FLOAT", {"default": 0, "min": 0, "max": 1, "step": 0.001}),
                 "bidirectional": ("BOOLEAN", {"default": False}),
             }
         }

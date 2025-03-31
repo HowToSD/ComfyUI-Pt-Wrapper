@@ -1,6 +1,12 @@
+import os
+import sys
 from typing import Any, Dict, Tuple
 import torch
 
+PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".."))
+MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
+sys.path.append(MODULE_ROOT)
+from hugging_face_wrapper.hf_glove_dataset import HfGloveDataset
 
 class PtvHfGloveDataset:
     """
@@ -65,9 +71,6 @@ class PtvHfGloveDataset:
         Returns:  
             Tuple: A tuple containing the dataset instance.  
         """
-        # Keep import within this method so that relevant packages are imported
-        # only when they are actually needed.
-        from .hf_glove_dataset import HfGloveDataset
 
         with torch.inference_mode(False):
             dc = HfGloveDataset(

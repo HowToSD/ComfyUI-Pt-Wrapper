@@ -160,6 +160,7 @@
 | [Ptn Embedding Transformer Linear](ptn_embedding_transformer_linear.md) | A Transformer encoder model with a linear head. |
 | [Ptn GRU](ptn_gru.md) | A gated recurrent unit (GRU) model consisting of one or more of a recurrent layer.   |
 | [Ptn GRU Linear](ptn_gru_linear.md) | A recurrent neural network (GRU) model with a linear head. |
+| [Ptn Hf Fine Tuned Classification Model](ptn_hf_fine_tuned_classification_model.md) | A binary classification model containing a Hugging Face pretrained Transformer model. |
 | [Ptn Instance Norm 2d](ptn_instance_norm2d.md) | A normalization model to normalize elements over spatial axes within each channel for each sample. |
 | [Ptn LSTM](ptn_lstm.md) | A long short-term memory  (LSTM) model consisting of one or more of a recurrent layer.   |
 | [Ptn LSTM Linear](ptn_lstm_linear.md) | A recurrent neural network (LSTM) model with a linear head. |
@@ -225,6 +226,7 @@
 ## PyTorch wrapper - Training
 | Node | Description |
 | --- | --- |
+| [Hf Tokenizer Encode](hf_tokenizer_encode.md) | Hugging Face tokenizer wrapper for encoding text into token ID tensors. |
 | [Pt Apply Function](pt_apply_function.md) | Applies a function to the input tensor. |
 | [Pt Compute Loss](pt_compute_loss.md) | Computes loss for the input with the target using the specified loss function. |
 | [Pt Data Loader](pt_data_loader.md) | Loads data from a dataset node and creates a PyTorch DataLoader.   |
@@ -236,6 +238,7 @@
 | [Pt Train Classification Model](pt_train_classification_model.md) | Trains a classification model using a given dataset, optimizer, and number of epochs.   |
 | [Pt Train Classification Model Lr](pt_train_classification_model_lr.md) | Trains a classification model using a given dataset, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Classification Transformer Model](pt_train_classification_transformer_model.md) | Trains a classification Transformer model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
+| [Pt Train Fine Tune Classification Transformer Model](pt_train_fine_tune_classification_transformer_model.md) | Fine-tunes a classification Transformer model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Model](pt_train_model.md) | Trains a model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train RNN Model](pt_train_rnn_model.md) | Trains an RNN model using a given dataset, loss function, optimizer, and number of epochs with learning rate decay.   |
 | [Pt Train Regression Model](pt_train_regression_model.md) | Trains a regression model using a given dataset, optimizer, and number of epochs.   |

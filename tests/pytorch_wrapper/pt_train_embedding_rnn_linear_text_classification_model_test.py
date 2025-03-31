@@ -14,7 +14,7 @@ MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
 sys.path.append(MODULE_ROOT)
 
 from pytorch_wrapper.ptn_embedding_rnn_linear import PtnEmbeddingRNNLinear
-from pytorch_wrapper.hf_dataset_with_token_encode import HfDatasetWithTokenEncode
+from hugging_face_wrapper.hf_dataset_with_token_encode import HfDatasetWithTokenEncode
 from sentencepiece_wrapper.sp_load_model import SpLoadModel
 from sentencepiece_wrapper.sp_encode import SpEncode
 from pytorch_wrapper.pto_adam import PtoAdam

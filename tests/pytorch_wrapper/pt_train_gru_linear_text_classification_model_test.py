@@ -84,13 +84,13 @@ class TestPtTrainGRULinearTextClassificationModel(unittest.TestCase):
         )[0]
 
         self.optimizer = PtoAdamW().f(self.model,
-                                      0.001,
+                                      0.0003,
                                       0.9, 0.999,
                                       weight_decay=0.01,
                                       amsgrad=False)[0]
         
         self.scheduler = PtoLrSchedulerReduceOnPlateau().f(self.optimizer,
-                                                grace_period=10,
+                                                grace_period=5,
                                                 gamma=0.5
                                                )[0]
 
@@ -98,7 +98,7 @@ class TestPtTrainGRULinearTextClassificationModel(unittest.TestCase):
         self.save_model = PtSaveModel()
         self.load_model = PtLoadModel()
         self.linear_head = True
-        self.epochs = 50
+        self.epochs = 20
 
     @unittest.skipIf(os.getenv("RUN_SKIPPED_TESTS") != "1", "Skipping unless explicitly enabled")
     def test_1(self):

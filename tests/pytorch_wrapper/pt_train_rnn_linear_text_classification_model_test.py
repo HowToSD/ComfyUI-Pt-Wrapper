@@ -95,7 +95,7 @@ class TestPtTrainRNNLinearTextClassificationModel(unittest.TestCase):
         self.save_model = PtSaveModel()
         self.load_model = PtLoadModel()
         self.linear_head = True
-        self.epochs = 50
+        self.epochs = 10
 
     @unittest.skipIf(os.getenv("RUN_SKIPPED_TESTS") != "1", "Skipping unless explicitly enabled")
     def test_1(self):

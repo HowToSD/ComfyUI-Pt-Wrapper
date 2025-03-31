@@ -46,7 +46,7 @@ You can also enable `classification_metrics` to print validation accuracy to the
 
 ## Expected Accuracy
 
-Using this workflow, you should get around **83% validation accuracy** on the Hugging Face version of the IMDB dataset, which is a solid result for an RNN.
+Using this workflow, you should get around **85% validation accuracy** on the Hugging Face version of the IMDB dataset, which is a solid result for an RNN.
 Both GRU & LSTM workflows achieve approximately **87% validation accuracy**.
 
 # RNN Workflow with Training Embedding from Scratch

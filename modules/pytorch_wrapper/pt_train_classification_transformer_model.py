@@ -114,9 +114,6 @@ class PtTrainClassificationTransformerModel:
         best_val_loss = None
         rounds_since_best_val_loss = 0
 
-        all_preds = []
-        all_labels = []
-
         with torch.inference_mode(False):
             train_loss = []
             val_loss = []
@@ -157,6 +154,8 @@ class PtTrainClassificationTransformerModel:
                 
                 if val_loader:
                     with torch.no_grad():
+                        all_preds = []
+                        all_labels = []
                         model.train(False)  # TODO: Change to model.*e*v*a*l() once Comfy's security checker is fixed.
                         total_loss = 0
                         total_samples = len(val_loader.dataset)
@@ -180,7 +179,7 @@ class PtTrainClassificationTransformerModel:
 
                             if classification_metrics and y.squeeze().dim() == 1 :
                                 # Accuracy collection for binary classification
-                                preds = (y_hat > 0.5).int().detach().cpu().numpy()
+                                preds = (F.sigmoid(y_hat) > 0.5).int().detach().cpu().numpy()
                                 labels = y.int().detach().cpu().numpy()
                                 all_preds.extend(preds)
                                 all_labels.extend(labels)
