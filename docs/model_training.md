@@ -111,3 +111,7 @@ Refer to [Training RNN for text classification](training_rnn_for_classification.
 
 # Training Transformer
 Refer to [Training Transformer for text classification](training_transformer_for_classification.md)
+
+# Fine-tuning Huggning Face models for classification
+Refer to [Fine-tuning Huggning Face models for classification]
+(fine_tuning_huggning_face_models_for_classification.md).

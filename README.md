@@ -1,9 +1,20 @@
 ![Logo](docs/images/main_logo.png)
 
-## Update — March 28, 2025
+## Update — March 31, 2025
 
-**Now with Transformer support**  
-Train NLP models directly inside ComfyUI. See: [`embedding_transformer_classification.json`](examples/workflows/embedding_transformer_classification.json). Achieves ~83% accuracy on IMDB sentiment with Hugging Face datasets—using only node workflows.
+**Now with Hugging Face pretrained model support for text classification**
+
+You can use **ComfyUI-Pt-Wrapper** to fine-tune Hugging Face's pretrain models for text classification, such as sentiment analysis on a movie review dataset.
+
+You can choose from the following models:
+* bert-base-uncased
+* roberta-base
+* distilbert-base-uncased
+* albert-base-v2
+
+Performance was not compromised in adding this feature — you should achieve around 92-93% validation accuracy on the IMDB dataset with the pretrained DistilBERT model.
+
+Check out [Fine-tuning Huggning Face models for classification](docs/fine_tuning_huggning_face_models_for_classification.md).
 
 ---
 
