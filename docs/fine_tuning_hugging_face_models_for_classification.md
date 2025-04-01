@@ -1,4 +1,4 @@
-# Fine-tuning Huggning Face models for classification
+# Fine-tuning Hugging Face models for classification
 
 You can use **ComfyUI-Pt-Wrapper** to fine-tune Hugging Face's pretrain models for text classification, such as sentiment analysis on a movie review dataset.
 
