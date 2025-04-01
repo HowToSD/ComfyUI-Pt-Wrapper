@@ -51,7 +51,6 @@ class PtTrainFineTuneClassificationTransformerModel:
                 "classification_metrics": ("BOOLEAN", {"default":True})
             },
             "optional": {
-                "scheduler": ("PTLRSCHEDULER", {}),
                 "val_loader": ("PTDATALOADER", {})
             }
         }

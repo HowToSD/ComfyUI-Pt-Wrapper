@@ -55,3 +55,17 @@ Specify **Pt Train Transformer Classification Model** and configure training par
 ## Expected Accuracy
 
 Using this workflow, you should achieve around 92-93% validation accuracy on the Hugging Face version of the IMDB dataset with the pretrained DistilBERT model.
+
+# Fine-tuning by freezing the pretrained module layers
+
+ComfyUI-Pt-Wrapper also offers a node for fine-tuning by freezing the pretrained module layers.  
+See `examples/workflows/distilbert_classification_2.json`.
+
+![Workflow](images/distilbert_classification_2.png)
+
+Add **Pt Train Fine Tune Classification Transformer Model** node and specify the number of epochs to freeze in `freeze pretrained module epochs`.  
+Also specify the total number of epochs in `epochs`.
+
+For example, if you set `freeze_pretrained_module_epochs` to 1 and `epochs` to 4, then the weights for the pretrained module are frozen during the first epoch, and full fine-tuning takes place from epochs 2 to 4.
+
+Using this example workflow, you can expect a validation accuracy of 92% or 93%.
