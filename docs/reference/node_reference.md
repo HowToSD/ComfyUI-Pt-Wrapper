@@ -161,6 +161,7 @@
 | [Ptn GRU](ptn_gru.md) | A gated recurrent unit (GRU) model consisting of one or more of a recurrent layer.   |
 | [Ptn GRU Linear](ptn_gru_linear.md) | A recurrent neural network (GRU) model with a linear head. |
 | [Ptn Hf Fine Tuned Classification Model](ptn_hf_fine_tuned_classification_model.md) | A binary classification model containing a Hugging Face pretrained Transformer model. |
+| [Ptn Hf Lora Classification Model](ptn_hf_lora_classification_model.md) | A binary classification model containing a Hugging Face pretrained Transformer model. |
 | [Ptn Instance Norm 2d](ptn_instance_norm2d.md) | A normalization model to normalize elements over spatial axes within each channel for each sample. |
 | [Ptn LSTM](ptn_lstm.md) | A long short-term memory  (LSTM) model consisting of one or more of a recurrent layer.   |
 | [Ptn LSTM Linear](ptn_lstm_linear.md) | A recurrent neural network (LSTM) model with a linear head. |

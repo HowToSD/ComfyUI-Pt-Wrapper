@@ -166,6 +166,7 @@ from .modules.pytorch_wrapper.ptn_embedding_transformer_linear import PtnEmbeddi
 from .modules.pytorch_wrapper.ptn_gru import PtnGRU
 from .modules.pytorch_wrapper.ptn_gru_linear import PtnGRULinear
 from .modules.pytorch_wrapper.ptn_hf_fine_tuned_classification_model import PtnHfFineTunedClassificationModel
+from .modules.pytorch_wrapper.ptn_hf_lora_classification_model import PtnHfLoraClassificationModel
 from .modules.pytorch_wrapper.ptn_huber_loss import PtnHuberLoss
 from .modules.pytorch_wrapper.ptn_instance_norm2d import PtnInstanceNorm2d
 from .modules.pytorch_wrapper.ptn_kl_div_loss import PtnKLDivLoss
@@ -378,6 +379,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnGRU": PtnGRU,
     "PtnGRULinear": PtnGRULinear,
     "PtnHfFineTunedClassificationModel": PtnHfFineTunedClassificationModel,
+    "PtnHfLoraClassificationModel": PtnHfLoraClassificationModel,
     "PtnHuberLoss": PtnHuberLoss,
     "PtnInstanceNorm2d": PtnInstanceNorm2d,
     "PtnKLDivLoss": PtnKLDivLoss,
@@ -590,6 +592,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnGRU": "Ptn GRU",
     "PtnGRULinear": "Ptn GRU Linear",
     "PtnHfFineTunedClassificationModel": "Ptn Hf Fine Tuned Classification Model",
+    "PtnHfLoraClassificationModel": "Ptn Hf Lora Classification Model",
     "PtnHuberLoss": "Ptn Huber Loss",
     "PtnInstanceNorm2d": "Ptn Instance Norm 2d",
     "PtnKLDivLoss": "Ptn KL Div Loss",

@@ -7,3 +7,5 @@ datasets>=3.4.1
 transformers>=4.47.1
 gensim==4.3.2
 sentencepiece>=0.2.0
+peft>=0.15.1
+accelerate>=1.5.2

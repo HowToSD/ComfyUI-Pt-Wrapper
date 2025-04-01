@@ -29,7 +29,6 @@ Fine-tunes a classification Transformer model using a given dataset, loss functi
 | early_stopping_rounds | Int |
 | output_best_val_model | Boolean |
 | classification_metrics | Boolean |
-| scheduler | Ptlrscheduler |
 | val_loader | Ptdataloader |
 
 ## Output
