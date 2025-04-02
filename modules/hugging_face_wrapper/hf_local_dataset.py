@@ -1,3 +1,5 @@
+import os
+import sys
 from typing import Tuple, Callable, Optional
 import re
 from html import unescape
@@ -6,15 +8,20 @@ from torch.utils.data import Dataset
 from datasets import load_dataset  # Hugging Face (not PyTorch)
 from .utils import drop_html_tags
 
-class HfDatasetWithTokenEncode(Dataset):
+PROJECT_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", ".."))
+MODULE_ROOT = os.path.join(PROJECT_ROOT, "modules")
+sys.path.append(MODULE_ROOT)
+from pytorch_wrapper.utils import get_dataset_full_path
+
+class HfLocalDataset(Dataset):
     """
-    Hugging Face Dataset wrapper with custom token encode function.
+    Hugging Face Dataset wrapper to load datasets stored on the local file system.
 
     pragma: skip_doc
     """
     def __init__(self,
-                 dataset_name: str,
-                 split: str,
+                 file_path: str,
+                 file_format: str,
                  sample_field_name: str = "text",
                  label_field_name: str = "label",
                  encode: Optional[Callable]=None,
@@ -24,15 +31,23 @@ class HfDatasetWithTokenEncode(Dataset):
         Initializes the dataset by loading Hugging Face dataset.
 
         Args:
-            dataset_name (str): The name of the Hugging Face dataset.
-            split (str): The dataset split (e.g., 'train').
-             sample_field_name (str): Field name for text samples.
+            file_path (str): Path to the dataset file. Can be an absolute path or a relative path.  
+            If a relative path is provided, it is resolved from the `datasets` directory under this extension.  
+            For example, to load `datasets/foo/bar_train.jsonp`, specify `foo/bar_train.jsonp` or the absolute path.
+            file_format (str): File format (e.g. json if the file is in jsonl format).
+            sample_field_name (str): Field name for text samples.
             label_field_name (str): Field name for labels.
             encode (Optional[Callable]): Token encode function
             remove_html_tags (Optional[bool]): Remove html tags in text if True.
             encode_return_dict (Optional[bool]): Encode function returns a Dict instead of a Tuple.
         """
-        self.dataset = load_dataset(dataset_name, split=split)
+        dataset_full_path = get_dataset_full_path(file_path)
+
+        # Note split="train" is used here to load the whole dataset
+        # and not to load just the train dataset.
+        self.dataset = load_dataset(file_format,
+                                    data_files=dataset_full_path,
+                                    split="train")
         self.sample_field_name = sample_field_name
         self.label_field_name = label_field_name
         self.encode = encode

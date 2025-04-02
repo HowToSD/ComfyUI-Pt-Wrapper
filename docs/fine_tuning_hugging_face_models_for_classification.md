@@ -69,3 +69,10 @@ Also specify the total number of epochs in `epochs`.
 For example, if you set `freeze_pretrained_module_epochs` to 1 and `epochs` to 4, then the weights for the pretrained module are frozen during the first epoch, and full fine-tuning takes place from epochs 2 to 4.
 
 Using this example workflow, you can expect a validation accuracy of 92% or 93%.
+
+# Loading a Dataset from the Local File System
+
+Instead of downloading a dataset from Hugging Face, you can also specify a custom dataset stored on your local file system.  
+Use the **PtvHfLocalDataset** node to specify the file path for the dataset.
+
+See `examples/workflows/distilbert_classification_local_dataset.json` for an example workflow that demonstrates loading an IMDB dataset in JSONL format from the local file system.

@@ -197,6 +197,7 @@ from .modules.pytorch_wrapper.ptv_dataset_len import PtvDatasetLen
 from .modules.pytorch_wrapper.ptv_dataset_loader import PtvDatasetLoader
 from .modules.pytorch_wrapper.ptv_hf_dataset_with_token_encode import PtvHfDatasetWithTokenEncode
 from .modules.pytorch_wrapper.ptv_hf_glove_dataset import PtvHfGloveDataset
+from .modules.pytorch_wrapper.ptv_hf_local_dataset import PtvHfLocalDataset
 from .modules.pytorch_wrapper.ptv_image_folder_dataset import PtvImageFolderDataset
 from .modules.pytorch_wrapper.ptv_sequential_tensor_dataset import PtvSequentialTensorDataset
 from .modules.pytorch_wrapper.ptv_transforms_data_augment import PtvTransformsDataAugment
@@ -410,6 +411,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtvDatasetLoader": PtvDatasetLoader,
     "PtvHfDatasetWithTokenEncode": PtvHfDatasetWithTokenEncode,
     "PtvHfGloveDataset": PtvHfGloveDataset,
+    "PtvHfLocalDataset": PtvHfLocalDataset,
     "PtvImageFolderDataset": PtvImageFolderDataset,
     "PtvSequentialTensorDataset": PtvSequentialTensorDataset,
     "PtvTransformsDataAugment": PtvTransformsDataAugment,
@@ -623,6 +625,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtvDatasetLoader": "Ptv Dataset Loader",
     "PtvHfDatasetWithTokenEncode": "Ptv Hf Dataset With Token Encode",
     "PtvHfGloveDataset": "Ptv Hf Glove Dataset",
+    "PtvHfLocalDataset": "Ptv Hf Local Dataset",
     "PtvImageFolderDataset": "Ptv Image Folder Dataset",
     "PtvSequentialTensorDataset": "Ptv Sequential Tensor Dataset",
     "PtvTransformsDataAugment": "Ptv Transforms Data Augment",

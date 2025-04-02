@@ -251,6 +251,7 @@
 | [Ptv Dataset Loader](ptv_dataset_loader.md) | A node to combine the dataset and data loader into a single node. |
 | [Ptv Hf Dataset With Token Encode](ptv_hf_dataset_with_token_encode.md) | A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to token IDs. |
 | [Ptv Hf Glove Dataset](ptv_hf_glove_dataset.md) | A PyTorch Dataset class wrapper for a Hugging Face dataset that converts text to embedding using Glove. |
+| [Ptv Hf Local Dataset](ptv_hf_local_dataset.md) | A PyTorch Dataset class wrapper for a Hugging Face dataset to load a dataset that is stored on the local file system. |
 | [Ptv Image Folder Dataset](ptv_image_folder_dataset.md) | A Torchvision ImageFolder Dataset class wrapper. |
 | [Ptv Sequential Tensor Dataset](ptv_sequential_tensor_dataset.md) | Creates a sequential tensor Dataset. |
 | [Ptv Transforms Data Augment](ptv_transforms_data_augment.md) | Applies data augmentation transformations to dataset elements. |
