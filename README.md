@@ -14,7 +14,7 @@ You can choose from the following models:
 
 Performance was not compromised in adding this feature — you should achieve around 92-93% validation accuracy on the IMDB dataset with the pretrained DistilBERT model.
 
-Check out [Fine-tuning Huggning Face models for classification](docs/fine_tuning_huggning_face_models_for_classification.md).
+Check out [Fine-tuning Huggning Face models for classification](docs/fine_tuning_hugging_face_models_for_classification.md).
 
 ---
 
