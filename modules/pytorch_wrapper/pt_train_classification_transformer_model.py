@@ -24,6 +24,9 @@ class PtTrainClassificationTransformerModel:
             classification_metrics (bool): If True and if val_loader is set, print out classification metrics.  This is only valid for classification model training.  
             val_loader (PTDATALOADER): DataLoader for validation dataset (optional).  
             scheduler (PTLRSCHEDULER): Learning rate scheduler.  
+            unpack_input (Optional[bool]): If True and the input is a list, unpack it when calling the model.  
+            For example, if the dataloader returns [a, b] and your model's forward is defined as forward(a, b), set this to True.
+
 
     category: PyTorch wrapper - Training
     """
@@ -51,7 +54,8 @@ class PtTrainClassificationTransformerModel:
             },
             "optional": {
                 "scheduler": ("PTLRSCHEDULER", {}),
-                "val_loader": ("PTDATALOADER", {})
+                "val_loader": ("PTDATALOADER", {}),
+                "unpack_input":  ("BOOLEAN", {"default":False})
             }
         }
 
@@ -76,7 +80,8 @@ class PtTrainClassificationTransformerModel:
           output_best_val_model:bool,
           classification_metrics:bool,
           scheduler: Optional[Union[torch.optim.lr_scheduler._LRScheduler, torch.optim.lr_scheduler.ReduceLROnPlateau]] = None,
-          val_loader: Optional[torch.utils.data.DataLoader] = None) -> Tuple[nn.Module, torch.Tensor, torch.Tensor]:
+          val_loader: Optional[torch.utils.data.DataLoader] = None,
+          unpack_input: Optional[bool] = False) -> Tuple[nn.Module, torch.Tensor, torch.Tensor]:
         """
         Trains an Transformer model.
 
@@ -93,7 +98,7 @@ class PtTrainClassificationTransformerModel:
             classification_metrics (bool): If True and if val_loader is set, print out classification metrics.  This is only valid for classification model training.
             val_loader (Optional[torch.utils.data.DataLoader]): DataLoader for validation dataset (optional).
             scheduler (Optional[Union[torch.optim.lr_scheduler._LRScheduler, torch.optim.lr_scheduler.ReduceLROnPlateau]]): Learning rate scheduler.
-
+            unpack_input (Optional[bool]): Unpack input (x) if input is a list.
         Returns:
             Tuple[torch.nn.Module, torch.Tensor, torch.Tensor]: A tuple containing the trained model, 
             training loss history, and validation loss history.
@@ -135,7 +140,10 @@ class PtTrainClassificationTransformerModel:
                         y = y.to("cuda")
                     optimizer.zero_grad()
 
-                    y_hat = model(x)
+                    if unpack_input:
+                        y_hat = model(*x)
+                    else:
+                        y_hat = model(x)
                     if y.dim() == 1:
                         y = torch.unsqueeze(y, dim=-1)
                         y = y.to(torch.float32)
@@ -167,7 +175,10 @@ class PtTrainClassificationTransformerModel:
                                     x = x.to("cuda")
                                 y = y.to("cuda")
 
-                            y_hat = model(x)
+                            if unpack_input:
+                                y_hat = model(*x)
+                            else:
+                                y_hat = model(x)
                             if y.dim() == 1:
                                 y = torch.unsqueeze(y, dim=-1)
                                 y = y.to(torch.float32)

@@ -8,6 +8,10 @@
 | Node | Description |
 | --- | --- |
 | [Pt Save Model](pt_save_model.md) | A wrapper class for saving a PyTorch model. |
+## Miscellaneous
+| Node | Description |
+| --- | --- |
+| [Ptn Model With Closure](ptn_model_with_closure.md) | A model that is followed by a closure function. |
 ## PyTorch wrapper - Arithmetic operations
 | Node | Description |
 | --- | --- |
@@ -154,6 +158,7 @@
 | [Ptn Avg Pool 2d](ptn_avg_pool2d.md) | An avgpool layer.   |
 | [Ptn Batch Norm 2d](ptn_batch_norm2d.md) | A normalization model to normalize over the batch and spatial axes for each channel. |
 | [Ptn Chained Model](ptn_chained_model.md) | Constructs a chained PyTorch model. |
+| [Ptn Chained Model With Attention Mask](ptn_chained_model_with_attention_mask.md) | A chained model that sequentially applies `model_a` and `model_b`, |
 | [Ptn Conv 2d](ptn_conv2d.md) |     A convolutional model consisting of a single conv2d layer.   |
 | [Ptn Conv Model](ptn_conv_model.md) | A convolutional model consisting of multiple convolutional layers.   |
 | [Ptn Embedding](ptn_embedding.md) | Constructs an embedding layer. |
@@ -168,12 +173,16 @@
 | [Ptn Layer Norm](ptn_layer_norm.md) | A normalization model to normalize elements over specified axes. |
 | [Ptn Linear](ptn_linear.md) | A linear model consisting of a single dense layer.   |
 | [Ptn Linear Model](ptn_linear_model.md) | A linear model consisting of dense layers.   |
+| [Ptn Masked Mean Pooling](ptn_masked_mean_pooling.md) | Constructs a masked mean pooling layer. |
 | [Ptn Max Pool 2d](ptn_max_pool2d.md) | A maxpool layer.   |
+| [Ptn Multihead Attention](ptn_multihead_attention.md) | A Multihead attention model. |
 | [Ptn Pre Add Channel Axis](ptn_pre_add_channel_axis.md) | Adds a channel axis after the batch axis if the input is rank 3 (bs, h, w) |
 | [Ptn Pre Flatten](ptn_pre_flatten.md) | Flattens the input tensor before processing the tensor in the specified model. |
 | [Ptn RNN](ptn_rnn.md) | A recurrent neural network (RNN) model consisting of one or more of a recurrent layer.   |
 | [Ptn RNN Linear](ptn_embedding_rnn_linear.md) | A recurrent neural network (RNN) model with a linear head. |
 | [Ptn RNN Linear](ptn_rnn_linear.md) | A recurrent neural network (RNN) model with a linear head. |
+| [Ptn Residual Connection Model](ptn_residual_connection_model.md) | A model that saves the input and add to the output of the specified model. |
+| [Ptn Residual Connection Model With Attention Mask](ptn_residual_connection_model_with_attention_mask.md) | A model that saves the input and add to the output of the specified model. |
 | [Ptn Resnet Model](ptn_resnet_model.md) | A Resnet model consisting of multiple Resnet layers.   |
 ## PyTorch wrapper - Optimizer
 | Node | Description |

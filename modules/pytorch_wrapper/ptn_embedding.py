@@ -26,7 +26,7 @@ class PtnEmbedding:
         return {
             "required": {
                 "num_embeddings": ("INT", {"default": 10000, "min": 1, "max": 1e6}),
-                "embedding_size": ("INT", {"default": 100, "min": 1, "max": 1e6}),
+                "embedding_dim": ("INT", {"default": 100, "min": 1, "max": 1e6}),
                 "padding_idx": ("INT", {"default": -1, "min": -1, "max": 1e6}),
             }
         }

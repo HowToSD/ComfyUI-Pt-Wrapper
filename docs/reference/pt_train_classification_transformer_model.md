@@ -13,7 +13,9 @@ Trains a classification Transformer model using a given dataset, loss function, 
         output_best_val_model (bool): Whether to outputs the model with the best val loss or the model from the last epoch.  
         classification_metrics (bool): If True and if val_loader is set, print out classification metrics.  This is only valid for classification model training.  
         val_loader (PTDATALOADER): DataLoader for validation dataset (optional).  
-        scheduler (PTLRSCHEDULER): Learning rate scheduler.
+        scheduler (PTLRSCHEDULER): Learning rate scheduler.  
+        unpack_input (Optional[bool]): If True and the input is a list, unpack it when calling the model.  
+        For example, if the dataloader returns [a, b] and your model's forward is defined as forward(a, b), set this to True.
 
 ## Input
 | Name | Data type |
@@ -30,6 +32,7 @@ Trains a classification Transformer model using a given dataset, loss function, 
 | classification_metrics | Boolean |
 | scheduler | Ptlrscheduler |
 | val_loader | Ptdataloader |
+| unpack_input | Boolean |
 
 ## Output
 | Data type |

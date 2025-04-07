@@ -115,6 +115,7 @@ def process_python_file(file_path: str, output_dir: str, node_list: Dict[str, Li
             category = class_info["category"]
             
             file_name = os.path.splitext(os.path.basename(file_path))[0] + ".md"
+            file_name = file_name.replace(" ", "")  # Remove white space
             output_path = os.path.join(output_dir, file_name)
             
             with open(output_path, "w", encoding="utf-8") as md_file:

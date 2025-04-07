@@ -157,6 +157,7 @@ from .modules.pytorch_wrapper.ptn_batch_norm2d import PtnBatchNorm2d
 from .modules.pytorch_wrapper.ptn_bce_loss import PtnBCELoss
 from .modules.pytorch_wrapper.ptn_bce_with_logits_loss import PtnBCEWithLogitsLoss
 from .modules.pytorch_wrapper.ptn_chained_model import PtnChainedModel
+from .modules.pytorch_wrapper.ptn_chained_model_with_attention_mask import PtnChainedModelWithAttentionMask
 from .modules.pytorch_wrapper.ptn_conv2d import PtnConv2d
 from .modules.pytorch_wrapper.ptn_conv_model import PtnConvModel
 from .modules.pytorch_wrapper.ptn_cross_entropy_loss import PtnCrossEntropyLoss
@@ -176,11 +177,16 @@ from .modules.pytorch_wrapper.ptn_linear import PtnLinear
 from .modules.pytorch_wrapper.ptn_linear_model import PtnLinearModel
 from .modules.pytorch_wrapper.ptn_lstm import PtnLSTM
 from .modules.pytorch_wrapper.ptn_lstm_linear import PtnLSTMLinear
+from .modules.pytorch_wrapper.ptn_masked_mean_pooling import PtnMaskedMeanPooling
 from .modules.pytorch_wrapper.ptn_max_pool2d import PtnMaxPool2d
+from .modules.pytorch_wrapper.ptn_model_with_closure import PtnModelWithClosure
 from .modules.pytorch_wrapper.ptn_mse_loss import PtnMSELoss
+from .modules.pytorch_wrapper.ptn_multihead_attention import PtnMultiheadAttention
 from .modules.pytorch_wrapper.ptn_nll_loss import PtnNLLLoss
 from .modules.pytorch_wrapper.ptn_pre_add_channel_axis import PtnPreAddChannelAxis
 from .modules.pytorch_wrapper.ptn_pre_flatten import PtnPreFlatten
+from .modules.pytorch_wrapper.ptn_residual_connection_model import PtnResidualConnectionModel
+from .modules.pytorch_wrapper.ptn_residual_connection_model_with_attention_mask import PtnResidualConnectionModelWithAttentionMask
 from .modules.pytorch_wrapper.ptn_resnet_model import PtnResnetModel
 from .modules.pytorch_wrapper.ptn_rnn import PtnRNN
 from .modules.pytorch_wrapper.ptn_rnn_linear import PtnRNNLinear
@@ -371,6 +377,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnBCEWithLogitsLoss": PtnBCEWithLogitsLoss,
     "PtnBatchNorm2d": PtnBatchNorm2d,
     "PtnChainedModel": PtnChainedModel,
+    "PtnChainedModelWithAttentionMask": PtnChainedModelWithAttentionMask,
     "PtnConv2d": PtnConv2d,
     "PtnConvModel": PtnConvModel,
     "PtnCrossEntropyLoss": PtnCrossEntropyLoss,
@@ -391,12 +398,17 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnLinear": PtnLinear,
     "PtnLinearModel": PtnLinearModel,
     "PtnMSELoss": PtnMSELoss,
+    "PtnMaskedMeanPooling": PtnMaskedMeanPooling,
     "PtnMaxPool2d": PtnMaxPool2d,
+    "PtnModelWithClosure": PtnModelWithClosure,
+    "PtnMultiheadAttention": PtnMultiheadAttention,
     "PtnNLLLoss": PtnNLLLoss,
     "PtnPreAddChannelAxis": PtnPreAddChannelAxis,
     "PtnPreFlatten": PtnPreFlatten,
     "PtnRNN": PtnRNN,
     "PtnRNNLinear": PtnRNNLinear,
+    "PtnResidualConnectionModel": PtnResidualConnectionModel,
+    "PtnResidualConnectionModelWithAttentionMask": PtnResidualConnectionModelWithAttentionMask,
     "PtnResnetModel": PtnResnetModel,
     "PtnSmoothL1Loss": PtnSmoothL1Loss,
     "PtoAdam": PtoAdam,
@@ -585,6 +597,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnBCEWithLogitsLoss": "Ptn BCE With Logits Loss",
     "PtnBatchNorm2d": "Ptn Batch Norm 2d",
     "PtnChainedModel": "Ptn Chained Model",
+    "PtnChainedModelWithAttentionMask": "Ptn Chained Model With Attention Mask",
     "PtnConv2d": "Ptn Conv 2d",
     "PtnConvModel": "Ptn Conv Model",
     "PtnCrossEntropyLoss": "Ptn Cross Entropy Loss",
@@ -605,12 +618,17 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnLinear": "Ptn Linear",
     "PtnLinearModel": "Ptn Linear Model",
     "PtnMSELoss": "Ptn MSE Loss",
+    "PtnMaskedMeanPooling": "Ptn Masked Mean Pooling",
     "PtnMaxPool2d": "Ptn Max Pool 2d",
+    "PtnModelWithClosure": "Ptn Model With Closure",
+    "PtnMultiheadAttention": "Ptn Multihead Attention",
     "PtnNLLLoss": "Ptn NLL Loss",
     "PtnPreAddChannelAxis": "Ptn Pre Add Channel Axis",
     "PtnPreFlatten": "Ptn Pre Flatten",
     "PtnRNN": "Ptn RNN",
     "PtnRNNLinear": "Ptn RNN Linear",
+    "PtnResidualConnectionModel": "Ptn Residual Connection Model",
+    "PtnResidualConnectionModelWithAttentionMask": "Ptn Residual Connection Model With Attention Mask",
     "PtnResnetModel": "Ptn Resnet Model",
     "PtnSmoothL1Loss": "Ptn Smooth L1 Loss",
     "PtoAdam": "Pto Adam",

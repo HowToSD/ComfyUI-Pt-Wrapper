@@ -10,7 +10,7 @@ Constructs an embedding layer.
 | Name | Data type |
 |---|---|
 | num_embeddings | Int |
-| embedding_size | Int |
+| embedding_dim | Int |
 | padding_idx | Int |
 
 ## Output
