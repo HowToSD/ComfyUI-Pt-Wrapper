@@ -11,7 +11,7 @@ Learn how to construct a Transformer encoder using basic components such as mult
 ![Overview](docs/images/mha_overview.png)  
 *The complete setup of all required nodes is included in the example workflow.*
 
-Check out the [Building Transformer From Scratch](docs/building_transformer_from_scratch) guide.
+Check out the [Building Transformer From Scratch](docs/building_transformer_from_scratch.md) guide.
 
 ---
 
