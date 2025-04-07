@@ -1,20 +1,17 @@
 ![Logo](docs/images/main_logo.png)
 
-## Update — March 31, 2025
+## Update — April 6, 2025
 
-**Now with Hugging Face pretrained model support for text classification**
+## Now You Can Try Building a Transformer Model from Scratch
 
-You can use **ComfyUI-Pt-Wrapper** to fine-tune Hugging Face's pretrain models for text classification, such as sentiment analysis on a movie review dataset.
+You can use **ComfyUI-Pt-Wrapper** to build a Transformer encoder model from scratch for text classification.
 
-You can choose from the following models:
-* bert-base-uncased
-* roberta-base
-* distilbert-base-uncased
-* albert-base-v2
+Learn how to construct a Transformer encoder using basic components such as multi-head attention, layer normalization, linear layers, embedding layers, and residual connections. This workflow allows you to train the model for IMDB text classification and achieve around 85% accuracy!
 
-Performance was not compromised in adding this feature — you should achieve around 92-93% validation accuracy on the IMDB dataset with the pretrained DistilBERT model.
+![Overview](docs/images/mha_overview.png)  
+*The complete setup of all required nodes is included in the example workflow.*
 
-Check out [Fine-tuning Hugging Face models for classification](docs/fine_tuning_hugging_face_models_for_classification.md).
+Check out the [Building Transformer From Scratch](docs/building_transformer_from_scratch) guide.
 
 ---
 
