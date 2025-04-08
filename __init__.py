@@ -182,6 +182,7 @@ from .modules.pytorch_wrapper.ptn_max_pool2d import PtnMaxPool2d
 from .modules.pytorch_wrapper.ptn_model_with_closure import PtnModelWithClosure
 from .modules.pytorch_wrapper.ptn_mse_loss import PtnMSELoss
 from .modules.pytorch_wrapper.ptn_multihead_attention import PtnMultiheadAttention
+from .modules.pytorch_wrapper.ptn_multihead_attention_custom import PtnMultiheadAttentionCustom
 from .modules.pytorch_wrapper.ptn_nll_loss import PtnNLLLoss
 from .modules.pytorch_wrapper.ptn_pre_add_channel_axis import PtnPreAddChannelAxis
 from .modules.pytorch_wrapper.ptn_pre_flatten import PtnPreFlatten
@@ -402,6 +403,7 @@ NODE_CLASS_MAPPINGS: Dict[str, Type[T]] = {
     "PtnMaxPool2d": PtnMaxPool2d,
     "PtnModelWithClosure": PtnModelWithClosure,
     "PtnMultiheadAttention": PtnMultiheadAttention,
+    "PtnMultiheadAttentionCustom": PtnMultiheadAttentionCustom,
     "PtnNLLLoss": PtnNLLLoss,
     "PtnPreAddChannelAxis": PtnPreAddChannelAxis,
     "PtnPreFlatten": PtnPreFlatten,
@@ -622,6 +624,7 @@ NODE_DISPLAY_NAME_MAPPINGS: Dict[str, str] = {
     "PtnMaxPool2d": "Ptn Max Pool 2d",
     "PtnModelWithClosure": "Ptn Model With Closure",
     "PtnMultiheadAttention": "Ptn Multihead Attention",
+    "PtnMultiheadAttentionCustom": "Ptn Multihead Attention Custom",
     "PtnNLLLoss": "Ptn NLL Loss",
     "PtnPreAddChannelAxis": "Ptn Pre Add Channel Axis",
     "PtnPreFlatten": "Ptn Pre Flatten",

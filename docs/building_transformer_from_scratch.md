@@ -167,3 +167,11 @@ With this workflow, you should reach around **85% validation accuracy** on the H
 This is a solid performance for a Transformer built entirely from scratch.
 
 ---
+
+### If you want to understand how Multi-head Attention is implemented
+
+Refer to `modules/pytorch_wrapper/ptn_multihead_attention_custom.py`, which contains the implementation of Multi-head Attention and its wrapper node.  
+You can also check out the example workflow in `examples/workflows/mha_custom.json`, which demonstrates how to use this wrapper node.  
+This workflow achieves around 85–86% val accuracy on the IMDB dataset.
+
+---

@@ -176,6 +176,7 @@
 | [Ptn Masked Mean Pooling](ptn_masked_mean_pooling.md) | Constructs a masked mean pooling layer. |
 | [Ptn Max Pool 2d](ptn_max_pool2d.md) | A maxpool layer.   |
 | [Ptn Multihead Attention](ptn_multihead_attention.md) | A Multihead attention model. |
+| [Ptn Multihead Attention Custom](ptn_multihead_attention_custom.md) | A Multihead attention model. |
 | [Ptn Pre Add Channel Axis](ptn_pre_add_channel_axis.md) | Adds a channel axis after the batch axis if the input is rank 3 (bs, h, w) |
 | [Ptn Pre Flatten](ptn_pre_flatten.md) | Flattens the input tensor before processing the tensor in the specified model. |
 | [Ptn RNN](ptn_rnn.md) | A recurrent neural network (RNN) model consisting of one or more of a recurrent layer.   |
