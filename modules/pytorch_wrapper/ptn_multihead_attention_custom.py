@@ -6,7 +6,7 @@ from einops import einops
 
 class PtnMultiheadAttentionCustomDef(nn.Module):
     """
-    Implements MultiheadAttention.
+    Implements Multihead attention.
 
     Attributes:
         embed_dim (int): Hidden dimension (d_model) for each token of the Transformer.
